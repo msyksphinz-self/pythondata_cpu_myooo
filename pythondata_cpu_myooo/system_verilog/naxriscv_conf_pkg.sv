@@ -1,4 +1,4 @@
-package scariv_conf_pkg;
+package myooo_conf_pkg;
 
   localparam ICACHE_DATA_W = 64;
   localparam DCACHE_DATA_W = 64;
@@ -49,4 +49,4 @@ package scariv_conf_pkg;
 
   localparam FPNEW_LATENCY = 4;
 
-endpackage // scariv_conf_pkg
+endpackage // myooo_conf_pkg

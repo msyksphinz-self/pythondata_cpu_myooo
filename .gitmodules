@@ -1,0 +1,3 @@
+[submodule "pythondata_cpu_myooo/system_verilog/fpnew"]
+	path = pythondata_cpu_myooo/system_verilog/fpnew
+	url = https://github.com/msyksphinz-self/fpnew.git
