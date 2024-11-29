@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+from __future__ import print_function
+
+import os
+
+import {{ py }}
+
+print("Found {{ name }} @ version", {{ py }}.version_str, "(with data", {{ py }}.data_version_str, ")")
+print()
+print("Data is in", {{ py }}.data_location)
+assert os.path.exists({{ py }}.data_location)
+print("Data is version", {{ py }}.data_version_str, {{ py }}.data_git_hash)
+print("-"*75)
+print({{ py }}.data_git_msg)
+print("-"*75)
+print()
+print("It contains:")
+for root, dirs, files in os.walk({{ py }}.data_location):
+    dirs.sort()
+    for f in sorted(files):
+        path = os.path.relpath(os.path.join(root, f), {{ py }}.data_location)
+        print(" -", path)

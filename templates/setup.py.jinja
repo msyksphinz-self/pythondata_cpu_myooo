@@ -1,0 +1,34 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+from pythondata_{{ type }}_{{ name }} import version_str
+
+setuptools.setup(
+    name="{{ repo }}",
+    version=version_str,
+    author="LiteX Authors",
+    author_email="litex@googlegroups.com",
+    description="""\
+Python module containing {{ contents }} files for {{ human_name }} {{ type }}.""",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/litex-hub/{{ repo }}",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "{{ license }}",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.5',
+    zip_safe=False,
+    packages=setuptools.find_packages(),
+    package_data={
+    	'{{ type }}_{{ name }}': ['{{ type }}_{{ name }}/{{ contents }}/**'],
+    },
+    include_package_data=True,
+    project_urls={
+        "Bug Tracker": "https://github.com/litex-hub/{{ repo }}/issues",
+        "Source Code": "https://github.com/litex-hub/{{ repo }}",
+    },
+)
