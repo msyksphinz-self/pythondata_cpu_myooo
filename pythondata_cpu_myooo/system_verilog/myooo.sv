@@ -30,46 +30,59 @@ module internal_decoder_inst_cat (
   output logic [2: 0]  inst_cat,
   output logic [2: 0]  inst_subcat
 );
-wire tmp_0 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & inst[22] & !inst[21] & inst[20] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_0 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & inst[22] & !inst[21] & inst[20] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_1 = !inst[31] & !inst[30] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & !inst[20] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_2 = !inst[31] & !inst[30] & !inst[29] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & !inst[20] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_3 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_2 = !inst[31] & !inst[30] & !inst[29] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & !inst[20] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_3 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_4 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[13] & !inst[6] & !inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_5 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[14] & !inst[13] & !inst[12] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_6 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_7 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_8 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_9 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & inst[14] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_10 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[13] & !inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_11 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_12 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_13 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & inst[14] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_14 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_15 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[14] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_16 = !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_17 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_18 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_19 = !inst[14] & !inst[13] & !inst[12] & inst[6] & inst[5] & !inst[4] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_20 = !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_21 = inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_22 = inst[14] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_23 = inst[13] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_24 = !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_25 = !inst[13] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_26 = inst[12] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_27 = inst[13] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_28 = !inst[6] & !inst[5] & inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_29 = !inst[12] & !inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_30 = !inst[14] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_31 = !inst[6] & inst[5] & inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_32 = !inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_33 = !inst[14] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-assign inst_cat[2] = tmp_0 | tmp_1 | tmp_2 | tmp_3 | tmp_4 | tmp_5 | tmp_6 | tmp_8 | tmp_10 | tmp_13 | tmp_14 | tmp_16 | tmp_26 | tmp_27 | tmp_30 | 1'b0;
-assign inst_cat[1] = tmp_7 | tmp_10 | tmp_13 | tmp_14 | tmp_19 | tmp_21 | tmp_22 | tmp_24 | tmp_25 | tmp_28 | tmp_32 | tmp_33 | 1'b0;
-assign inst_cat[0] = tmp_0 | tmp_1 | tmp_2 | tmp_3 | tmp_7 | tmp_9 | tmp_11 | tmp_12 | tmp_15 | tmp_17 | tmp_18 | tmp_20 | tmp_23 | tmp_26 | tmp_27 | tmp_29 | tmp_31 | tmp_32 | tmp_33 | 1'b0;
-assign inst_subcat[2] = tmp_7 | tmp_8 | tmp_16 | 1'b0;
-assign inst_subcat[1] = tmp_4 | tmp_5 | tmp_6 | tmp_19 | tmp_21 | tmp_22 | tmp_24 | tmp_25 | tmp_30 | tmp_32 | tmp_33 | 1'b0;
-assign inst_subcat[0] = tmp_19 | tmp_21 | tmp_22 | tmp_25 | tmp_28 | 1'b0;
+wire tmp_8 = inst[31] & inst[30] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_9 = inst[31] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_10 = inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_11 = inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_12 = !inst[31] & !inst[29] & inst[28] & inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_13 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & inst[14] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_14 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[13] & !inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_15 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_16 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_17 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & inst[14] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_18 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_19 = inst[31] & inst[30] & !inst[29] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_20 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_21 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[14] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_22 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_23 = !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_24 = !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[12] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_25 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_26 = !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[13] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_27 = !inst[14] & !inst[13] & !inst[12] & inst[6] & inst[5] & !inst[4] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_28 = !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_29 = !inst[31] & !inst[30] & !inst[28] & !inst[26] & !inst[14] & !inst[13] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_30 = !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_31 = !inst[14] & inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_32 = inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_33 = inst[14] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_34 = inst[13] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_35 = !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_36 = !inst[13] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_37 = !inst[6] & inst[5] & inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_38 = !inst[14] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_39 = inst[12] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_40 = !inst[31] & !inst[30] & !inst[29] & !inst[26] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_41 = !inst[6] & !inst[5] & inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_42 = inst[13] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_43 = !inst[12] & !inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_44 = !inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_45 = !inst[14] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_46 = !inst[26] & inst[6] & !inst[5] & !inst[4] & inst[1] & inst[0] & 1'b1;
+assign inst_cat[2] = tmp_0 | tmp_1 | tmp_2 | tmp_3 | tmp_4 | tmp_5 | tmp_6 | tmp_8 | tmp_9 | tmp_10 | tmp_11 | tmp_12 | tmp_14 | tmp_17 | tmp_18 | tmp_19 | tmp_20 | tmp_23 | tmp_24 | tmp_26 | tmp_28 | tmp_29 | tmp_38 | tmp_39 | tmp_40 | tmp_42 | tmp_46 | 1'b0;
+assign inst_cat[1] = tmp_7 | tmp_8 | tmp_9 | tmp_10 | tmp_11 | tmp_12 | tmp_14 | tmp_17 | tmp_19 | tmp_20 | tmp_24 | tmp_26 | tmp_27 | tmp_29 | tmp_31 | tmp_32 | tmp_33 | tmp_35 | tmp_36 | tmp_40 | tmp_41 | tmp_44 | tmp_45 | tmp_46 | 1'b0;
+assign inst_cat[0] = tmp_0 | tmp_1 | tmp_2 | tmp_3 | tmp_7 | tmp_8 | tmp_9 | tmp_10 | tmp_11 | tmp_12 | tmp_13 | tmp_15 | tmp_16 | tmp_19 | tmp_21 | tmp_22 | tmp_24 | tmp_25 | tmp_26 | tmp_29 | tmp_30 | tmp_31 | tmp_34 | tmp_37 | tmp_39 | tmp_40 | tmp_42 | tmp_43 | tmp_44 | tmp_45 | tmp_46 | 1'b0;
+assign inst_subcat[2] = tmp_7 | tmp_18 | tmp_23 | tmp_28 | tmp_31 | 1'b0;
+assign inst_subcat[1] = tmp_4 | tmp_5 | tmp_6 | tmp_27 | tmp_32 | tmp_33 | tmp_35 | tmp_36 | tmp_38 | tmp_44 | tmp_45 | 1'b0;
+assign inst_subcat[0] = tmp_27 | tmp_28 | tmp_31 | tmp_32 | tmp_33 | tmp_36 | tmp_41 | 1'b0;
 endmodule
 
 module decoder_inst_cat (
@@ -128,41 +141,56 @@ module internal_decoder_reg (
   output logic r3
 );
 wire tmp_0 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[14] & !inst[13] & !inst[12] & !inst[11] & !inst[10] & !inst[9] & !inst[8] & !inst[7] & inst[6] & inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_1 = !inst[31] & !inst[30] & !inst[29] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_2 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & inst[14] & !inst[13] & inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_3 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[13] & inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_4 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & inst[14] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_5 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_6 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_7 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_8 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_9 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_10 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & inst[14] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_11 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[14] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_12 = !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_13 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_14 = !inst[14] & !inst[13] & !inst[12] & inst[6] & inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_15 = !inst[14] & inst[12] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_16 = !inst[14] & inst[13] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_17 = inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_18 = !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_19 = inst[12] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_20 = inst[13] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_21 = inst[14] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_22 = !inst[13] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_23 = !inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_24 = !inst[14] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_25 = inst[13] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_26 = !inst[14] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_27 = !inst[6] & inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_28 = !inst[12] & !inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-assign rd[1] = 1'b0;
-assign rd[0] = tmp_1 | tmp_4 | tmp_5 | tmp_6 | tmp_7 | tmp_8 | tmp_10 | tmp_11 | tmp_12 | tmp_13 | tmp_14 | tmp_17 | tmp_18 | tmp_19 | tmp_20 | tmp_23 | tmp_24 | tmp_25 | tmp_27 | tmp_28 | 1'b0;
-assign r1[1] = 1'b0;
-assign r1[0] = tmp_0 | tmp_1 | tmp_4 | tmp_5 | tmp_6 | tmp_7 | tmp_8 | tmp_10 | tmp_11 | tmp_12 | tmp_13 | tmp_14 | tmp_15 | tmp_16 | tmp_18 | tmp_21 | tmp_22 | tmp_23 | tmp_24 | tmp_25 | tmp_26 | tmp_28 | 1'b0;
-assign r2[1] = 1'b0;
-assign r2[0] = tmp_0 | tmp_2 | tmp_3 | tmp_6 | tmp_7 | tmp_8 | tmp_9 | tmp_10 | tmp_12 | tmp_21 | tmp_22 | tmp_26 | 1'b0;
-assign r3 = 1'b0;
+wire tmp_1 = inst[31] & inst[30] & inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_2 = inst[31] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_3 = !inst[31] & !inst[30] & !inst[29] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_4 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_5 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_6 = !inst[31] & !inst[29] & inst[28] & inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_7 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_8 = inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_9 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & inst[14] & !inst[13] & inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_10 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[13] & inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_11 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_12 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_13 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_14 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & inst[14] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_15 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_16 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[13] & inst[12] & !inst[6] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_17 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_18 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & inst[14] & !inst[6] & inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_19 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_20 = !inst[31] & !inst[30] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[12] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_21 = !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_22 = !inst[31] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[14] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_23 = !inst[31] & !inst[30] & !inst[28] & !inst[26] & !inst[14] & !inst[13] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_24 = !inst[14] & !inst[13] & !inst[12] & inst[6] & inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_25 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[6] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_26 = !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_27 = !inst[14] & inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_28 = !inst[31] & !inst[30] & !inst[29] & !inst[26] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_29 = inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_30 = !inst[14] & inst[12] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_31 = !inst[14] & inst[13] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_32 = !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[5] & inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_33 = inst[12] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_34 = inst[13] & inst[6] & inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_35 = inst[14] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_36 = !inst[13] & inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_37 = !inst[14] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_38 = !inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_39 = inst[13] & !inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_40 = !inst[14] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_41 = !inst[6] & inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_42 = !inst[26] & inst[6] & !inst[5] & !inst[4] & inst[1] & inst[0] & 1'b1;
+wire tmp_43 = !inst[12] & !inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+assign rd[1] = tmp_1 | tmp_4 | tmp_5 | tmp_6 | tmp_7 | tmp_20 | tmp_23 | tmp_27 | tmp_28 | tmp_42 | 1'b0;
+assign rd[0] = tmp_2 | tmp_3 | tmp_8 | tmp_11 | tmp_12 | tmp_13 | tmp_14 | tmp_15 | tmp_16 | tmp_17 | tmp_18 | tmp_21 | tmp_22 | tmp_24 | tmp_25 | tmp_29 | tmp_32 | tmp_33 | tmp_34 | tmp_38 | tmp_39 | tmp_40 | tmp_41 | tmp_43 | 1'b0;
+assign r1[1] = tmp_2 | tmp_4 | tmp_5 | tmp_6 | tmp_8 | tmp_11 | tmp_12 | tmp_20 | tmp_23 | tmp_28 | tmp_42 | 1'b0;
+assign r1[0] = tmp_0 | tmp_1 | tmp_3 | tmp_7 | tmp_13 | tmp_14 | tmp_15 | tmp_16 | tmp_17 | tmp_18 | tmp_21 | tmp_22 | tmp_24 | tmp_25 | tmp_26 | tmp_27 | tmp_30 | tmp_31 | tmp_32 | tmp_35 | tmp_36 | tmp_37 | tmp_38 | tmp_39 | tmp_40 | tmp_43 | 1'b0;
+assign r2[1] = tmp_11 | tmp_12 | tmp_20 | tmp_23 | tmp_26 | tmp_28 | tmp_42 | 1'b0;
+assign r2[0] = tmp_0 | tmp_9 | tmp_10 | tmp_13 | tmp_15 | tmp_17 | tmp_18 | tmp_19 | tmp_21 | tmp_35 | tmp_36 | tmp_37 | 1'b0;
+assign r3 = tmp_42 | 1'b0;
 endmodule
 
 module decoder_reg (
@@ -371,42 +399,43 @@ wire tmp_1 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26
 wire tmp_2 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[19] & !inst[18] & !inst[17] & !inst[16] & !inst[15] & !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_3 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_4 = !inst[31] & !inst[30] & !inst[29] & !inst[27] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_5 = !inst[31] & !inst[30] & !inst[29] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_6 = !inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_7 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_8 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_9 = inst[31] & inst[29] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_10 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_11 = !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_5 = !inst[31] & !inst[30] & !inst[29] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_6 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_7 = !inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_8 = !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_9 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_10 = inst[31] & inst[29] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_11 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_12 = !inst[31] & !inst[30] & !inst[29] & inst[27] & !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_13 = inst[14] & !inst[13] & inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_14 = inst[31] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_13 = inst[31] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_14 = inst[14] & !inst[13] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
 wire tmp_15 = inst[30] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_16 = !inst[31] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_17 = !inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_18 = inst[14] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_19 = !inst[14] & !inst[13] & !inst[12] & !inst[6] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_20 = !inst[28] & !inst[27] & !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_21 = inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_22 = !inst[14] & !inst[13] & inst[12] & !inst[6] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_23 = !inst[14] & inst[13] & !inst[12] & !inst[6] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_24 = !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_25 = !inst[14] & inst[12] & !inst[6] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_26 = !inst[14] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-wire tmp_27 = !inst[14] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
-assign size[2] = tmp_17 | tmp_19 | 1'b0;
-assign size[1] = tmp_4 | tmp_12 | tmp_13 | tmp_21 | tmp_22 | tmp_23 | tmp_24 | 1'b0;
-assign size[0] = tmp_5 | tmp_10 | tmp_13 | tmp_20 | tmp_25 | 1'b0;
-assign sign[1] = tmp_13 | tmp_18 | 1'b0;
-assign sign[0] = tmp_4 | tmp_8 | tmp_24 | tmp_26 | 1'b0;
-assign op[2] = tmp_0 | tmp_1 | tmp_3 | tmp_10 | tmp_12 | tmp_20 | tmp_24 | 1'b0;
-assign op[1] = tmp_2 | tmp_3 | tmp_10 | tmp_12 | tmp_20 | tmp_24 | tmp_27 | 1'b0;
-assign op[0] = tmp_1 | tmp_2 | tmp_13 | tmp_18 | tmp_26 | 1'b0;
-assign rmwop[3] = tmp_14 | 1'b0;
-assign rmwop[2] = tmp_16 | 1'b0;
-assign rmwop[1] = tmp_10 | tmp_12 | tmp_15 | 1'b0;
-assign rmwop[0] = tmp_3 | tmp_6 | tmp_7 | tmp_9 | tmp_11 | 1'b0;
-assign is_amo = tmp_7 | tmp_20 | tmp_24 | 1'b0;
+wire tmp_16 = inst[14] & inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_17 = !inst[31] & !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_18 = !inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_19 = !inst[14] & !inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_20 = !inst[13] & inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_21 = !inst[28] & !inst[27] & !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_22 = !inst[14] & !inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_23 = !inst[28] & !inst[27] & !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_24 = !inst[14] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_25 = !inst[14] & inst[13] & inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & inst[1] & inst[0] & 1'b1;
+wire tmp_26 = !inst[14] & inst[13] & !inst[12] & !inst[6] & !inst[5] & !inst[4] & !inst[3] & inst[1] & inst[0] & 1'b1;
+wire tmp_27 = !inst[14] & inst[13] & inst[12] & !inst[6] & inst[5] & !inst[4] & !inst[3] & inst[1] & inst[0] & 1'b1;
+wire tmp_28 = !inst[14] & inst[13] & !inst[12] & !inst[6] & inst[5] & !inst[4] & !inst[3] & inst[1] & inst[0] & 1'b1;
+assign size[2] = tmp_18 | tmp_19 | 1'b0;
+assign size[1] = tmp_4 | tmp_12 | tmp_16 | tmp_20 | tmp_22 | tmp_23 | tmp_26 | tmp_28 | 1'b0;
+assign size[0] = tmp_5 | tmp_11 | tmp_20 | tmp_21 | tmp_22 | tmp_25 | tmp_27 | 1'b0;
+assign sign[1] = tmp_14 | tmp_16 | 1'b0;
+assign sign[0] = tmp_4 | tmp_6 | tmp_23 | tmp_24 | tmp_25 | tmp_26 | 1'b0;
+assign op[2] = tmp_0 | tmp_1 | tmp_3 | tmp_11 | tmp_12 | tmp_21 | tmp_23 | 1'b0;
+assign op[1] = tmp_2 | tmp_3 | tmp_11 | tmp_12 | tmp_19 | tmp_21 | tmp_22 | tmp_23 | tmp_27 | tmp_28 | 1'b0;
+assign op[0] = tmp_1 | tmp_2 | tmp_16 | tmp_18 | tmp_20 | tmp_25 | tmp_26 | 1'b0;
+assign rmwop[3] = tmp_13 | 1'b0;
+assign rmwop[2] = tmp_17 | 1'b0;
+assign rmwop[1] = tmp_11 | tmp_12 | tmp_15 | 1'b0;
+assign rmwop[0] = tmp_3 | tmp_7 | tmp_8 | tmp_9 | tmp_10 | 1'b0;
+assign is_amo = tmp_9 | tmp_21 | tmp_23 | 1'b0;
 endmodule
 
 module decoder_lsu_ctrl (
@@ -816,17 +845,72 @@ module internal_decoder_fpu_ctrl (
   output logic [5: 0]  op,
   output logic use_frm
 );
-assign pipe[1] = 1'b0;
-assign pipe[0] = 1'b0;
-assign size[1] = 1'b0;
-assign size[0] = 1'b0;
-assign op[5] = 1'b0;
-assign op[4] = 1'b0;
-assign op[3] = 1'b0;
-assign op[2] = 1'b0;
-assign op[1] = 1'b0;
-assign op[0] = 1'b0;
-assign use_frm = 1'b0;
+wire tmp_0 = inst[31] & inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_1 = inst[31] & inst[30] & inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_2 = inst[31] & inst[30] & inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_3 = inst[31] & inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_4 = inst[31] & inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_5 = inst[31] & inst[30] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & !inst[14] & !inst[13] & inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_6 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_7 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_8 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_9 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_10 = inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_11 = !inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[14] & inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_12 = !inst[31] & inst[30] & !inst[29] & inst[28] & inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_13 = !inst[31] & inst[30] & !inst[29] & inst[28] & inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_14 = !inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_15 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_16 = !inst[31] & !inst[30] & inst[29] & !inst[28] & inst[27] & !inst[26] & !inst[14] & !inst[13] & inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_17 = !inst[31] & !inst[30] & inst[29] & !inst[28] & inst[27] & !inst[26] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_18 = inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[24] & !inst[23] & !inst[22] & !inst[20] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_19 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_20 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_21 = inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_22 = !inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_23 = inst[31] & inst[30] & !inst[29] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_24 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_25 = !inst[31] & !inst[30] & !inst[28] & !inst[27] & !inst[26] & !inst[14] & !inst[13] & inst[12] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_26 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_27 = !inst[31] & !inst[30] & !inst[28] & inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_28 = !inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_29 = !inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_30 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_31 = !inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_32 = inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_33 = inst[31] & inst[30] & !inst[29] & !inst[27] & !inst[26] & !inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & !inst[20] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_34 = inst[31] & inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_35 = !inst[31] & !inst[30] & !inst[29] & inst[28] & inst[27] & !inst[26] & inst[25] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_36 = !inst[31] & !inst[30] & !inst[28] & !inst[26] & inst[25] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_37 = inst[31] & inst[30] & !inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & inst[21] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_38 = inst[31] & inst[30] & !inst[29] & !inst[27] & !inst[26] & inst[25] & !inst[24] & !inst[23] & !inst[22] & !inst[21] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_39 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & inst[27] & !inst[26] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_40 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[14] & !inst[12] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_41 = !inst[31] & !inst[30] & !inst[29] & !inst[27] & !inst[26] & !inst[25] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_42 = inst[31] & !inst[30] & inst[29] & !inst[28] & !inst[27] & !inst[26] & inst[25] & !inst[14] & !inst[13] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_43 = !inst[31] & !inst[30] & !inst[29] & inst[28] & !inst[27] & !inst[26] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_44 = !inst[31] & !inst[30] & !inst[29] & inst[28] & inst[27] & !inst[26] & !inst[25] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_45 = !inst[26] & inst[25] & inst[6] & !inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_46 = !inst[26] & inst[6] & !inst[5] & !inst[4] & inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_47 = !inst[26] & !inst[25] & inst[6] & !inst[5] & !inst[4] & inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_48 = !inst[31] & !inst[30] & !inst[29] & !inst[28] & !inst[26] & !inst[25] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_49 = !inst[31] & !inst[30] & !inst[29] & !inst[26] & inst[25] & inst[6] & !inst[5] & inst[4] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_50 = !inst[31] & !inst[30] & !inst[29] & !inst[27] & !inst[26] & inst[6] & !inst[5] & !inst[3] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_51 = !inst[26] & !inst[25] & inst[6] & !inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_52 = !inst[26] & inst[25] & inst[6] & !inst[5] & !inst[4] & !inst[3] & inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_53 = !inst[26] & !inst[25] & inst[6] & !inst[5] & !inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+wire tmp_54 = !inst[26] & inst[25] & inst[6] & !inst[5] & !inst[4] & !inst[2] & inst[1] & inst[0] & 1'b1;
+assign pipe[1] = tmp_1 | tmp_3 | tmp_11 | tmp_14 | tmp_22 | tmp_31 | 1'b0;
+assign pipe[0] = tmp_4 | tmp_5 | tmp_12 | tmp_13 | tmp_16 | tmp_17 | tmp_19 | tmp_20 | tmp_21 | tmp_23 | tmp_24 | tmp_26 | tmp_28 | tmp_29 | tmp_30 | tmp_32 | tmp_33 | tmp_34 | tmp_37 | tmp_38 | tmp_40 | tmp_42 | tmp_44 | tmp_45 | tmp_47 | tmp_48 | tmp_49 | tmp_50 | tmp_51 | tmp_52 | tmp_53 | tmp_54 | 1'b0;
+assign size[1] = tmp_5 | tmp_11 | tmp_13 | tmp_19 | tmp_21 | tmp_29 | tmp_33 | tmp_36 | tmp_38 | tmp_40 | tmp_42 | tmp_45 | tmp_49 | tmp_52 | tmp_54 | 1'b0;
+assign size[0] = tmp_1 | tmp_3 | tmp_4 | tmp_12 | tmp_14 | tmp_15 | tmp_20 | tmp_23 | tmp_26 | tmp_27 | tmp_28 | tmp_30 | tmp_31 | tmp_32 | tmp_34 | tmp_37 | tmp_41 | tmp_44 | tmp_47 | tmp_48 | tmp_51 | tmp_53 | 1'b0;
+assign op[5] = tmp_0 | tmp_2 | tmp_5 | tmp_11 | tmp_13 | tmp_28 | tmp_29 | tmp_34 | tmp_36 | tmp_37 | tmp_38 | tmp_40 | tmp_42 | tmp_45 | tmp_49 | 1'b0;
+assign op[4] = tmp_1 | tmp_3 | tmp_4 | tmp_5 | tmp_19 | tmp_20 | tmp_21 | tmp_23 | tmp_24 | tmp_26 | tmp_30 | tmp_33 | tmp_34 | tmp_37 | tmp_38 | tmp_52 | tmp_54 | 1'b0;
+assign op[3] = tmp_1 | tmp_11 | tmp_12 | tmp_14 | tmp_16 | tmp_17 | tmp_19 | tmp_21 | tmp_28 | tmp_29 | tmp_31 | tmp_32 | tmp_33 | tmp_34 | tmp_40 | tmp_42 | tmp_44 | tmp_52 | tmp_54 | 1'b0;
+assign op[2] = tmp_0 | tmp_4 | tmp_9 | tmp_13 | tmp_14 | tmp_15 | tmp_19 | tmp_22 | tmp_26 | tmp_27 | tmp_28 | tmp_32 | tmp_35 | tmp_37 | tmp_40 | tmp_41 | tmp_42 | tmp_47 | tmp_48 | tmp_52 | tmp_54 | 1'b0;
+assign op[1] = tmp_0 | tmp_2 | tmp_8 | tmp_10 | tmp_15 | tmp_16 | tmp_20 | tmp_21 | tmp_22 | tmp_24 | tmp_29 | tmp_30 | tmp_31 | tmp_32 | tmp_39 | tmp_42 | tmp_43 | tmp_46 | tmp_51 | tmp_52 | 1'b0;
+assign op[0] = tmp_3 | tmp_4 | tmp_6 | tmp_7 | tmp_8 | tmp_12 | tmp_13 | tmp_17 | tmp_18 | tmp_25 | tmp_29 | tmp_30 | tmp_33 | tmp_40 | tmp_50 | tmp_53 | tmp_54 | 1'b0;
+assign use_frm = tmp_2 | tmp_12 | tmp_13 | tmp_19 | tmp_21 | tmp_23 | tmp_24 | tmp_28 | tmp_29 | tmp_32 | tmp_33 | tmp_34 | tmp_37 | tmp_38 | tmp_44 | tmp_45 | tmp_47 | tmp_48 | tmp_49 | tmp_50 | tmp_51 | tmp_52 | tmp_53 | tmp_54 | 1'b0;
 endmodule
 
 module decoder_fpu_ctrl (
@@ -913,8 +997,8 @@ package myooo_pkg;
   localparam CMT_ID_SIZE = CMT_ENTRY_SIZE * 2;
   localparam CMT_ID_W = $clog2(CMT_ID_SIZE);
 
-  localparam MSHR_ENTRY_SIZE = 8;
-  localparam MSHR_ENTRY_W = $clog2(MSHR_ENTRY_SIZE);
+  localparam MISSU_ENTRY_SIZE = 8;
+  localparam MISSU_ENTRY_W = $clog2(MISSU_ENTRY_SIZE);
 
   localparam INT_REGRD_PORT_NUM = myooo_conf_pkg::ALU_INST_NUM * 2 +    // ALU port
                                   myooo_conf_pkg::LSU_INST_NUM +        // LSU port
@@ -1401,7 +1485,7 @@ typedef struct packed {
 } commit_blk_t;
 
 function automatic logic id0_is_older_than_id1 (cmt_id_t cmt_id0, grp_id_t grp_id0,
-                                                cmt_id_t cmt_id1, grp_id_t grp_id1);
+                                      cmt_id_t cmt_id1, grp_id_t grp_id1);
 logic                                w_cmt_is_older;
 logic                                w_0_older_than_1;
 
@@ -1870,6 +1954,7 @@ endpackage // myooo_alu_pkg
 // ------------------------------------------------------------------------
 
 package myooo_lsu_pkg;
+
   import myooo_pkg::*;
   import decoder_inst_cat_pkg::*;
 
@@ -1884,47 +1969,15 @@ package myooo_lsu_pkg;
   localparam ICACHE_TAG_LOW = $clog2(myooo_conf_pkg::ICACHE_WORDS);
   localparam ICACHE_DATA_B_W = myooo_conf_pkg::ICACHE_DATA_W / 8;
 
+// 128 / 8 = 16
   localparam DCACHE_DATA_B_W = myooo_conf_pkg::DCACHE_DATA_W / 8;
 
   localparam DCACHE_TAG_HIGH = riscv_pkg::PADDR_W-1;
-  localparam DCACHE_TAG_LOW  = $clog2(DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_WORDS) < 12 ? $clog2(DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_WORDS) : 12;
+// log2(16 * 32) = 4 + 5 = 9
+  localparam DCACHE_TAG_LOW = $clog2(DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_WORDS);
 
 localparam DCACHE_BANK_LOW  = $clog2(DCACHE_DATA_B_W);
 localparam DCACHE_BANK_HIGH = $clog2(myooo_conf_pkg::DCACHE_BANKS) + DCACHE_BANK_LOW - 1;
-
-// ---------------------------
-// L1D Cache Port declaration
-// ---------------------------
-// LSU Pipeline + STQ Interface + PTW + Snoop
-localparam L1D_LS_PORT_BASE  = 0;
-
-localparam L1D_SNOOP_PORT    = 0;
-localparam L1D_PTW_PORT      = L1D_SNOOP_PORT + 1;
-localparam L1D_MISSU_PORT    = L1D_PTW_PORT   + 1;
-localparam L1D_ST_RD_PORT    = L1D_MISSU_PORT + 1;
-localparam L1D_PIPT_PORT_NUM = L1D_ST_RD_PORT + 1;
-
-
-
-//         standard                                   (512 / 8) *                           128 *                            4 = 32,768 B (8KB)
-//         boomv3                                     (128 / 8) *                            64 *                            4 = 4096 B (4KB)
-localparam DCACHE_B_SIZE     = (DCACHE_DATA_B_W) * myooo_conf_pkg::DCACHE_WORDS * myooo_conf_pkg::DCACHE_WAYS;
-localparam DCACHE_ACC_LENGTH = $clog2((DCACHE_DATA_B_W) * myooo_conf_pkg::DCACHE_WORDS);
-localparam DCACHE_COLOR_W    = DCACHE_ACC_LENGTH > 12 ? DCACHE_ACC_LENGTH - 12 : 0;
-typedef logic [DCACHE_COLOR_W-1: 0] dc_color_t;
-typedef logic [DCACHE_ACC_LENGTH-1: $clog2(DCACHE_DATA_B_W)] dc_index_t;
-
-function automatic dc_index_t gen_dc_index (myooo_pkg::vaddr_t va);
-  return va[DCACHE_ACC_LENGTH-1: $clog2(myooo_conf_pkg::DCACHE_DATA_W/8)];
-endfunction // gen_dc_index
-
-function automatic dc_index_t gen_dc_pa_index (myooo_pkg::paddr_t pa, dc_color_t color);
-  if (DCACHE_ACC_LENGTH > 12) begin
-    return {color, pa[11: $clog2(DCACHE_DATA_B_W)]};
-  end else begin
-    return pa[DCACHE_ACC_LENGTH-1: $clog2(DCACHE_DATA_B_W)];
-  end
-endfunction // gen_dc_pa_index
 
 // DCache Data Types
 typedef logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] dc_ways_idx_t;
@@ -1932,14 +1985,14 @@ typedef logic [myooo_conf_pkg::DCACHE_WAYS-1 : 0]        dc_ways_t;
 typedef logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]       dc_data_t;
 typedef logic [myooo_conf_pkg::DCACHE_DATA_W/8-1: 0]     dc_strb_t;
 
-localparam MEM_Q_SIZE = myooo_conf_pkg::LDQ_SIZE > myooo_conf_pkg::STQ_SIZE ?
-                        myooo_conf_pkg::LDQ_SIZE :
-                        myooo_conf_pkg::STQ_SIZE;
+  localparam MEM_Q_SIZE = myooo_conf_pkg::LDQ_SIZE > myooo_conf_pkg::STQ_SIZE ?
+                          myooo_conf_pkg::LDQ_SIZE :
+                          myooo_conf_pkg::STQ_SIZE;
 
 localparam LSU_IQ_ENTRY_SIZE = myooo_conf_pkg::MEM_DISP_SIZE / myooo_conf_pkg::LSU_INST_NUM;
 
-localparam HAZARD_INDEX_SIZE = myooo_conf_pkg::MSHR_ENTRY_SIZE > myooo_conf_pkg::STQ_SIZE ?
-                               myooo_conf_pkg::MSHR_ENTRY_SIZE :
+localparam HAZARD_INDEX_SIZE = myooo_conf_pkg::MISSU_ENTRY_SIZE > myooo_conf_pkg::STQ_SIZE ?
+                               myooo_conf_pkg::MISSU_ENTRY_SIZE :
                                myooo_conf_pkg::STQ_SIZE;
 
 typedef enum logic [ 1: 0] {
@@ -1967,9 +2020,9 @@ typedef enum logic [ 2: 0] {
 typedef enum logic [ 2: 0] {
   EX2_HAZ_NONE,
   EX2_HAZ_L1D_CONFLICT,
-  EX2_HAZ_MSHR_ASSIGNED,
-  EX2_HAZ_MSHR_FULL,
-  EX2_HAZ_OLDER_SAME_ADDR,
+  EX2_HAZ_MISSU_ASSIGNED,
+  EX2_HAZ_MISSU_FULL,
+  EX2_HAZ_MISSU_EVICT_CONFLICT,
   EX2_HAZ_RMW_ORDER_HAZ,
   EX2_HAZ_STQ_NONFWD_HAZ,
   EX2_HAZ_STQ_FWD_MISS   // Only use in COARSE_LDST_FWD mode
@@ -2186,7 +2239,6 @@ endfunction // assign_issue
   typedef struct packed {
     mem_cmd_t cmd;
     myooo_pkg::paddr_t addr;
-    dc_color_t          color;
     dc_data_t data;
     dc_strb_t byte_en;
   } l2_req_t;
@@ -2196,30 +2248,27 @@ endfunction // assign_issue
   } l2_resp_t;
 
 typedef struct packed {
-  dc_data_t           data;
-  dc_ways_idx_t       way;
-  myooo_pkg::paddr_t paddr;
-  dc_color_t          color;
+  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0] data;
+  dc_ways_idx_t way;
+  myooo_pkg::paddr_t           paddr;
 } evict_payload_t;
 
 typedef struct packed {
   myooo_pkg::paddr_t paddr;
-  dc_color_t          color;
-  logic               is_uc;
-  dc_ways_idx_t       way;
-} mshr_req_t;
+  logic             is_uc;
+  dc_ways_idx_t     way;
+} missu_req_t;
 
 typedef struct packed {
   logic                          full;
   logic                          evict_conflict;
   logic                          allocated;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_index_oh;
-} mshr_resp_t;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] missu_index_oh;
+} missu_resp_t;
 
 typedef struct packed {
   logic               valid;
   myooo_pkg::paddr_t paddr;
-  dc_color_t          color;
   logic               is_uc;
   logic               sent;
   logic               get_data;
@@ -2227,7 +2276,7 @@ typedef struct packed {
   dc_ways_idx_t       way;
 } mshr_entry_t;
 
-function mshr_entry_t assign_mshr_entry (logic valid, mshr_req_t req);
+function mshr_entry_t assign_mshr_entry (logic valid, missu_req_t req);
   mshr_entry_t ret;
 
   ret = 'h0;
@@ -2240,7 +2289,6 @@ function mshr_entry_t assign_mshr_entry (logic valid, mshr_req_t req);
   end else begin
     ret.paddr = {req.paddr[riscv_pkg::PADDR_W-1:$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)],
                    {$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W){1'b0}}};
-    ret.color = req.color;
   end
 
   return ret;
@@ -2255,9 +2303,9 @@ typedef struct packed {
 
 typedef struct packed {
   logic          valid;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] resolve_index_oh;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_entry_valids;
-} mshr_resolve_t;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] resolve_index_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] missu_entry_valids;
+} missu_resolve_t;
 
 typedef struct packed {
   logic valid;
@@ -2277,14 +2325,18 @@ typedef struct packed {
 } ldq_ex2_update_t;
 
 typedef struct packed {
-  myooo_pkg::cmt_id_t          cmt_id;
-  myooo_pkg::grp_id_t          grp_id;
-  myooo_pkg::paddr_t           paddr;
-  dc_color_t                    color;
-  logic                         is_uc;
-  decoder_lsu_ctrl_pkg::size_t  size; // Memory Access Size
+  myooo_pkg::cmt_id_t cmt_id;
+  myooo_pkg::grp_id_t grp_id;
+  myooo_pkg::paddr_t  paddr;
+  logic                is_uc;
+  decoder_lsu_ctrl_pkg::size_t size; // Memory Access Size
   decoder_lsu_ctrl_pkg::rmwop_t rmwop;
-  logic                         success; // SC is succeeded
+} stq_ex1_update_t;
+
+typedef struct packed {
+  myooo_pkg::cmt_id_t cmt_id;
+  myooo_pkg::grp_id_t grp_id;
+  logic                success;     // SC is succeeded
 } stq_ex2_update_t;
 
 
@@ -2300,29 +2352,26 @@ typedef struct packed {
 typedef struct packed {
   logic                                           s0_valid;
   logic                                           s0_tag_update_valid;
-  dc_ways_idx_t                                   s0_way;
-  myooo_pkg::paddr_t                             s0_paddr;
-  dc_color_t                                      s0_color;
-  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]     s0_data;
+  dc_ways_idx_t s0_way;
+  myooo_pkg::paddr_t                 s0_paddr;
+  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]       s0_data;
   logic [DCACHE_DATA_B_W-1: 0]                    s0_be;
-  myooo_lsu_pkg::mesi_t                          s0_mesi;
+  myooo_lsu_pkg::mesi_t                            s0_mesi;
 } dc_wr_req_t;
 
 typedef struct packed {
-  logic               s1_hit;
-  logic               s1_miss;
-  logic               s2_evicted_valid;
-  myooo_pkg::paddr_t s2_evicted_paddr;
-  dc_color_t          s2_evicted_color;
-  dc_data_t           s2_evicted_data;
-  mesi_t              s2_evicted_mesi;
+  logic                                     s1_hit;
+  logic                                     s1_miss;
+  logic                                     s2_evicted_valid;
+  myooo_pkg::paddr_t                         s2_evicted_paddr;
+  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0] s2_evicted_data;
+  mesi_t                                    s2_evicted_mesi;
 } dc_wr_resp_t;
 
 typedef struct packed {
-  myooo_pkg::paddr_t            s0_paddr;
-  dc_color_t                     s0_color;
-  myooo_lsu_pkg::dc_data_t      s0_data;
-  myooo_lsu_pkg::dc_strb_t      s0_be;
+  myooo_pkg::paddr_t              s0_paddr;
+  myooo_lsu_pkg::dc_data_t        s0_data;
+  myooo_lsu_pkg::dc_strb_t        s0_be;
   dc_ways_idx_t                  s0_way;
   mesi_t                         s0_mesi;
 } s0_l1d_wr_req_t;
@@ -2336,19 +2385,17 @@ typedef struct packed {
 
 
 typedef struct packed {
-  logic                  s2_evicted_valid;
-  dc_data_t              s2_evicted_data;
-  myooo_pkg::paddr_t    s2_evicted_paddr;
-  dc_color_t             s2_evicted_color;
-  myooo_lsu_pkg::mesi_t s2_evicted_mesi;
+  logic                                     s2_evicted_valid;
+  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0] s2_evicted_data;
+  myooo_pkg::paddr_t                         s2_evicted_paddr;
+  myooo_lsu_pkg::mesi_t                      s2_evicted_mesi;
 } s2_l1d_wr_resp_t;
 
 
 typedef struct packed {
   logic          valid;
   logic          high_priority;
-  dc_index_t     index;
-  myooo_pkg::paddr_t paddr_d1;
+  myooo_pkg::paddr_t paddr;
 } dc_read_req_t;
 
 typedef struct packed {
@@ -2520,7 +2567,6 @@ typedef struct packed {
   logic                 dead;
 
   myooo_pkg::maxaddr_t addr;
-  dc_color_t            color;
   logic                 paddr_valid;
   logic                 rs2_rel_read_accepted;
   logic                 rs2_phy_read_accepted;
@@ -2558,7 +2604,7 @@ typedef struct packed {
 typedef struct packed {
   logic                          full;
   logic                          conflict;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_index_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] missu_index_oh;
 } srq_resp_t;
 
 function logic is_amo_logical(mem_cmd_t cmd);
@@ -2606,7 +2652,7 @@ endfunction // isAMOLogical
 // typedef enum logic[3:0] {
 //   LDQ_INIT           ,
 //   LDQ_EX2_RUN        ,
-//   LDQ_MSHR_WAIT     ,
+//   LDQ_MISSU_WAIT     ,
 //   LDQ_TLB_HAZ        ,
 //   LDQ_ISSUE_WAIT     ,
 //   LDQ_CHECK_ST_DEPEND,
@@ -2614,8 +2660,8 @@ endfunction // isAMOLogical
 //   LDQ_WAIT_COMMIT    ,
 //   LDQ_WAIT_ENTRY_CLR ,
 //   LDQ_ISSUED         ,
-//   LDQ_MSHR_EVICT_HAZ  ,
-//   LDQ_MSHR_FULL       ,
+//   LDQ_MISSU_EVICT_HAZ  ,
+//   LDQ_MISSU_FULL       ,
 //   LDQ_WAIT_OLDEST    ,
 //   LDQ_NONFWD_HAZ_WAIT
 // } ldq_state_t;
@@ -2645,7 +2691,7 @@ typedef struct packed {
   // myooo_pkg::paddr_t paddr;
   myooo_pkg::maxaddr_t  addr;
   logic                  paddr_valid;
-//  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_haz_index_oh;
+//  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] missu_haz_index_oh;
 //  logic [myooo_conf_pkg::STQ_SIZE-1: 0]  hazard_index;
 
   logic                 dead;
@@ -2674,9 +2720,7 @@ typedef struct packed {
   logic                  l1d_high_priority;
   logic                  paddr_valid;
   myooo_pkg::paddr_t    paddr;
-  dc_color_t             color;
   logic                  is_uc;
-
 `ifdef SIMULATION
   logic [63: 0]          kanata_id;
   vaddr_t                sim_pc_addr;
@@ -2732,7 +2776,7 @@ typedef enum logic [2:0]{
   STATUS_HIT = 1,
   STATUS_MISS = 2,
   STATUS_L1D_CONFLICT = 3,
-  STATUS_MSHR_CONFLICT = 4
+  STATUS_MISSU_CONFLICT = 4
 } lsu_status_t;
 
 
@@ -2740,7 +2784,6 @@ typedef enum logic [2:0]{
 
 typedef struct packed {
   myooo_pkg::paddr_t paddr;
-  dc_color_t          color;
 } snoop_req_t;
 
 typedef struct packed {
@@ -2774,11 +2817,10 @@ typedef enum logic [1:0] {
 
 typedef struct packed {
   logic                                                valid;
-  myooo_pkg::paddr_t                                  paddr;
-  dc_color_t                                           color;
+  logic [riscv_pkg::PADDR_W-1: 0]                      paddr;
   logic [ST_BUF_WIDTH/8-1:0]                           strb;
   logic [ST_BUF_WIDTH-1: 0]                            data;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0]       mshr_index_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]       missu_index_oh;
   dc_ways_idx_t                                        l1d_way;
   logic                                                l1d_high_priority;
   decoder_lsu_ctrl_pkg::rmwop_t                        rmwop;
@@ -2797,7 +2839,7 @@ typedef enum logic [ 3: 0] {
   ST_BUF_RESP_L1D      = 2,
   ST_BUF_L1D_UPDATE    = 3,
   ST_BUF_L1D_UPD_RESP  = 4,
-  ST_BUF_MSHR_REFILL  = 5,
+  ST_BUF_MISSU_REFILL  = 5,
   ST_BUF_WAIT_REFILL   = 6,
   ST_BUF_WAIT_FULL     = 7,
   ST_BUF_WAIT_EVICT    = 8,
@@ -2814,7 +2856,6 @@ function st_buffer_entry_t assign_st_buffer (
    myooo_pkg::grp_id_t grp_id,
 `endif // SIMULATION
    myooo_pkg::paddr_t  paddr,
-   dc_color_t           color,
    logic [ST_BUF_WIDTH/8-1: 0]   strb,
    logic [ST_BUF_WIDTH-1: 0]     data,
    decoder_lsu_ctrl_pkg::rmwop_t rmwop,
@@ -2826,7 +2867,6 @@ function st_buffer_entry_t assign_st_buffer (
 
   ret.valid = 1'b1;
   ret.paddr = paddr[riscv_pkg::PADDR_W-1:0];
-  ret.color = color;
   ret.strb  = strb;
   ret.data  = data;
 
@@ -2869,7 +2909,6 @@ typedef struct packed {
   myooo_pkg::paddr_t        paddr;
   logic                      is_uc;
   myooo_lsu_pkg::ex2_haz_t  hazard_typ;
-  dc_color_t                 color;
   logic [HAZARD_INDEX_SIZE-1: 0] hazard_index;
 } lsu_replay_queue_t;
 
@@ -2900,11 +2939,13 @@ modport slave  (input  ex2_update, ex2_payload);
 endinterface // ldq_upd_if
 
 interface stq_upd_if;
+  logic        ex1_update;
+  myooo_lsu_pkg::stq_ex1_update_t ex1_payload;
   logic        ex2_update;
   myooo_lsu_pkg::stq_ex2_update_t ex2_payload;
 
-modport master (output ex2_update, ex2_payload);
-modport slave  (input  ex2_update, ex2_payload);
+modport master (output ex1_update, ex1_payload, ex2_update, ex2_payload);
+modport slave  (input  ex1_update, ex1_payload, ex2_update, ex2_payload);
 
 endinterface // stq_upd_if
 // ------------------------------------------------------------------------
@@ -3951,102 +3992,28 @@ interface regwrite_if #(parameter REG_TYPE = myooo_pkg::GPR);
   modport slave (input valid,  input rnid,  input data);
 
 endinterface
-interface l1d_rd_vipt_if;
+interface l1d_rd_if;
 
-  /* verilator lint_off UNOPTFLAT */
-  logic                      s0_valid;
-  myooo_lsu_pkg::dc_index_t s0_index;
-  logic                      s0_high_priority;
+  logic             s0_valid;
+  myooo_pkg::paddr_t s0_paddr;
+  logic             s0_high_priority;
 
-  myooo_pkg::paddr_t           s1_paddr;
-  logic                         s1_hit;
-  myooo_lsu_pkg::dc_ways_idx_t s1_hit_way;
-  logic                         s1_miss;
-  logic                         s1_conflict;
-  myooo_lsu_pkg::mesi_t        s1_mesi;
-  myooo_lsu_pkg::dc_data_t     s1_data;
+  logic                                    s1_hit;
+  logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] s1_hit_way;
+  logic                                    s1_miss;
+  logic                                    s1_conflict;
+  myooo_lsu_pkg::mesi_t                     s1_mesi;
+  logic [myooo_conf_pkg::DCACHE_DATA_W-1:0] s1_data;
 
   // Eviction: Replaced Address
-  logic                         s1_replace_valid;
-  myooo_lsu_pkg::dc_ways_idx_t s1_replace_way;
-  myooo_lsu_pkg::mesi_t        s1_replace_mesi;
+  logic                                           s1_replace_valid;
+  logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] s1_replace_way;
+  myooo_lsu_pkg::mesi_t                            s1_replace_mesi;
 
-  modport master(
-    output s0_valid,
-    output s0_index,
-    output s0_high_priority,
-
-    output s1_paddr,
-    input  s1_hit,
-    input  s1_hit_way,
-    input  s1_miss,
-    input  s1_conflict,
-    input  s1_data,
-    input  s1_mesi,
-
-    input  s1_replace_valid,
-    input  s1_replace_way,
-    input  s1_replace_mesi
-  );
-
-  modport slave(
-    input  s0_valid,
-    input  s0_index,
-    input  s0_high_priority,
-
-    input  s1_paddr,
-    output s1_hit,
-    output s1_hit_way,
-    output s1_miss,
-    output s1_conflict,
-    output s1_data,
-    output s1_mesi,
-
-    output s1_replace_valid,
-    output s1_replace_way,
-    output s1_replace_mesi
-  );
-
-
-  modport watch (
-    input s1_hit,
-    input s1_hit_way,
-    input s1_miss,
-    input s1_conflict,
-    input s1_data,
-    input s1_mesi,
-
-    input s1_replace_valid,
-    input s1_replace_way,
-    input s1_replace_mesi
-  );
-
-endinterface // l1d_rd_vipt_if
-
-
-interface l1d_rd_pipt_if;
-
-  logic                      s0_valid;
-  myooo_pkg::paddr_t        s0_paddr;
-  myooo_lsu_pkg::dc_color_t s0_color;
-  logic                      s0_high_priority;
-
-  logic                         s1_hit;
-  myooo_lsu_pkg::dc_ways_idx_t s1_hit_way;
-  logic                         s1_miss;
-  logic                         s1_conflict;
-  myooo_lsu_pkg::mesi_t        s1_mesi;
-  myooo_lsu_pkg::dc_data_t     s1_data;
-
-  // Eviction: Replaced Address
-  logic                         s1_replace_valid;
-  myooo_lsu_pkg::dc_ways_idx_t s1_replace_way;
-  myooo_lsu_pkg::mesi_t        s1_replace_mesi;
 
   modport master(
     output s0_valid,
     output s0_paddr,
-    output s0_color,
     output s0_high_priority,
 
     input  s1_hit,
@@ -4064,7 +4031,6 @@ interface l1d_rd_pipt_if;
   modport slave(
     input  s0_valid,
     input  s0_paddr,
-    input  s0_color,
     input  s0_high_priority,
 
     output s1_hit,
@@ -4093,18 +4059,19 @@ interface l1d_rd_pipt_if;
     input s1_replace_mesi
   );
 
-endinterface // l1d_rd_pipt_if
+endinterface // l1d_rd_if
 
 
 interface l1d_wr_if;
 
-  logic                           s0_valid;
-  myooo_lsu_pkg::s0_l1d_wr_req_t s0_wr_req;
-  logic                           s0_unlock_valid;
+  logic                          s0_valid;
+  myooo_lsu_pkg::s0_l1d_wr_req_t  s0_wr_req;
+  myooo_lsu_pkg::mesi_t           s0_mesi;
+  logic                          s0_unlock_valid;
 
-  logic                            s1_resp_valid;
+  logic                          s1_resp_valid;
   myooo_lsu_pkg::s1_l1d_wr_resp_t s1_wr_resp;
-  logic                            s2_done;
+  logic                          s2_done;
   myooo_lsu_pkg::s2_l1d_wr_resp_t s2_wr_resp;
 
   modport master(
@@ -4143,10 +4110,10 @@ interface l1d_wr_if;
 endinterface // l1d_wr_if
 
 
-interface l1d_mshr_if;
+interface l1d_missu_if;
   logic load;
-  myooo_lsu_pkg::mshr_req_t  req_payload;
-  myooo_lsu_pkg::mshr_resp_t resp_payload;
+  myooo_lsu_pkg::missu_req_t  req_payload;
+  myooo_lsu_pkg::missu_resp_t resp_payload;
 
   modport master (
     output load,
@@ -4160,32 +4127,13 @@ interface l1d_mshr_if;
     output resp_payload
   );
 
-endinterface // l1d_mshr_if
-
-
-interface mshr_info_if;
-  logic      is_full;
-  logic      is_almost_full;
-  logic      is_empty;
-  modport master (
-    output is_full,
-    output is_almost_full,
-    output is_empty
-  );
-
-  modport slave (
-    input is_full,
-    input is_almost_full,
-    input is_empty
-  );
-
-endinterface // l1d_mshr_if
+endinterface // l1d_missu_if
 
 
 // Search Interface
 // from STQ --> LRQ Eviction
 // to search hitting eviction address
-interface mshr_evict_search_if;
+interface missu_evict_search_if;
 logic                                    valid;
 logic [myooo_lsu_pkg::DCACHE_TAG_LOW-1:0] tag_low;
 logic [myooo_conf_pkg::DCACHE_WAYS-1: 0]  hit_ways;
@@ -4202,13 +4150,13 @@ modport slave (
   output hit_ways
 );
 
-endinterface // mshr_evict_search_if
+endinterface // missu_evict_search_if
 
 
 interface mshr_stbuf_search_if;
-  logic [myooo_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_index_oh;
-  logic [myooo_lsu_pkg::DCACHE_DATA_B_W-1: 0]  stbuf_be;
-  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]   stbuf_data;
+  logic [myooo_pkg::MISSU_ENTRY_SIZE-1: 0]    mshr_index_oh;
+  logic [myooo_lsu_pkg::DCACHE_DATA_B_W-1: 0] stbuf_be;
+  logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]  stbuf_data;
 
   modport master (
     output mshr_index_oh,
@@ -4264,35 +4212,35 @@ modport slave (
 
 endinterface // l1d_evict_if
 
-interface mshr_dc_search_if;
+interface missu_dc_search_if;
 
 logic valid;
-logic [myooo_pkg::MSHR_ENTRY_W-1: 0] index;
-myooo_lsu_pkg::mshr_entry_t mshr_entry;
+logic [myooo_pkg::MISSU_ENTRY_W-1: 0] index;
+myooo_lsu_pkg::mshr_entry_t missu_entry;
 
 modport master (
   output valid,
   output index,
-  input  mshr_entry
+  input  missu_entry
 );
 
 modport slave (
   input  valid,
   input  index,
-  output mshr_entry
+  output missu_entry
 );
 
-endinterface // mshr_dc_search_if
+endinterface // missu_dc_search_if
 
 
-interface mshr_pa_search_if;
+interface missu_pa_search_if;
 
 logic                                 s0_valid;
 myooo_pkg::paddr_t       s0_paddr;
-logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] s1_hit_index_oh;
-logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] s1_hit_update_index_oh;
-logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] s1_evict_hit_index_oh;
-logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] s1_evict_sent;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] s1_hit_index_oh;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] s1_hit_update_index_oh;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] s1_evict_hit_index_oh;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] s1_evict_sent;
 
 modport master (
   output s0_valid,
@@ -4312,7 +4260,7 @@ modport slave (
   output s1_evict_sent
 );
 
-endinterface // mshr_pa_search_if
+endinterface // missu_pa_search_if
 
 
 interface ldq_replay_if;
@@ -4405,73 +4353,7 @@ modport slave (
 
 endinterface // fwd_check_if
 
-
-interface lsu_pipe_cmp_master_if;
-
-myooo_pkg::cmt_id_t                       ex0_cmt_id;
-myooo_pkg::grp_id_t                       ex0_grp_id;
-logic [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex1_has_older_store;
-
-logic                                      ex2_load_valid;
-myooo_pkg::paddr_t                        ex2_paddr;
-logic [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex2_haz_same_paddr_store;
-
-modport master (
-  output ex0_cmt_id,
-  output ex0_grp_id,
-  input  ex1_has_older_store,
-
-  output ex2_load_valid,
-  output ex2_paddr,
-  input  ex2_haz_same_paddr_store
-);
-
-modport slave (
-  input  ex0_cmt_id,
-  input  ex0_grp_id,
-  output ex1_has_older_store,
-
-  input  ex2_load_valid,
-  input  ex2_paddr,
-  output ex2_haz_same_paddr_store
-);
-
-endinterface // lsu_pipe_cmp_master_if
-
-
-interface lsu_pipe_cmp_slave_if;
-
-myooo_pkg::cmt_id_t [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex0_cmt_id;
-myooo_pkg::grp_id_t [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex0_grp_id;
-logic                [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex1_has_older_store;
-
-logic                                      [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex2_load_valid;
-myooo_pkg::paddr_t                        [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex2_paddr;
-logic [myooo_conf_pkg::LSU_INST_NUM-1: 0] [myooo_conf_pkg::LSU_INST_NUM-2: 0] ex2_haz_same_paddr_store;
-
-modport master (
-  output ex0_cmt_id,
-  output ex0_grp_id,
-  input  ex1_has_older_store,
-
-  output ex2_load_valid,
-  output ex2_paddr,
-  input  ex2_haz_same_paddr_store
-);
-
-modport slave (
-  input  ex0_cmt_id,
-  input  ex0_grp_id,
-  output ex1_has_older_store,
-
-  input  ex2_load_valid,
-  input  ex2_paddr,
-  output ex2_haz_same_paddr_store
-);
-
-endinterface // lsu_pipe_cmp_slave_if
-
-interface mshr_fwd_if;
+interface missu_fwd_if;
 logic                                     ex2_valid;
 myooo_pkg::paddr_t           ex2_paddr;
 logic                                     ex2_fwd_valid;
@@ -4493,7 +4375,7 @@ modport slave
    output ex2_fwd_data
    );
 
-endinterface // mshr_fwd_if
+endinterface // missu_fwd_if
 
 
 interface ldq_haz_check_if;
@@ -4662,12 +4544,12 @@ interface lsu_access_if;
 
   logic                           resp_valid;
   myooo_lsu_pkg::lsu_status_t      status;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_conflicted_idx_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] missu_conflicted_idx_oh;
 
   riscv_pkg::xlen_t  data;
 
   logic                                 conflict_resolve_vld;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] conflict_resolve_idx_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] conflict_resolve_idx_oh;
 
   modport master (
     output req_valid,
@@ -4675,7 +4557,7 @@ interface lsu_access_if;
     output size,
     input  resp_valid,
     input  status,
-    input  mshr_conflicted_idx_oh,
+    input  missu_conflicted_idx_oh,
     input  data,
     input  conflict_resolve_vld,
     input  conflict_resolve_idx_oh
@@ -4687,7 +4569,7 @@ interface lsu_access_if;
     input  size,
     output resp_valid,
     output status,
-    output mshr_conflicted_idx_oh,
+    output missu_conflicted_idx_oh,
     output data,
     output conflict_resolve_vld,
     output conflict_resolve_idx_oh
@@ -4787,7 +4669,6 @@ interface l1d_snoop_if;
   logic                                        req_s0_valid;
   myooo_lsu_pkg::l1d_snp_cmd_t                req_s0_cmd;
   myooo_pkg::paddr_t                          req_s0_paddr ;
-  myooo_lsu_pkg::dc_color_t                   req_s0_color;
   logic [myooo_conf_pkg::DCACHE_WAYS-1: 0]    req_s0_ways;
 
   logic                                        resp_s1_valid;
@@ -4800,7 +4681,6 @@ interface l1d_snoop_if;
     output req_s0_valid,
     output req_s0_cmd,
     output req_s0_paddr,
-    output req_s0_color,
     output req_s0_ways,
     input  resp_s1_valid,
     input  resp_s1_status,
@@ -4813,7 +4693,6 @@ interface l1d_snoop_if;
     input  req_s0_valid,
     input  req_s0_cmd,
     input  req_s0_paddr,
-    input  req_s0_color,
     input  req_s0_ways,
     output resp_s1_valid,
     output resp_s1_status,
@@ -4826,8 +4705,8 @@ endinterface // l1d_snoop_if
 
 
 interface stq_snoop_if;
-  logic                      req_s0_valid;
-  myooo_pkg::paddr_t        req_s0_paddr;
+  logic                           req_s0_valid;
+  myooo_pkg::paddr_t req_s0_paddr ;
 
   logic                                      resp_s1_valid;
   logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]  resp_s1_data;
@@ -4855,17 +4734,18 @@ endinterface // stq_snoop_if
 
 
 interface mshr_snoop_if;
-  logic                      req_s0_valid;
-  myooo_pkg::paddr_t        req_s0_paddr;
-
+  logic               req_s0_valid;
+  myooo_pkg::paddr_t req_s0_paddr;
   logic                                        resp_s1_valid;
   logic                                        resp_s1_evict_valid;
   logic [myooo_lsu_pkg::DCACHE_DATA_B_W-1: 0] resp_s1_be;
   logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]  resp_s1_data;
 
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] resp_s1_hit_index;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] entry_valid;
-  logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] entry_resolved;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] resp_s1_hit_index;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] entry_valid;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] entry_resolved;
+
+  // logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] s1_hit_evict_index;
 
   modport master (
     output req_s0_valid,
@@ -4897,8 +4777,8 @@ endinterface // mshr_snoop_if
 
 
 interface stbuf_snoop_if;
-  logic                      req_s0_valid;
-  myooo_pkg::paddr_t        req_s0_paddr ;
+  logic                           req_s0_valid;
+  myooo_pkg::paddr_t req_s0_paddr ;
 
   logic                                      resp_s1_valid;
   logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]  resp_s1_data;
@@ -4926,8 +4806,8 @@ endinterface // stbuf_snoop_if
 
 
 interface streq_snoop_if;
-  logic                      req_s0_valid;
-  myooo_pkg::paddr_t        req_s0_paddr;
+  logic                           req_s0_valid;
+  myooo_pkg::paddr_t req_s0_paddr ;
 
   logic                                        resp_s1_valid;
   logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]  resp_s1_data;
@@ -4955,16 +4835,15 @@ endinterface // streq_snoop_if
 
 
 interface st_buffer_if;
-logic                                       valid;
+logic                                     valid;
 myooo_pkg::paddr_t                         paddr;
-myooo_lsu_pkg::dc_color_t                  color;
 logic [myooo_lsu_pkg::ST_BUF_WIDTH/8-1: 0] strb;
 logic [myooo_lsu_pkg::ST_BUF_WIDTH-1: 0]   data;
-logic                                       is_rmw;
-decoder_lsu_ctrl_pkg::rmwop_t               rmwop;
-decoder_lsu_ctrl_pkg::size_t                size;
+logic                                     is_rmw;
+decoder_lsu_ctrl_pkg::rmwop_t             rmwop;
+decoder_lsu_ctrl_pkg::size_t              size;
 
-logic                                       is_empty;
+logic                                     is_empty;
 
 `ifdef SIMULATION
 myooo_pkg::cmt_id_t cmt_id;
@@ -4976,7 +4855,6 @@ myooo_lsu_pkg::st_buffer_resp_t resp;
 modport master (
   output valid,
   output paddr,
-  output color,
   output strb,
   output data,
   output is_rmw,
@@ -4994,7 +4872,6 @@ modport master (
 modport slave (
   input valid,
   input paddr,
-  input color,
   input strb,
   input data,
   input is_rmw,
@@ -5012,7 +4889,6 @@ modport slave (
 modport monitor (
   input valid,
   input paddr,
-  input color,
   input strb,
   input data,
   input is_rmw,
@@ -5200,7 +5076,7 @@ modport slave(
 endinterface // done_if
 
 module connect_done_if (done_if.slave slave, done_if.master master);
-  assign  master.done     = slave.done    ; 
+  assign  master.done     = slave.done    ;
   assign  master.index_oh = slave.index_oh;
   assign  master.payload  = slave.payload ;
 endmodule
@@ -7940,7 +7816,7 @@ end
 endgenerate
 
 
-myooo_lsu_vipt_top
+myooo_lsu_top
 u_lsu_top
   (
     .i_clk    (i_clk    ),
@@ -9514,13 +9390,13 @@ typedef enum logic [ 2: 0] {
   CHECK_L1D = 1,
   RESP_L1D  = 2,
   L2_REQUEST = 3,
-  WAIT_L1D_MSHR = 4,
+  WAIT_L1D_MISSU = 4,
   L2_RESP_WAIT = 5
 } state_t;
 
 state_t r_state;
 logic [$clog2(riscv_pkg::PG_LEVELS)-1: 0] r_count;
-logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] r_wait_conflicted_mshr_oh;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] r_wait_conflicted_missu_oh;
 
 logic [PTW_PORT_NUM-1: 0]             w_ptw_valid;
 logic [PTW_PORT_NUM-1: 0]             w_ptw_accept;
@@ -9665,9 +9541,9 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
               // L1D port conflict : retry
               r_state <= CHECK_L1D;
             end
-            myooo_lsu_pkg::STATUS_MSHR_CONFLICT : begin
-              r_state <= WAIT_L1D_MSHR;
-              r_wait_conflicted_mshr_oh <= lsu_access.mshr_conflicted_idx_oh;
+            myooo_lsu_pkg::STATUS_MISSU_CONFLICT : begin
+              r_state <= WAIT_L1D_MISSU;
+              r_wait_conflicted_missu_oh <= lsu_access.missu_conflicted_idx_oh;
             end
             default : begin
 `ifdef SIMULATION
@@ -9681,9 +9557,9 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
 `endif // SIMULATION
         end // else: !if(lsu_access.resp_valid)
       end
-      WAIT_L1D_MSHR : begin
+      WAIT_L1D_MISSU : begin
         if (lsu_access.conflict_resolve_vld &&
-            lsu_access.conflict_resolve_idx_oh == r_wait_conflicted_mshr_oh) begin
+            lsu_access.conflict_resolve_idx_oh == r_wait_conflicted_missu_oh) begin
           r_state <= CHECK_L1D;
         end
       end
@@ -11838,10 +11714,8 @@ dc_data_t                                       w_dat_ram_data;
 // ------------------------
 // Instruction Prefetcher
 // ------------------------
-logic      w_pref_l2_req_valid ;
-paddr_t    w_pref_l2_req_paddr ;
-dc_color_t w_pref_l2_req_color ;
-
+logic   w_pref_l2_req_valid ;
+paddr_t w_pref_l2_req_paddr ;
 logic     w_f1_pref_paddr_hit;
 dc_data_t w_f1_pref_hit_data;
 logic     r_f2_pref_paddr_hit;
@@ -12123,7 +11997,6 @@ always_comb begin
     ic_l2_req.valid           = 1'b1;
     ic_l2_req.payload.cmd     = M_XRD;
     ic_l2_req.payload.addr    = w_pref_l2_req_paddr;
-    ic_l2_req.payload.color   = w_pref_l2_req_color;
     ic_l2_req.tag             = {L2_UPPER_TAG_IC, {(L2_CMD_TAG_W-3){1'b0}}, 1'b1};
     ic_l2_req.payload.data    = 'h0;
     ic_l2_req.payload.byte_en = 'h0;
@@ -12131,7 +12004,6 @@ always_comb begin
     ic_l2_req.valid           = (r_ic_state == ICReq) & !r_f2_working_pref_hit;
     ic_l2_req.payload.cmd     = M_XRD;
     ic_l2_req.payload.addr    = r_f2_paddr;
-    ic_l2_req.payload.color   = r_f2_vaddr[12 +: DCACHE_COLOR_W];
     ic_l2_req.tag             = {L2_UPPER_TAG_IC, {(L2_CMD_TAG_W-2){1'b0}}};
     ic_l2_req.payload.data    = 'h0;
     ic_l2_req.payload.byte_en = 'h0;
@@ -12175,7 +12047,6 @@ u_ic_pref
    .o_pref_l2_req_valid (w_pref_l2_req_valid),
    .i_pref_l2_req_ready (ic_l2_req.ready),
    .o_pref_l2_req_paddr (w_pref_l2_req_paddr),
-   .o_pref_l2_req_color (w_pref_l2_req_color),
 
    // Response prefetech
    .i_pref_l2_resp_valid(ic_l2_pref_resp_fire),
@@ -12299,10 +12170,9 @@ module myooo_ic_pref
  input paddr_t  i_ic_l2_req_paddr,
 
  // Requests prefetch
- output logic      o_pref_l2_req_valid,
- input logic       i_pref_l2_req_ready,
- output paddr_t    o_pref_l2_req_paddr,
- output dc_color_t o_pref_l2_req_color,
+ output logic   o_pref_l2_req_valid,
+ input logic    i_pref_l2_req_ready,
+ output paddr_t o_pref_l2_req_paddr,
 
  // Response prefetech
  input logic     i_pref_l2_resp_valid,
@@ -12377,7 +12247,6 @@ end // always_ff @ (posedge i_clk, negedge i_reset_n)
 
 assign o_pref_l2_req_valid = (r_pref_state == ICReq);
 assign o_pref_l2_req_paddr = r_pref_paddr;
-assign o_pref_l2_req_color = r_pref_vaddr[12 +: DCACHE_COLOR_W];
 
 // Search PAaddr
 always_ff @ (posedge i_clk, negedge i_reset_n) begin
@@ -13910,7 +13779,7 @@ endmodule // myooo_rename_map
 // NAME : myooo_inflight_list
 // TYPE : module
 // ------------------------------------------------------------------------
-// MyOOO Inflight Physical ID List
+// Myooo Inflight Physical ID List
 // ------------------------------------------------------------------------
 //
 // ------------------------------------------------------------------------
@@ -15428,7 +15297,8 @@ assign w_commit.tval          = (w_commit.except_type == myooo_pkg::INST_ADDR_MI
                                 r_rob_except.tval;
 encoder #(.SIZE(CMT_ENTRY_SIZE)) except_pc_vaddr (.i_in (r_rob_except.grp_id), .o_out(w_cmt_except_valid_encoded));
 /* verilator lint_off WIDTH */
-assign w_commit.epc          = w_out_payload.disp[w_cmt_except_valid_encoded].pc_addr;
+assign w_commit.epc          = w_int_valid ? w_out_payload.disp[0].pc_addr :
+                               w_out_payload.disp[w_cmt_except_valid_encoded].pc_addr;
 assign w_commit.dead_id      = (w_out_entry.dead | w_dead_grp_id | {{(myooo_conf_pkg::DISP_SIZE-1){w_int_valid}}, 1'b0}) & w_commit.grp_id;
 assign w_commit.flush_valid  = {myooo_conf_pkg::DISP_SIZE{w_rob_except_match}} & r_rob_except.grp_id | w_int_valid;
 
@@ -15936,6 +15806,38 @@ end
 
 `endif // ILA_DEBUG
 
+logic [$clog2(myooo_conf_pkg::CMT_ENTRY_SIZE)-1: 0] w_commited_idx;
+assign w_commited_idx = w_out_cmt_entry_id;
+
+rob_payload_t committed_rob_payload;
+assign committed_rob_payload = u_payload_ram.data_array[w_commited_idx];
+
+int fp;
+
+always_ff @ (negedge i_clk) begin
+  if (w_out_valid) begin
+    for (int grp_idx = 0; grp_idx < DISP_SIZE; grp_idx++) begin
+      if (w_commit.grp_id[grp_idx] & !w_commit.dead_id[grp_idx]) begin
+        $fwrite(fp, "%t [%02d %02d] pc=%08x, %08x, DASM(%08x)",
+                $time,
+                w_commit.cmt_id, grp_idx,
+                committed_rob_payload.disp[grp_idx].pc_addr,
+                committed_rob_payload.disp[grp_idx].inst,
+                committed_rob_payload.disp[grp_idx].inst);
+        if (w_commit.except_valid[grp_idx]) begin
+          $fwrite(fp, " exception = %02d, tval = %08x",
+                  w_commit.except_type,
+                  w_commit.tval);
+        end
+        $fwrite(fp, "\n");
+      end // if (w_commit.grp_id[grp_idx] & !w_commit.dead_id[grp_idx])
+    end // for (int grp_idx = 0; grp_idx < DISP_SIZE; grp_idx++)
+  end // if (w_out_valid)
+end // always_ff @ (negedge i_clk)
+
+initial begin
+  fp = $fopen ("trace.log", "w");
+end
 
 endmodule // myooo_rob
 // ------------------------------------------------------------------------
@@ -18760,7 +18662,7 @@ assign o_valid = 1'b0;
 
 endmodule // myooo_zicond_alu
 // ------------------------------------------------------------------------
-// NAME : myooo_lsu_vipt_top
+// NAME : myooo_lsu_top
 // TYPE : package
 // ------------------------------------------------------------------------
 // LSU Top
@@ -18776,87 +18678,91 @@ endmodule // myooo_zicond_alu
 //  DCache
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_top
+module myooo_lsu_top
   import myooo_lsu_pkg::*;
 (
- input logic i_clk,
- input logic i_reset_n,
+    input logic i_clk,
+    input logic i_reset_n,
 
- /* CSR information */
- csr_info_if.slave           csr_info,
+    /* CSR information */
+    csr_info_if.slave                     csr_info,
 
- /* ROB notification interface */
- rob_info_if.slave           rob_info_if,
+    /* ROB notification interface */
+    rob_info_if.slave           rob_info_if,
 
- input logic [myooo_conf_pkg::DISP_SIZE-1:0] disp_valid[myooo_conf_pkg::LSU_INST_NUM],
- myooo_front_if.watch                        disp,
+    input logic [myooo_conf_pkg::DISP_SIZE-1:0] disp_valid[myooo_conf_pkg::LSU_INST_NUM],
+    myooo_front_if.watch                        disp,
+    cre_ret_if.slave    iss_cre_ret_if[myooo_conf_pkg::LSU_INST_NUM],
+    cre_ret_if.slave    ldq_cre_ret_if,
+    cre_ret_if.slave    stq_cre_ret_if,
 
- cre_ret_if.slave    iss_cre_ret_if[myooo_conf_pkg::LSU_INST_NUM],
- cre_ret_if.slave    ldq_cre_ret_if,
- cre_ret_if.slave    stq_cre_ret_if,
+    regread_if.master   int_rs1_regread[myooo_conf_pkg::LSU_INST_NUM-1: 0],
+    regread_if.master   int_rs2_regread[myooo_conf_pkg::STQ_REGRD_PORT_NUM],
+    regread_if.master   fp_rs2_regread [myooo_conf_pkg::STQ_REGRD_PORT_NUM],
 
- regread_if.master   int_rs1_regread[myooo_conf_pkg::LSU_INST_NUM-1: 0],
- regread_if.master   int_rs2_regread[myooo_conf_pkg::STQ_REGRD_PORT_NUM],
- regread_if.master   fp_rs2_regread [myooo_conf_pkg::STQ_REGRD_PORT_NUM],
+    // Page Table Walk I/O
+    tlb_ptw_if.master ptw_if[myooo_conf_pkg::LSU_INST_NUM],
 
- // Page Table Walk I/O
- tlb_ptw_if.master ptw_if[myooo_conf_pkg::LSU_INST_NUM],
+    // (Now) Use for PTW access L1D
+    lsu_access_if.slave   lsu_access,
 
- // (Now) Use for PTW access L1D
- lsu_access_if.slave   lsu_access,
+    l2_req_if.master  l1d_ext_req,
+    l2_resp_if.slave  l1d_ext_resp,
 
- l2_req_if.master  l1d_ext_req,
- l2_resp_if.slave  l1d_ext_resp,
+    /* Forwarding path */
+    early_wr_if.slave early_wr_in_if[myooo_pkg::REL_BUS_SIZE],
+    phy_wr_if.slave   phy_wr_in_if  [myooo_pkg::TGT_BUS_SIZE],
 
- /* Forwarding path */
- early_wr_if.slave early_wr_in_if[myooo_pkg::REL_BUS_SIZE],
- phy_wr_if.slave   phy_wr_in_if  [myooo_pkg::TGT_BUS_SIZE],
+    /* write output */
+    early_wr_if.master    early_wr_out_if[myooo_conf_pkg::LSU_INST_NUM],
+    phy_wr_if.master      phy_wr_out_if  [myooo_conf_pkg::LSU_INST_NUM],
+    lsu_mispred_if.master mispred_out_if [myooo_conf_pkg::LSU_INST_NUM],
 
- /* write output */
- early_wr_if.master    early_wr_out_if[myooo_conf_pkg::LSU_INST_NUM],
- phy_wr_if.master      phy_wr_out_if  [myooo_conf_pkg::LSU_INST_NUM],
- lsu_mispred_if.master mispred_out_if [myooo_conf_pkg::LSU_INST_NUM],
-
- done_report_if.master  done_report_if  [myooo_conf_pkg::LSU_INST_NUM],
- flush_report_if.master flush_report_if [myooo_conf_pkg::LSU_INST_NUM],
-
-
- // Internal Broadcast Interface
- snoop_info_if.monitor snoop_info_if,
- l1d_snoop_if.slave   l1d_snoop_if,
- stq_snoop_if.slave   stq_snoop_if,
- mshr_snoop_if.slave  mshr_snoop_if,
- stbuf_snoop_if.slave stbuf_snoop_if,
- streq_snoop_if.slave streq_snoop_if,
-
- /* SFENCE update information */
- sfence_if.master            sfence_if,
- /* FENCE.I update */
- output logic                o_fence_i,
+    done_report_if.master   done_report_if [myooo_conf_pkg::LSU_INST_NUM],
+    flush_report_if.master flush_report_if [myooo_conf_pkg::LSU_INST_NUM],
 
 
- // Commit notification
- commit_if.monitor commit_if,
- br_upd_if.slave   br_upd_if
- );
+    // Internal Broadcast Interface
+    snoop_info_if.monitor snoop_info_if,
+    l1d_snoop_if.slave   l1d_snoop_if,
+    stq_snoop_if.slave   stq_snoop_if,
+    mshr_snoop_if.slave  mshr_snoop_if,
+    stbuf_snoop_if.slave stbuf_snoop_if,
+    streq_snoop_if.slave streq_snoop_if,
 
-l1d_rd_vipt_if  w_l1d_rd_vipt_if [myooo_conf_pkg::LSU_INST_NUM] ();
-l1d_rd_pipt_if  w_l1d_rd_pipt_if [L1D_PIPT_PORT_NUM] ();
+    /* SFENCE update information */
+    sfence_if.master            sfence_if,
+    /* FENCE.I update */
+    output logic                o_fence_i,
+
+
+    // Commit notification
+    commit_if.monitor commit_if,
+    br_upd_if.slave              br_upd_if
+   );
+
+// LSU Pipeline + STQ Interface + PTW + Snoop
+localparam L1D_SNOOP_PORT    = 0;
+localparam L1D_PTW_PORT      = L1D_SNOOP_PORT   + 1;
+localparam L1D_LS_PORT_BASE  = L1D_PTW_PORT     + 1;
+localparam L1D_MISSU_PORT    = L1D_LS_PORT_BASE + myooo_conf_pkg::LSU_INST_NUM;
+localparam L1D_ST_RD_PORT    = L1D_MISSU_PORT     + 1;
+localparam L1D_RD_PORT_NUM   = L1D_ST_RD_PORT   + 1;
+
+l1d_rd_if  w_l1d_rd_if [L1D_RD_PORT_NUM] ();
 l1d_wr_if  w_l1d_stbuf_wr_if();
 l1d_wr_if  w_l1d_merge_if();
 l1d_wr_if  w_miss_l1d_wr_if();
 l1d_wr_if  w_snoop_wr_if();
 // LSU Pipeline + ST-Buffer
-l1d_mshr_if w_l1d_mshr_if[myooo_conf_pkg::LSU_INST_NUM + 1] ();
+l1d_missu_if w_l1d_missu_if[myooo_conf_pkg::LSU_INST_NUM + 1] ();
 fwd_check_if w_ex2_fwd_check[myooo_conf_pkg::LSU_INST_NUM] ();
 fwd_check_if w_stbuf_fwd_check[myooo_conf_pkg::LSU_INST_NUM] ();
 fwd_check_if w_streq_fwd_check[myooo_conf_pkg::LSU_INST_NUM] ();
 
-lsu_pipe_cmp_master_if w_lsu_pipe_master_cmp_if[myooo_conf_pkg::LSU_INST_NUM] ();
-lsu_pipe_cmp_slave_if  w_lsu_pipe_slave_cmp_if [myooo_conf_pkg::LSU_INST_NUM] ();
-
-mshr_resolve_t w_mshr_resolve;
-mshr_info_if    w_mshr_info_if();
+missu_resolve_t w_missu_resolve;
+logic     w_missu_is_full;
+logic     w_missu_is_empty;
 logic     w_stq_rmw_existed;
 
 lsu_mispred_if w_mispred_if [myooo_conf_pkg::LSU_INST_NUM]();
@@ -18873,7 +18779,7 @@ stq_upd_if  w_stq_upd_if[myooo_conf_pkg::LSU_INST_NUM]();
 myooo_pkg::grp_id_t      w_ldq_disp_valid;
 myooo_pkg::grp_id_t      w_stq_disp_valid;
 
-mshr_fwd_if w_mshr_fwd_if [myooo_conf_pkg::LSU_INST_NUM]();
+missu_fwd_if w_missu_fwd_if [myooo_conf_pkg::LSU_INST_NUM]();
 ldq_haz_check_if w_ldq_haz_check_if [myooo_conf_pkg::LSU_INST_NUM]();
 stq_haz_check_if w_stq_haz_check_if [myooo_conf_pkg::LSU_INST_NUM]();
 
@@ -18882,7 +18788,7 @@ rmw_order_check_if w_rmw_order_check_if[myooo_conf_pkg::LSU_INST_NUM]();
 lrsc_if  w_lrsc_if[myooo_conf_pkg::LSU_INST_NUM]();
 
 st_buffer_if            w_st_buffer_if();
-mshr_pa_search_if      w_mshr_pa_search_if();
+missu_pa_search_if      w_missu_pa_search_if();
 mshr_stbuf_search_if    w_mshr_stbuf_search_if();
 uc_write_if             w_uc_write_if();
 
@@ -18908,70 +18814,6 @@ assign w_sfence_if_slave.is_rs1_x0 = sfence_if.is_rs1_x0;
 assign w_sfence_if_slave.is_rs2_x0 = sfence_if.is_rs2_x0;
 assign w_sfence_if_slave.vaddr     = sfence_if.vaddr;
 
-generate if (myooo_conf_pkg::LSU_INST_NUM == 1) begin : gen_cmp_pipe_1
-end else if (myooo_conf_pkg::LSU_INST_NUM == 2) begin : gen_cmp_pipe_2
-
-  assign w_lsu_pipe_slave_cmp_if[0].ex0_cmt_id    [0] = w_lsu_pipe_master_cmp_if[1].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[0].ex0_grp_id    [0] = w_lsu_pipe_master_cmp_if[1].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[0].ex2_load_valid[0] = w_lsu_pipe_master_cmp_if[1].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[0].ex2_paddr     [0] = w_lsu_pipe_master_cmp_if[1].ex2_paddr;
-
-  assign w_lsu_pipe_master_cmp_if[1].ex1_has_older_store     [0] = w_lsu_pipe_slave_cmp_if[0].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[1].ex2_haz_same_paddr_store[0] = w_lsu_pipe_slave_cmp_if[0].ex2_haz_same_paddr_store;
-
-  assign w_lsu_pipe_slave_cmp_if[1].ex0_cmt_id    [0] = w_lsu_pipe_master_cmp_if[0].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[1].ex0_grp_id    [0] = w_lsu_pipe_master_cmp_if[0].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[1].ex2_load_valid[0] = w_lsu_pipe_master_cmp_if[0].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[1].ex2_paddr     [0] = w_lsu_pipe_master_cmp_if[0].ex2_paddr;
-
-  assign w_lsu_pipe_master_cmp_if[0].ex1_has_older_store     [0] = w_lsu_pipe_slave_cmp_if[1].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[0].ex2_haz_same_paddr_store[0] = w_lsu_pipe_slave_cmp_if[1].ex2_haz_same_paddr_store;
-
-end else if (myooo_conf_pkg::LSU_INST_NUM == 3) begin : gen_cmp_pipe_3
-
-  assign w_lsu_pipe_slave_cmp_if[0].ex0_cmt_id    [0] = w_lsu_pipe_master_cmp_if[1].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[0].ex0_grp_id    [0] = w_lsu_pipe_master_cmp_if[1].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[0].ex2_load_valid[0] = w_lsu_pipe_master_cmp_if[1].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[0].ex2_paddr     [0] = w_lsu_pipe_master_cmp_if[1].ex2_paddr;
-  assign w_lsu_pipe_slave_cmp_if[0].ex0_cmt_id    [1] = w_lsu_pipe_master_cmp_if[2].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[0].ex0_grp_id    [1] = w_lsu_pipe_master_cmp_if[2].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[0].ex2_load_valid[1] = w_lsu_pipe_master_cmp_if[2].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[0].ex2_paddr     [1] = w_lsu_pipe_master_cmp_if[2].ex2_paddr;
-
-  assign w_lsu_pipe_master_cmp_if[0].ex1_has_older_store     [0] = w_lsu_pipe_slave_cmp_if[1].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[0].ex2_haz_same_paddr_store[0] = w_lsu_pipe_slave_cmp_if[1].ex2_haz_same_paddr_store;
-  assign w_lsu_pipe_master_cmp_if[0].ex1_has_older_store     [1] = w_lsu_pipe_slave_cmp_if[2].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[0].ex2_haz_same_paddr_store[1] = w_lsu_pipe_slave_cmp_if[2].ex2_haz_same_paddr_store;
-
-  assign w_lsu_pipe_slave_cmp_if[1].ex0_cmt_id    [0] = w_lsu_pipe_master_cmp_if[0].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[1].ex0_grp_id    [0] = w_lsu_pipe_master_cmp_if[0].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[1].ex2_load_valid[0] = w_lsu_pipe_master_cmp_if[0].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[1].ex2_paddr     [0] = w_lsu_pipe_master_cmp_if[0].ex2_paddr;
-  assign w_lsu_pipe_slave_cmp_if[1].ex0_cmt_id    [1] = w_lsu_pipe_master_cmp_if[2].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[1].ex0_grp_id    [1] = w_lsu_pipe_master_cmp_if[2].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[1].ex2_load_valid[1] = w_lsu_pipe_master_cmp_if[2].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[1].ex2_paddr     [1] = w_lsu_pipe_master_cmp_if[2].ex2_paddr;
-
-  assign w_lsu_pipe_master_cmp_if[1].ex1_has_older_store     [0] = w_lsu_pipe_slave_cmp_if[0].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[1].ex2_haz_same_paddr_store[0] = w_lsu_pipe_slave_cmp_if[0].ex2_haz_same_paddr_store;
-  assign w_lsu_pipe_master_cmp_if[1].ex1_has_older_store     [1] = w_lsu_pipe_slave_cmp_if[2].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[1].ex2_haz_same_paddr_store[1] = w_lsu_pipe_slave_cmp_if[2].ex2_haz_same_paddr_store;
-
-  assign w_lsu_pipe_slave_cmp_if[2].ex0_cmt_id    [0] = w_lsu_pipe_master_cmp_if[0].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[2].ex0_grp_id    [0] = w_lsu_pipe_master_cmp_if[0].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[2].ex2_load_valid[0] = w_lsu_pipe_master_cmp_if[0].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[2].ex2_paddr     [0] = w_lsu_pipe_master_cmp_if[0].ex2_paddr;
-  assign w_lsu_pipe_slave_cmp_if[2].ex0_cmt_id    [1] = w_lsu_pipe_master_cmp_if[1].ex0_cmt_id;
-  assign w_lsu_pipe_slave_cmp_if[2].ex0_grp_id    [1] = w_lsu_pipe_master_cmp_if[1].ex0_grp_id;
-  assign w_lsu_pipe_slave_cmp_if[2].ex2_load_valid[1] = w_lsu_pipe_master_cmp_if[1].ex2_load_valid;
-  assign w_lsu_pipe_slave_cmp_if[2].ex2_paddr     [1] = w_lsu_pipe_master_cmp_if[1].ex2_paddr;
-
-  assign w_lsu_pipe_master_cmp_if[2].ex1_has_older_store     [0] = w_lsu_pipe_slave_cmp_if[0].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[2].ex2_haz_same_paddr_store[0] = w_lsu_pipe_slave_cmp_if[0].ex2_haz_same_paddr_store;
-  assign w_lsu_pipe_master_cmp_if[2].ex1_has_older_store     [1] = w_lsu_pipe_slave_cmp_if[1].ex1_has_older_store;
-  assign w_lsu_pipe_master_cmp_if[2].ex2_haz_same_paddr_store[1] = w_lsu_pipe_slave_cmp_if[1].ex2_haz_same_paddr_store;
-
-end endgenerate // block: gen_cmp_pipe_3
 
 generate for (genvar lsu_idx = 0; lsu_idx < myooo_conf_pkg::LSU_INST_NUM; lsu_idx++) begin : lsu_loop
 
@@ -18979,7 +18821,7 @@ generate for (genvar lsu_idx = 0; lsu_idx < myooo_conf_pkg::LSU_INST_NUM; lsu_id
   assign w_mispred_if[lsu_idx].rd_type   = mispred_out_if[lsu_idx].rd_type  ;
   assign w_mispred_if[lsu_idx].rd_rnid   = mispred_out_if[lsu_idx].rd_rnid  ;
 
-  myooo_lsu_vipt
+  myooo_lsu
   #(
     .LSU_PIPE_IDX(lsu_idx),
     .PORT_BASE(lsu_idx * (myooo_conf_pkg::MEM_DISP_SIZE / myooo_conf_pkg::LSU_INST_NUM))
@@ -19007,15 +18849,12 @@ generate for (genvar lsu_idx = 0; lsu_idx < myooo_conf_pkg::LSU_INST_NUM; lsu_id
     .stbuf_fwd_check_if (w_stbuf_fwd_check[lsu_idx]),
     .streq_fwd_check_if (w_streq_fwd_check[lsu_idx]),
 
-    .lsu_pipe_cmp_master_if (w_lsu_pipe_master_cmp_if[lsu_idx]),
-    .lsu_pipe_cmp_slave_if  (w_lsu_pipe_slave_cmp_if [lsu_idx]),
-
     .ptw_if(ptw_if[lsu_idx]),
-    .l1d_rd_if (w_l1d_rd_vipt_if[L1D_LS_PORT_BASE + lsu_idx]),
-    .l1d_mshr_if (w_l1d_mshr_if[lsu_idx]),
+    .l1d_rd_if (w_l1d_rd_if[L1D_LS_PORT_BASE + lsu_idx]),
+    .l1d_missu_if (w_l1d_missu_if[lsu_idx]),
     .ldq_haz_check_if (w_ldq_haz_check_if[lsu_idx]),
     .stq_haz_check_if (w_stq_haz_check_if[lsu_idx]),
-    .mshr_fwd_if (w_mshr_fwd_if[lsu_idx]),
+    .missu_fwd_if (w_missu_fwd_if[lsu_idx]),
 
     .rmw_order_check_if (w_rmw_order_check_if[lsu_idx]),
     .lrsc_if            (w_lrsc_if[lsu_idx]),
@@ -19029,8 +18868,9 @@ generate for (genvar lsu_idx = 0; lsu_idx < myooo_conf_pkg::LSU_INST_NUM; lsu_id
     .i_stq_rmw_existed (w_stq_rmw_existed),
     .i_stq_rs2_resolve (w_stq_rs2_resolve),
 
-    .i_mshr_resolve (w_mshr_resolve),
-    .mshr_info_if    (w_mshr_info_if),
+    .i_missu_resolve (w_missu_resolve),
+    .i_missu_is_full (w_missu_is_full),
+    .i_missu_is_empty (w_missu_is_empty),
 
     .early_wr_out_if (early_wr_out_if[lsu_idx]),
     .mispred_out_if  (mispred_out_if [lsu_idx]),
@@ -19086,7 +18926,8 @@ u_ldq
 
  .ldq_upd_if (w_ldq_upd_if),
 
- .i_mshr_resolve (w_mshr_resolve),
+ .i_missu_resolve (w_missu_resolve),
+ .i_missu_is_full (w_missu_is_full),
 
  .i_stq_rs2_resolve (w_stq_rs2_resolve),
 
@@ -19126,6 +18967,8 @@ myooo_stq
  .stq_haz_check_if (w_stq_haz_check_if),
  .rmw_order_check_if (w_rmw_order_check_if),
 
+ .i_missu_is_empty (w_missu_is_empty),
+
  .o_stq_rmw_existed (w_stq_rmw_existed),
 
  .commit_if (commit_if),
@@ -19139,7 +18982,7 @@ myooo_stq
  .o_stq_rs2_resolve (w_stq_rs2_resolve)
 );
 
-assign w_l1d_rd_pipt_if [L1D_MISSU_PORT].s0_valid = 'h0;
+assign w_l1d_rd_if [L1D_MISSU_PORT].s0_valid = 'h0;
 
 myooo_l1d_mshr
 u_l1d_mshr
@@ -19147,11 +18990,12 @@ u_l1d_mshr
  .i_clk    (i_clk    ),
  .i_reset_n(i_reset_n),
 
- .l1d_mshr  (w_l1d_mshr_if),
- .mshr_fwd_if (w_mshr_fwd_if),
+ .l1d_missu  (w_l1d_missu_if),
+ .missu_fwd_if (w_missu_fwd_if),
 
- .o_mshr_resolve (w_mshr_resolve),
- .mshr_info_if    (w_mshr_info_if),
+ .o_missu_is_full  (w_missu_is_full ),
+ .o_missu_resolve  (w_missu_resolve ),
+ .o_missu_is_empty (w_missu_is_empty),
 
  .l1d_ext_rd_req  (w_l1d_ext_req[0]),
  .l1d_ext_rd_resp (l1d_ext_resp  ),
@@ -19167,7 +19011,7 @@ u_l1d_mshr
 
  .mshr_stbuf_search_if (w_mshr_stbuf_search_if),
 
- .mshr_pa_search_if (w_mshr_pa_search_if)
+ .missu_pa_search_if (w_missu_pa_search_if)
  );
 
 
@@ -19189,15 +19033,15 @@ u_myooo_store_requester
    .l1d_ext_wr_req(w_l1d_ext_req[1])
    );
 
-myooo_lsu_vipt_st_buffer
+myooo_st_buffer
 u_st_buffer
   (
    .i_clk (i_clk),
    .i_reset_n (i_reset_n),
 
    .st_buffer_if        (w_st_buffer_if),
-   .l1d_rd_if           (w_l1d_rd_pipt_if[L1D_ST_RD_PORT]),
-   .l1d_mshr_stq_miss_if (w_l1d_mshr_if[myooo_conf_pkg::LSU_INST_NUM]),
+   .l1d_rd_if           (w_l1d_rd_if[L1D_ST_RD_PORT]),
+   .l1d_missu_stq_miss_if (w_l1d_missu_if[myooo_conf_pkg::LSU_INST_NUM]),
    .l1d_stbuf_wr_if       (w_l1d_stbuf_wr_if),
    .l1d_mshr_wr_if        (w_miss_l1d_wr_if),
 
@@ -19207,10 +19051,10 @@ u_st_buffer
    .rmw_order_check_if  (w_rmw_order_check_if),
 
    .stbuf_fwd_check_if  (w_stbuf_fwd_check),
-   .mshr_pa_search_if  (w_mshr_pa_search_if),
+   .missu_pa_search_if  (w_missu_pa_search_if),
 
    .mshr_stbuf_search_if (w_mshr_stbuf_search_if),
-   .i_mshr_resolve      (w_mshr_resolve)
+   .i_missu_resolve      (w_missu_resolve)
    );
 
 
@@ -19238,24 +19082,24 @@ u_lrsc
 // --------------------------
 logic                                 r_ptw_resp_valid;
 logic [$clog2(myooo_conf_pkg::DCACHE_DATA_W / riscv_pkg::XLEN_W)-1:0] r_ptw_paddr_sel;
-// logic                                 r_ptw_mshr_resp_full;
-// logic                                 r_ptw_mshr_resp_conflict;
-// logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] r_ptw_mshr_resp_mshr_index_oh;
+// logic                                 r_ptw_missu_resp_full;
+// logic                                 r_ptw_missu_resp_conflict;
+// logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] r_ptw_missu_resp_missu_index_oh;
 
-assign w_l1d_rd_pipt_if [L1D_PTW_PORT].s0_valid = lsu_access.req_valid;
-assign w_l1d_rd_pipt_if [L1D_PTW_PORT].s0_high_priority = 1'b0;
-assign w_l1d_rd_pipt_if [L1D_PTW_PORT].s0_paddr = lsu_access.paddr;
+assign w_l1d_rd_if [L1D_PTW_PORT].s0_valid = lsu_access.req_valid;
+assign w_l1d_rd_if [L1D_PTW_PORT].s0_high_priority = 1'b0;
+assign w_l1d_rd_if [L1D_PTW_PORT].s0_paddr = lsu_access.paddr;
 assign lsu_access.resp_valid = r_ptw_resp_valid;
-assign lsu_access.status = w_l1d_rd_pipt_if[L1D_PTW_PORT].s1_conflict ? STATUS_L1D_CONFLICT :
-                           w_l1d_rd_pipt_if[L1D_PTW_PORT].s1_hit      ? STATUS_HIT :
-                           w_l1d_rd_pipt_if[L1D_PTW_PORT].s1_miss     ? STATUS_MISS :
+assign lsu_access.status = w_l1d_rd_if[L1D_PTW_PORT].s1_conflict ? STATUS_L1D_CONFLICT :
+                           w_l1d_rd_if[L1D_PTW_PORT].s1_hit      ? STATUS_HIT :
+                           w_l1d_rd_if[L1D_PTW_PORT].s1_miss     ? STATUS_MISS :
                            STATUS_NONE;
 
 generate if (myooo_conf_pkg::DCACHE_DATA_W == riscv_pkg::XLEN_W) begin : lsu_access_1
-  assign lsu_access.mshr_conflicted_idx_oh = 'h0;
-  assign lsu_access.data                    = w_l1d_rd_pipt_if[L1D_PTW_PORT].s1_data;
-  assign lsu_access.conflict_resolve_vld    = w_mshr_resolve.valid;
-  assign lsu_access.conflict_resolve_idx_oh = w_mshr_resolve.resolve_index_oh;
+  assign lsu_access.missu_conflicted_idx_oh = 'h0;
+  assign lsu_access.data                    = w_l1d_rd_if[L1D_PTW_PORT].s1_data;
+  assign lsu_access.conflict_resolve_vld    = w_missu_resolve.valid;
+  assign lsu_access.conflict_resolve_idx_oh = w_missu_resolve.resolve_index_oh;
 
   always_ff @ (posedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
@@ -19265,10 +19109,10 @@ generate if (myooo_conf_pkg::DCACHE_DATA_W == riscv_pkg::XLEN_W) begin : lsu_acc
     end
   end
 end else begin : lsu_access_2
-  assign lsu_access.mshr_conflicted_idx_oh = 'h0;
-  assign lsu_access.data                    = w_l1d_rd_pipt_if[L1D_PTW_PORT].s1_data[{r_ptw_paddr_sel, {$clog2(riscv_pkg::XLEN_W){1'b0}}} +: riscv_pkg::XLEN_W];
-  assign lsu_access.conflict_resolve_vld    = w_mshr_resolve.valid;
-  assign lsu_access.conflict_resolve_idx_oh = w_mshr_resolve.resolve_index_oh;
+  assign lsu_access.missu_conflicted_idx_oh = 'h0;
+  assign lsu_access.data                    = w_l1d_rd_if[L1D_PTW_PORT].s1_data[{r_ptw_paddr_sel, {$clog2(riscv_pkg::XLEN_W){1'b0}}} +: riscv_pkg::XLEN_W];
+  assign lsu_access.conflict_resolve_vld    = w_missu_resolve.valid;
+  assign lsu_access.conflict_resolve_idx_oh = w_missu_resolve.resolve_index_oh;
 
   always_ff @ (posedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
@@ -19287,24 +19131,22 @@ end endgenerate // block: lsu_access_2
 // ---------------------------
 logic r_snoop_resp_valid;
 
-assign w_l1d_rd_pipt_if [L1D_SNOOP_PORT].s0_valid = l1d_snoop_if.req_s0_valid & (l1d_snoop_if.req_s0_cmd == SNOOP_READ);
-assign w_l1d_rd_pipt_if [L1D_SNOOP_PORT].s0_paddr = l1d_snoop_if.req_s0_paddr;
-assign w_l1d_rd_pipt_if [L1D_SNOOP_PORT].s0_color = l1d_snoop_if.req_s0_color;
-assign w_l1d_rd_pipt_if [L1D_SNOOP_PORT].s0_high_priority = 1'b0;
+assign w_l1d_rd_if [L1D_SNOOP_PORT].s0_valid = l1d_snoop_if.req_s0_valid & (l1d_snoop_if.req_s0_cmd == SNOOP_READ);
+assign w_l1d_rd_if [L1D_SNOOP_PORT].s0_paddr = l1d_snoop_if.req_s0_paddr;
+assign w_l1d_rd_if [L1D_SNOOP_PORT].s0_high_priority = 1'b0;
 
 assign l1d_snoop_if.resp_s1_valid  = r_snoop_resp_valid;
-assign l1d_snoop_if.resp_s1_status = w_l1d_rd_pipt_if[L1D_SNOOP_PORT].s1_conflict ? STATUS_L1D_CONFLICT :
-                                     w_l1d_rd_pipt_if[L1D_SNOOP_PORT].s1_hit      ? STATUS_HIT :
-                                     w_l1d_rd_pipt_if[L1D_SNOOP_PORT].s1_miss     ? STATUS_MISS :
+assign l1d_snoop_if.resp_s1_status = w_l1d_rd_if[L1D_SNOOP_PORT].s1_conflict ? STATUS_L1D_CONFLICT :
+                                     w_l1d_rd_if[L1D_SNOOP_PORT].s1_hit      ? STATUS_HIT :
+                                     w_l1d_rd_if[L1D_SNOOP_PORT].s1_miss     ? STATUS_MISS :
                                      STATUS_NONE;
-assign l1d_snoop_if.resp_s1_ways   = w_l1d_rd_pipt_if[L1D_SNOOP_PORT].s1_hit_way;
-assign l1d_snoop_if.resp_s1_be     = w_l1d_rd_pipt_if[L1D_SNOOP_PORT].s1_hit ? {DCACHE_DATA_B_W{1'b1}} : {DCACHE_DATA_B_W{1'b0}};
-assign l1d_snoop_if.resp_s1_data   = w_l1d_rd_pipt_if[L1D_SNOOP_PORT].s1_data;
+assign l1d_snoop_if.resp_s1_ways   = w_l1d_rd_if[L1D_SNOOP_PORT].s1_hit_way;
+assign l1d_snoop_if.resp_s1_be     = w_l1d_rd_if[L1D_SNOOP_PORT].s1_hit ? {DCACHE_DATA_B_W{1'b1}} : {DCACHE_DATA_B_W{1'b0}};
+assign l1d_snoop_if.resp_s1_data   = w_l1d_rd_if[L1D_SNOOP_PORT].s1_data;
 
 assign w_snoop_wr_if.s0_valid           = l1d_snoop_if.req_s0_valid & (l1d_snoop_if.req_s0_cmd == SNOOP_INVALID);
 assign w_snoop_wr_if.s0_wr_req.s0_way   = l1d_snoop_if.req_s0_ways;
 assign w_snoop_wr_if.s0_wr_req.s0_paddr = l1d_snoop_if.req_s0_paddr;
-assign w_snoop_wr_if.s0_wr_req.s0_color = l1d_snoop_if.req_s0_color;
 assign w_snoop_wr_if.s0_wr_req.s0_data  = 'h0;
 assign w_snoop_wr_if.s0_wr_req.s0_mesi  = myooo_lsu_pkg::MESI_INVALID;
 
@@ -19316,26 +19158,25 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
   end
 end
 
-myooo_lsu_vipt_dcache
+myooo_dcache
+  #(.RD_PORT_NUM (L1D_RD_PORT_NUM))
 u_myooo_dcache
   (
    .i_clk(i_clk),
    .i_reset_n(i_reset_n),
 
-   .l1d_rd_vipt_if  (w_l1d_rd_vipt_if),
-   .l1d_rd_pipt_if  (w_l1d_rd_pipt_if),
-
+   .l1d_rd_if       (w_l1d_rd_if),
    .stbuf_l1d_wr_if (w_l1d_stbuf_wr_if),
 
    .stbuf_l1d_merge_if (w_l1d_merge_if  ),
-   .mshr_l1d_wr_if    (w_miss_l1d_wr_if),
+   .missu_l1d_wr_if    (w_miss_l1d_wr_if),
 
    .snoop_wr_if        (w_snoop_wr_if)
    );
 
-endmodule // myooo_lsu_vipt_top
+endmodule // mrsh_lsu_top
 // ------------------------------------------------------------------------
-// NAME : myooo_lsu_vipt
+// NAME : myooo_lsu
 // TYPE : module
 // ------------------------------------------------------------------------
 // LSU Top Module
@@ -19343,7 +19184,7 @@ endmodule // myooo_lsu_vipt_top
 //
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt
+module myooo_lsu
   import myooo_lsu_pkg::*;
   #(
     parameter LSU_PIPE_IDX = 0,
@@ -19377,17 +19218,14 @@ module myooo_lsu_vipt
     fwd_check_if.master           stbuf_fwd_check_if,
     // Store Requestor Forward checker
     fwd_check_if.master           streq_fwd_check_if,
-    // Each Pipeline address check
-    lsu_pipe_cmp_master_if.master lsu_pipe_cmp_master_if,
-    lsu_pipe_cmp_slave_if.slave   lsu_pipe_cmp_slave_if ,
 
     /* L1D Interface */
-    l1d_rd_vipt_if.master         l1d_rd_if,
+    l1d_rd_if.master              l1d_rd_if,
 
     /* Load Requester Interface */
-    l1d_mshr_if.master          l1d_mshr_if,
-    // MSHR Forward Check
-    mshr_fwd_if.master    mshr_fwd_if,
+    l1d_missu_if.master          l1d_missu_if,
+    // MISSU Forward Check
+    missu_fwd_if.master    missu_fwd_if,
     // STQ -> LDQ check
     ldq_haz_check_if.master    ldq_haz_check_if,
 
@@ -19410,8 +19248,9 @@ module myooo_lsu_vipt
     input logic             i_st_buffer_empty,
     input logic             i_st_requester_empty,
 
-    input mshr_resolve_t    i_mshr_resolve,
-    mshr_info_if.slave      mshr_info_if,
+    input missu_resolve_t   i_missu_resolve,
+    input logic             i_missu_is_full,
+    input logic             i_missu_is_empty,
 
     input logic             i_stq_rmw_existed,
     input stq_resolve_t     i_stq_rs2_resolve,
@@ -19439,15 +19278,15 @@ localparam MEM_PORT_SIZE = myooo_conf_pkg::MEM_DISP_SIZE / myooo_conf_pkg::LSU_I
 localparam LSU_ISS_ENTRY_SIZE = myooo_conf_pkg::RV_LSU_ENTRY_SIZE / myooo_conf_pkg::LSU_INST_NUM;
 done_if ex3_internal_done_if();
 
-lsu_pipe_issue_t                w_ex0_pipe_issue;
-logic [MEM_Q_SIZE-1: 0]         w_ex0_issue_index_oh;
-logic                           w_replay_selected;
+myooo_lsu_pkg::lsu_pipe_issue_t w_ex0_replay_issue;
+logic [MEM_Q_SIZE-1: 0]         w_ex0_replay_index_oh;
+logic w_replay_selected;
 
 logic [MEM_PORT_SIZE-1:0] disp_picked_inst_valid;
 myooo_pkg::disp_t        disp_picked_inst  [MEM_PORT_SIZE];
 myooo_pkg::grp_id_t      disp_picked_grp_id[MEM_PORT_SIZE];
 
-lsu_issue_entry_t               w_issue_from_iss;
+myooo_lsu_pkg::lsu_issue_entry_t               w_issue_from_iss;
 logic [LSU_ISS_ENTRY_SIZE-1: 0] w_issue_index_from_iss;
 
 lsu_pipe_haz_if w_lsu_pipe_haz_if ();
@@ -19471,7 +19310,7 @@ u_myooo_disp_pickup
    .o_disp_grp_id (disp_picked_grp_id    )
    );
 
-myooo_lsu_vipt_issue_unit
+myooo_lsu_issue_unit
 #(
   .ENTRY_SIZE (LSU_ISS_ENTRY_SIZE),
   .IN_PORT_SIZE(MEM_PORT_SIZE)
@@ -19501,7 +19340,7 @@ u_issue_unit
   .i_st_requester_empty (i_st_requester_empty),
   .i_replay_queue_full  (w_replay_queue_full ),
 
-  .mshr_info_if (mshr_info_if),
+  .i_missu_is_empty     (i_missu_is_empty    ),
 
   .pipe_done_if (ex3_internal_done_if),
 
@@ -19517,7 +19356,7 @@ u_issue_unit
 
 
 // Replay Queue
-myooo_lsu_vipt_fast_replay_queue
+myooo_lsu_fast_replay_queue
 u_replay_queue
 (
   .i_clk (i_clk),
@@ -19530,10 +19369,11 @@ u_replay_queue
 
   .lsu_pipe_haz_if (w_lsu_pipe_haz_if),
 
-  .i_mshr_resolve (i_mshr_resolve),
-  .mshr_info_if   (mshr_info_if  ),
-
   .i_st_buffer_empty    (i_st_buffer_empty),
+  .i_missu_is_empty     (i_missu_is_empty ),
+
+  .i_missu_resolve (i_missu_resolve ),
+  .i_missu_is_full (i_missu_is_full ),
   .i_stq_rs2_resolve (i_stq_rs2_resolve),
 
   .o_full (),
@@ -19551,45 +19391,42 @@ assign w_lsu_pipe_req_if.ready = w_replay_selected;
 
 always_comb begin
   if (w_replay_selected) begin
-    w_ex0_pipe_issue.valid             = w_lsu_pipe_req_if.valid       ;
-    w_ex0_pipe_issue.cmt_id            = w_lsu_pipe_req_if.payload.cmt_id      ;
-    w_ex0_pipe_issue.grp_id            = w_lsu_pipe_req_if.payload.grp_id      ;
-    w_ex0_pipe_issue.inst              = w_lsu_pipe_req_if.payload.inst        ;
-    w_ex0_pipe_issue.rd_regs[0]        = w_lsu_pipe_req_if.payload.rd_reg      ;
-    w_ex0_pipe_issue.wr_reg            = w_lsu_pipe_req_if.payload.wr_reg      ;
-    w_ex0_pipe_issue.oldest_valid      = w_lsu_pipe_req_if.payload.oldest_valid;
-    w_ex0_pipe_issue.cat               = w_lsu_pipe_req_if.payload.cat         ;
-    w_ex0_pipe_issue.l1d_high_priority = w_lsu_pipe_req_if.payload.hazard_typ == EX2_HAZ_L1D_CONFLICT;
-    w_ex0_pipe_issue.paddr_valid       = 1'b1;
-    w_ex0_pipe_issue.paddr             = w_lsu_pipe_req_if.payload.paddr;
-    w_ex0_pipe_issue.color             = w_lsu_pipe_req_if.payload.color;
-    w_ex0_pipe_issue.is_uc             = w_lsu_pipe_req_if.payload.is_uc;
+    w_ex0_replay_issue.valid             = w_lsu_pipe_req_if.valid       ;
+    w_ex0_replay_issue.cmt_id            = w_lsu_pipe_req_if.payload.cmt_id      ;
+    w_ex0_replay_issue.grp_id            = w_lsu_pipe_req_if.payload.grp_id      ;
+    w_ex0_replay_issue.inst              = w_lsu_pipe_req_if.payload.inst        ;
+    w_ex0_replay_issue.rd_regs[0]        = w_lsu_pipe_req_if.payload.rd_reg      ;
+    w_ex0_replay_issue.wr_reg            = w_lsu_pipe_req_if.payload.wr_reg      ;
+    w_ex0_replay_issue.oldest_valid      = w_lsu_pipe_req_if.payload.oldest_valid;
+    w_ex0_replay_issue.cat               = w_lsu_pipe_req_if.payload.cat         ;
+    w_ex0_replay_issue.l1d_high_priority = w_lsu_pipe_req_if.payload.hazard_typ == EX2_HAZ_L1D_CONFLICT;
+    w_ex0_replay_issue.paddr_valid       = 1'b1;
+    w_ex0_replay_issue.paddr             = w_lsu_pipe_req_if.payload.paddr;
+    w_ex0_replay_issue.is_uc             = w_lsu_pipe_req_if.payload.is_uc;
 
 `ifdef SIMULATION
-    w_ex0_pipe_issue.kanata_id         = 'h0;
-    w_ex0_pipe_issue.sim_pc_addr       = 'h0;
+    w_ex0_replay_issue.kanata_id    = 'h0;  // w_lsu_pipe_req_if.kanata_id   ;
+    w_ex0_replay_issue.sim_pc_addr  = 'h0;
 `endif // SIMULATION
-    w_ex0_issue_index_oh              = 'h0;
+    w_ex0_replay_index_oh           = 'h0;
   end else begin
-    w_ex0_pipe_issue.valid             = w_issue_from_iss.valid & (w_replay_queue_full ? w_issue_from_iss.oldest_valid : 1'b1);
-    w_ex0_pipe_issue.cmt_id            = w_issue_from_iss.cmt_id;
-    w_ex0_pipe_issue.grp_id            = w_issue_from_iss.grp_id;
-    w_ex0_pipe_issue.inst              = w_issue_from_iss.inst;
-    w_ex0_pipe_issue.rd_regs           = w_issue_from_iss.rd_regs;
-    w_ex0_pipe_issue.wr_reg            = w_issue_from_iss.wr_reg;
-    w_ex0_pipe_issue.oldest_valid      = w_issue_from_iss.oldest_valid;
-    w_ex0_pipe_issue.cat               = w_issue_from_iss.cat;
-    w_ex0_pipe_issue.l1d_high_priority = 1'b0;
-    w_ex0_pipe_issue.paddr_valid       = 1'b0;
-    w_ex0_pipe_issue.paddr             = 'h0;
-    w_ex0_pipe_issue.color             = 'h0;
-
-    w_ex0_pipe_issue.is_uc             = 1'b0;
+    w_ex0_replay_issue.valid             = w_issue_from_iss.valid & (w_replay_queue_full ? w_issue_from_iss.oldest_valid : 1'b1);
+    w_ex0_replay_issue.cmt_id            = w_issue_from_iss.cmt_id;
+    w_ex0_replay_issue.grp_id            = w_issue_from_iss.grp_id;
+    w_ex0_replay_issue.inst              = w_issue_from_iss.inst;
+    w_ex0_replay_issue.rd_regs[0]        = w_issue_from_iss.rd_regs[0];
+    w_ex0_replay_issue.wr_reg            = w_issue_from_iss.wr_reg;
+    w_ex0_replay_issue.oldest_valid      = w_issue_from_iss.oldest_valid;
+    w_ex0_replay_issue.cat               = w_issue_from_iss.cat;
+    w_ex0_replay_issue.l1d_high_priority = 1'b0;
+    w_ex0_replay_issue.paddr_valid       = 1'b0;
+    w_ex0_replay_issue.paddr             = 'h0;
+    w_ex0_replay_issue.is_uc             = 1'b0;
 `ifdef SIMULATION
-    w_ex0_pipe_issue.kanata_id         = w_issue_from_iss.kanata_id;
-    w_ex0_pipe_issue.sim_pc_addr       = w_issue_from_iss.sim_pc_addr;
+    w_ex0_replay_issue.kanata_id    = w_issue_from_iss.kanata_id;
+    w_ex0_replay_issue.sim_pc_addr  = w_issue_from_iss.sim_pc_addr;
 `endif // SIMULATION
-    w_ex0_issue_index_oh              = w_issue_index_from_iss;
+    w_ex0_replay_index_oh           = w_issue_index_from_iss;
   end
 end // always_comb
 
@@ -19598,7 +19435,7 @@ end // always_comb
 // LSU Pipeline
 // ===========================
 
-myooo_lsu_vipt_pipe
+myooo_lsu_pipe
   #(
     .LSU_PIPE_IDX(LSU_PIPE_IDX),
     .RV_ENTRY_SIZE(MEM_Q_SIZE)
@@ -19611,28 +19448,26 @@ u_lsu_pipe
    .commit_if  (commit_if),
    .br_upd_if (br_upd_if),
 
-   .mshr_info_if (mshr_info_if),
-
    .csr_info (csr_info),
    .sfence_if_slave(sfence_if_slave),
 
    .mispred_if (mispred_in_if),
    .ex1_phy_wr_if (phy_wr_in_if),
 
-   .i_ex0_issue          (w_ex0_pipe_issue    ),
-   .i_ex0_issue_index_oh (w_ex0_issue_index_oh),
+   .i_ex0_replay_issue    (w_ex0_replay_issue   ),
+   .i_ex0_replay_index_oh (w_ex0_replay_index_oh),
 
    .ex0_regread_rs1     (ex0_regread_rs1    ),
 
-   .ex2_early_wr_out_if(early_wr_out_if),
-   .ex4_phy_wr_out_if  (phy_wr_out_if),
-   .ex3_mispred_out_if (mispred_out_if),
+   .ex1_early_wr_out_if(early_wr_out_if),
+   .ex3_phy_wr_out_if  (phy_wr_out_if),
+   .ex2_mispred_out_if (mispred_out_if),
 
-   .l1d_rd_if (l1d_rd_if),
+   .ex1_l1d_rd_if (l1d_rd_if),
 
    .ptw_if(ptw_if),
-   .l1d_mshr_if (l1d_mshr_if),
-   .mshr_fwd_if (mshr_fwd_if),
+   .l1d_missu_if (l1d_missu_if),
+   .missu_fwd_if (missu_fwd_if),
    .ldq_haz_check_if (ldq_haz_check_if),
 
    .rmw_order_check_if (rmw_order_check_if),
@@ -19642,9 +19477,6 @@ u_lsu_pipe
    .ex2_fwd_check_if (ex2_fwd_check_if),
    .stbuf_fwd_check_if (stbuf_fwd_check_if),
    .streq_fwd_check_if (streq_fwd_check_if),
-
-   .lsu_pipe_cmp_master_if (lsu_pipe_cmp_master_if),
-   .lsu_pipe_cmp_slave_if  (lsu_pipe_cmp_slave_if ),
 
    .lrsc_if (lrsc_if),
 
@@ -19660,16 +19492,16 @@ u_lsu_pipe
    .flush_report_if (flush_report_if)
 );
 
-endmodule // myooo_lsu_vipt
+endmodule // myooo_lsu
 // ------------------------------------------------------------------------
-// NAME : myooo_lsu_vipt_issue_unit
+// NAME : myooo_lsu_issue_unit
 // TYPE : module
 // ------------------------------------------------------------------------
 // MYOOO Instruction Scheduler for LSU
 // ------------------------------------------------------------------------
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_issue_unit
+module myooo_lsu_issue_unit
   import myooo_lsu_pkg::*;
 #(
     parameter IS_STORE = 0,
@@ -19706,10 +19538,9 @@ module myooo_lsu_vipt_issue_unit
   lsu_mispred_if.slave           mispred_if[myooo_conf_pkg::LSU_INST_NUM],
   // Execution updates from pipeline
   iq_upd_if.slave  iq_upd_if,
-  mshr_info_if.slave                    mshr_info_if,
-
   input logic                           i_st_buffer_empty,
   input logic                           i_st_requester_empty,
+  input logic                           i_missu_is_empty,
   input logic                           i_replay_queue_full,
   input logic                           i_stq_rmw_existed,
 
@@ -19929,7 +19760,7 @@ generate for (genvar s_idx = 0; s_idx < ENTRY_SIZE; s_idx++) begin : entry_loop
     .i_st_buffer_empty    (i_st_buffer_empty   ),
     .i_st_requester_empty (i_st_requester_empty),
     .i_replay_queue_full  (i_replay_queue_full ),
-    .mshr_info_if         (mshr_info_if        ),
+    .i_missu_is_empty     (i_missu_is_empty    ),
 
     .commit_if (commit_if),
     .br_upd_if (br_upd_if),
@@ -20018,7 +19849,7 @@ endgenerate
 
 function void dump_json(string name, int fp, int index);
   if (|w_entry_valid) begin
-    $fwrite(fp, "  \"myooo_lsu_vipt_issue_unit_%s[%d]\" : {\n", name, index[$clog2(ENTRY_SIZE)-1: 0]);
+    $fwrite(fp, "  \"myooo_lsu_issue_unit_%s[%d]\" : {\n", name, index[$clog2(ENTRY_SIZE)-1: 0]);
     $fwrite(fp, "    \"in_ptr\"  : %d\n", w_entry_in_ptr_oh);
     $fwrite(fp, "    \"out_ptr\" : %d\n", r_entry_out_ptr_oh);
     for (int s_idx = 0; s_idx < ENTRY_SIZE; s_idx++) begin
@@ -20063,7 +19894,7 @@ endfunction // dump_perf
 
 `endif // SIMULATION
 
-endmodule // myooo_lsu_vipt_issue_unit
+endmodule // myooo_lsu_issue_unit
 // ------------------------------------------------------------------------
 // NAME : myooo_lsu_issue_entry
 // TYPE : module
@@ -20103,10 +19934,9 @@ import myooo_lsu_pkg::*;
    lsu_mispred_if.slave  mispred_if[myooo_conf_pkg::LSU_INST_NUM],
   // Execution updates from pipeline
    iq_upd_if.slave iq_upd_if,
-   mshr_info_if.slave           mshr_info_if,
-
    input logic                  i_st_buffer_empty,
    input logic                  i_st_requester_empty,
+   input logic                  i_missu_is_empty,
    input logic                  i_replay_queue_full,
 
    input logic       i_entry_picked,
@@ -20140,15 +19970,6 @@ logic                     w_rs1_may_mispred;
 logic                     w_rs1_phy_hit;
 logic                     w_rs1_mispredicted;
 logic                     w_rs1_pred_mispredicted;
-
-myooo_pkg::rnid_t        w_rs2_rnid;
-myooo_pkg::reg_t         w_rs2_type;
-myooo_pkg::rel_bus_idx_t w_rs2_rel_index;
-logic                     w_rs2_rel_hit;
-logic                     w_rs2_may_mispred;
-logic                     w_rs2_phy_hit;
-logic                     w_rs2_mispredicted;
-logic                     w_rs2_pred_mispredicted;
 
 logic     w_entry_flush;
 logic     w_commit_flush;
@@ -20223,7 +20044,7 @@ always_comb begin
         w_state_next = myooo_lsu_pkg::LSU_SCHED_CLEAR;
         w_dead_next  = 1'b1;
       end else begin
-        if (o_entry_valid & o_entry_ready & i_entry_picked & !w_rs1_pred_mispredicted & !w_rs2_pred_mispredicted &
+        if (o_entry_valid & o_entry_ready & i_entry_picked & !w_rs1_pred_mispredicted &
             (~i_replay_queue_full | r_entry.oldest_valid)) begin
           w_issued_next = 1'b1;
           w_state_next = myooo_lsu_pkg::LSU_SCHED_ISSUED;
@@ -20235,7 +20056,7 @@ always_comb begin
         w_state_next = myooo_lsu_pkg::LSU_SCHED_CLEAR;
         w_dead_next  = 1'b1;
       end else begin
-        if (w_rs1_pred_mispredicted | w_rs2_pred_mispredicted) begin
+        if (w_rs1_pred_mispredicted) begin
           w_state_next = myooo_lsu_pkg::LSU_SCHED_WAIT;
           w_issued_next = 1'b0;
           w_entry_next.rd_regs[0].predict_ready = 1'b0;
@@ -20328,7 +20149,7 @@ end
 
 assign w_inst_oldest_ready = (rob_info_if.cmt_id == r_entry.cmt_id) &
                              ((rob_info_if.done_grp_id & r_entry.grp_id-1) == r_entry.grp_id-1);
-assign w_oldest_ready = r_entry.oldest_valid & i_st_buffer_empty /* & ~i_stq_rmw_existed */ & mshr_info_if.is_empty & w_inst_oldest_ready /* i_out_ptr_valid */;
+assign w_oldest_ready = r_entry.oldest_valid & i_st_buffer_empty /* & ~i_stq_rmw_existed */ & i_missu_is_empty & w_inst_oldest_ready /* i_out_ptr_valid */;
 
 assign w_pc_update_before_entry = 1'b0;
 
@@ -20343,7 +20164,7 @@ assign o_issue_succeeded = (r_state == myooo_lsu_pkg::LSU_SCHED_CLEAR);
 
 endmodule // myooo_lsu_issue_entry
 // ------------------------------------------------------------------------
-// NAME : myooo_lsu_vipt_fast_replay_queue
+// NAME : myooo_lsu_replay_queue
 // TYPE : module
 // ------------------------------------------------------------------------
 // LSU Replay Queue
@@ -20351,7 +20172,7 @@ endmodule // myooo_lsu_issue_entry
 //
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_fast_replay_queue
+module myooo_lsu_fast_replay_queue
   import myooo_lsu_pkg::*;
 (
     input logic i_clk,
@@ -20368,8 +20189,9 @@ module myooo_lsu_vipt_fast_replay_queue
 
     lsu_pipe_haz_if.slave  lsu_pipe_haz_if,
 
-    input mshr_resolve_t  i_mshr_resolve,
-    mshr_info_if.slave    mshr_info_if,
+    input missu_resolve_t  i_missu_resolve,
+    input logic            i_missu_is_full,
+    input logic            i_missu_is_empty,
 
     input logic            i_st_buffer_empty,
     input stq_resolve_t    i_stq_rs2_resolve,
@@ -20379,7 +20201,9 @@ module myooo_lsu_vipt_fast_replay_queue
 );
 
 // localparam REPLAY_QUEUE_SIZE = (myooo_conf_pkg::LDQ_SIZE + myooo_conf_pkg::STQ_SIZE) / myooo_conf_pkg::LSU_INST_NUM + 1;
-localparam REPLAY_QUEUE_SIZE = myooo_conf_pkg::RV_LSU_ENTRY_SIZE / myooo_conf_pkg::LSU_INST_NUM;
+localparam REPLAY_QUEUE_SIZE_RAW = myooo_conf_pkg::RV_LSU_ENTRY_SIZE / myooo_conf_pkg::LSU_INST_NUM;
+localparam REPLAY_QUEUE_SIZE = REPLAY_QUEUE_SIZE_RAW > 8 ? REPLAY_QUEUE_SIZE_RAW : 8;
+
 localparam REPLAY_QUEUE_W = $clog2(REPLAY_QUEUE_SIZE);
 
 typedef struct packed {
@@ -20398,7 +20222,6 @@ typedef struct packed {
     myooo_pkg::reg_rd_issue_t       rd_reg;
     myooo_pkg::reg_wr_issue_t       wr_reg;
     myooo_pkg::paddr_t              paddr;
-    dc_color_t                       color;
     logic                            is_uc;
 } replay_payload_t;
 
@@ -20488,12 +20311,11 @@ generate for (genvar q_idx = 0; q_idx < REPLAY_QUEUE_SIZE; q_idx++) begin : queu
         case (r_replay_queue[q_idx].hazard_typ)
           EX2_HAZ_STQ_NONFWD_HAZ : r_replay_queue[q_idx].hazard_index <= r_replay_queue[q_idx].hazard_index & ~i_stq_rs2_resolve.index;
           EX2_HAZ_STQ_FWD_MISS   : r_replay_queue[q_idx].hazard_index <= r_replay_queue[q_idx].hazard_index & ~i_stq_rs2_resolve.index;
-          EX2_HAZ_RMW_ORDER_HAZ  : r_replay_queue[q_idx].hazard_index <= w_is_oldest & i_st_buffer_empty & mshr_info_if.is_empty ? 'h0 : 1'b1;
+          EX2_HAZ_RMW_ORDER_HAZ  : r_replay_queue[q_idx].hazard_index <= w_is_oldest & i_st_buffer_empty & i_missu_is_empty ? 'h0 : 1'b1;
           EX2_HAZ_L1D_CONFLICT   : r_replay_queue[q_idx].hazard_index <= 'h0; // Replay immediately
-          EX2_HAZ_OLDER_SAME_ADDR : r_replay_queue[q_idx].hazard_index <= 'h0; // Replay immediately
-          EX2_HAZ_MSHR_FULL     : r_replay_queue[q_idx].hazard_index <= !mshr_info_if.is_full ? 'h0 : r_replay_queue[q_idx].hazard_index;
-          EX2_HAZ_MSHR_ASSIGNED : r_replay_queue[q_idx].hazard_index <= r_replay_queue[q_idx].hazard_index &
-                                                                         (i_mshr_resolve.valid ? ~i_mshr_resolve.resolve_index_oh : i_mshr_resolve.mshr_entry_valids);
+          EX2_HAZ_MISSU_FULL     : r_replay_queue[q_idx].hazard_index <= !i_missu_is_full ? 'h0 : r_replay_queue[q_idx].hazard_index;
+          EX2_HAZ_MISSU_ASSIGNED : r_replay_queue[q_idx].hazard_index <= r_replay_queue[q_idx].hazard_index &
+                                                                         (i_missu_resolve.valid ? ~i_missu_resolve.resolve_index_oh : i_missu_resolve.missu_entry_valids);
           default : begin
             r_replay_queue[q_idx].hazard_index <= 'h0;
           end
@@ -20514,7 +20336,6 @@ assign new_replay_payload.oldest_valid = lsu_pipe_haz_if.payload.oldest_valid;
 assign new_replay_payload.rd_reg       = lsu_pipe_haz_if.payload.rd_reg      ;
 assign new_replay_payload.wr_reg       = lsu_pipe_haz_if.payload.wr_reg      ;
 assign new_replay_payload.paddr        = lsu_pipe_haz_if.payload.paddr       ;
-assign new_replay_payload.color        = lsu_pipe_haz_if.payload.color       ;
 assign new_replay_payload.is_uc        = lsu_pipe_haz_if.payload.is_uc       ;
 
 distributed_ram
@@ -20557,7 +20378,6 @@ assign lsu_pipe_req_if.payload.oldest_valid   = w_replay_payload.oldest_valid ;
 assign lsu_pipe_req_if.payload.rd_reg         = w_replay_payload.rd_reg       ;
 assign lsu_pipe_req_if.payload.wr_reg         = w_replay_payload.wr_reg       ;
 assign lsu_pipe_req_if.payload.paddr          = w_replay_payload.paddr        ;
-assign lsu_pipe_req_if.payload.color          = w_replay_payload.color        ;
 assign lsu_pipe_req_if.payload.is_uc          = w_replay_payload.is_uc        ;
 assign lsu_pipe_req_if.payload.hazard_typ     = r_replay_queue  [w_resolved_index].hazard_typ   ;
 assign lsu_pipe_req_if.payload.hazard_index   = r_replay_queue  [w_resolved_index].hazard_index ;
@@ -20567,8 +20387,8 @@ logic [63: 0] sim_replay_stq_nofwd_cnt;
 logic [63: 0] sim_replay_stq_fwdmiss_cnt;
 logic [63: 0] sim_replay_rmw_order_cnt;
 logic [63: 0] sim_replay_l1d_confict_cnt;
-logic [63: 0] sim_replay_mshr_cnt;
-logic [63: 0] sim_replay_mshr_assigned_cnt;
+logic [63: 0] sim_replay_missu_cnt;
+logic [63: 0] sim_replay_missu_assigned_cnt;
 
 always_ff @ (negedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
@@ -20576,8 +20396,8 @@ always_ff @ (negedge i_clk, negedge i_reset_n) begin
     sim_replay_stq_fwdmiss_cnt    <= 'h0;
     sim_replay_rmw_order_cnt      <= 'h0;
     sim_replay_l1d_confict_cnt    <= 'h0;
-    sim_replay_mshr_cnt          <= 'h0;
-    sim_replay_mshr_assigned_cnt <= 'h0;
+    sim_replay_missu_cnt          <= 'h0;
+    sim_replay_missu_assigned_cnt <= 'h0;
   end else begin
     if (lsu_pipe_req_if.valid & lsu_pipe_req_if.ready) begin
       case (lsu_pipe_req_if.payload.hazard_typ)
@@ -20585,8 +20405,8 @@ always_ff @ (negedge i_clk, negedge i_reset_n) begin
         EX2_HAZ_STQ_FWD_MISS   : sim_replay_stq_fwdmiss_cnt    <= sim_replay_stq_fwdmiss_cnt    + 'h1;
         EX2_HAZ_RMW_ORDER_HAZ  : sim_replay_rmw_order_cnt      <= sim_replay_rmw_order_cnt      + 'h1;
         EX2_HAZ_L1D_CONFLICT   : sim_replay_l1d_confict_cnt    <= sim_replay_l1d_confict_cnt    + 'h1;
-        EX2_HAZ_MSHR_FULL     : sim_replay_mshr_cnt          <= sim_replay_mshr_cnt          + 'h1;
-        EX2_HAZ_MSHR_ASSIGNED : sim_replay_mshr_assigned_cnt <= sim_replay_mshr_assigned_cnt + 'h1;
+        EX2_HAZ_MISSU_FULL     : sim_replay_missu_cnt          <= sim_replay_missu_cnt          + 'h1;
+        EX2_HAZ_MISSU_ASSIGNED : sim_replay_missu_assigned_cnt <= sim_replay_missu_assigned_cnt + 'h1;
         default : begin end
       endcase // case (lsu_pipe_req_if.valid.hazard_typ)
     end
@@ -20600,17 +20420,17 @@ final begin
   $write ("EX2_HAZ_STQ_FWD_MISS   : %d\n", sim_replay_stq_fwdmiss_cnt);
   $write ("EX2_HAZ_RMW_ORDER_HAZ  : %d\n", sim_replay_rmw_order_cnt);
   $write ("EX2_HAZ_L1D_CONFLICT   : %d\n", sim_replay_l1d_confict_cnt);
-  $write ("EX2_HAZ_MSHR_FULL      : %d\n", sim_replay_mshr_cnt);
-  $write ("EX2_HAZ_MSHR_ASSIGNED  : %d\n", sim_replay_mshr_assigned_cnt);
+  $write ("EX2_HAZ_MISSU_FULL     : %d\n", sim_replay_missu_cnt);
+  $write ("EX2_HAZ_MISSU_ASSIGNED : %d\n", sim_replay_missu_assigned_cnt);
   $write ("==========================================\n");
 end
 
 `endif // SIMULATION
 
 
-endmodule // myooo_lsu_vipt_fast_replay_queue
+endmodule // myooo_lsu_fast_replay_queue
 // ------------------------------------------------------------------------
-// NAME : myooo_lsu_vipt_pipe
+// NAME : myooo_lsu_pipe
 // TYPE : module
 // ------------------------------------------------------------------------
 // LSU Pipeline
@@ -20618,7 +20438,7 @@ endmodule // myooo_lsu_vipt_fast_replay_queue
 //
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_pipe
+module myooo_lsu_pipe
   import decoder_lsu_ctrl_pkg::*;
   import myooo_lsu_pkg::*;
 #(
@@ -20638,22 +20458,20 @@ module myooo_lsu_vipt_pipe
  commit_if.monitor                     commit_if,
  br_upd_if.slave                       br_upd_if,
 
- mshr_info_if.slave                    mshr_info_if,
-
  phy_wr_if.slave                       ex1_phy_wr_if[myooo_pkg::TGT_BUS_SIZE],
 
  lsu_mispred_if.slave                  mispred_if[myooo_conf_pkg::LSU_INST_NUM],
 
- input lsu_pipe_issue_t                i_ex0_issue,
- input [MEM_Q_SIZE-1: 0]               i_ex0_issue_index_oh,
+ input myooo_lsu_pkg::lsu_pipe_issue_t i_ex0_replay_issue,
+ input [MEM_Q_SIZE-1: 0]                i_ex0_replay_index_oh,
 
- regread_if.master                     ex0_regread_rs1,
+ regread_if.master ex0_regread_rs1,
 
- early_wr_if.master                    ex2_early_wr_out_if,
- phy_wr_if.master                      ex4_phy_wr_out_if,
- lsu_mispred_if.master                 ex3_mispred_out_if,
+ early_wr_if.master                    ex1_early_wr_out_if,
+ phy_wr_if.master                      ex3_phy_wr_out_if,
+ lsu_mispred_if.master                 ex2_mispred_out_if,
 
- l1d_rd_vipt_if.master                 l1d_rd_if,
+ l1d_rd_if.master                      ex1_l1d_rd_if,
 
  // Forwarding checker
  fwd_check_if.master                   ex2_fwd_check_if,     // STQ
@@ -20661,16 +20479,12 @@ module myooo_lsu_vipt_pipe
  fwd_check_if.master                   streq_fwd_check_if,   // Store Requestor
  ldq_haz_check_if.master               ldq_haz_check_if,
  stq_haz_check_if.master               stq_haz_check_if,
- mshr_fwd_if.master                    mshr_fwd_if,
-
- // Pipeline each address checker
- lsu_pipe_cmp_master_if.master         lsu_pipe_cmp_master_if,
- lsu_pipe_cmp_slave_if.slave           lsu_pipe_cmp_slave_if,
+ missu_fwd_if.master                   missu_fwd_if,
 
  // RMW Ordere Hazard Check
  rmw_order_check_if.master             rmw_order_check_if,
 
- l1d_mshr_if.master                   l1d_mshr_if,
+ l1d_missu_if.master                   l1d_missu_if,
 
  // LRSC update Logic
  lrsc_if.master                        lrsc_if,
@@ -20707,10 +20521,8 @@ typedef struct packed {
 } lsu_pipe_ctrl_t;
 
 
-logic          w_tlb_ready;
-
 // Selected signal
-lsu_pipe_issue_t        w_ex0_issue;
+myooo_lsu_pkg::lsu_pipe_issue_t        w_ex0_issue;
 logic [MEM_Q_SIZE-1: 0]  w_ex0_index_oh;
 lsu_pipe_ctrl_t          w_ex0_pipe_ctrl;
 
@@ -20719,13 +20531,13 @@ riscv_pkg::xlen_t                    w_ex0_rs1_selected_data;
 
 logic                    w_ex0_rs1_lsu_mispred;
 logic                    w_ex0_rs1_mispred;
-logic                    w_ex0_commit_flush;
-logic                    w_ex0_br_flush;
+logic w_ex0_commit_flush;
+logic w_ex0_br_flush;
 
 //
 // EX1 stage
 //
-lsu_pipe_issue_t        r_ex1_issue, w_ex1_issue_next;
+myooo_lsu_pkg::lsu_pipe_issue_t        r_ex1_issue, w_ex1_issue_next;
 logic [MEM_Q_SIZE-1: 0]  r_ex1_index_oh;
 
 riscv_pkg::xlen_t        w_ex1_rs1_selected_data;
@@ -20740,20 +20552,19 @@ logic                    w_ex1_readmem_op;
 logic                    w_ex1_haz_detected;
 
 myooo_pkg::maxaddr_t    w_ex1_addr;
-logic                    w_ex1_commit_flush;
-logic                    w_ex1_br_flush;
-logic                    w_ex1_sfence_vma_illegal;
+logic w_ex1_commit_flush;
+logic w_ex1_br_flush;
+logic w_ex1_sfence_vma_illegal;
 
 
-riscv_pkg::xlen_t                  w_ex1_rs1_fwd_data;
+// riscv_pkg::xlen_t                  w_ex1_rs1_fwd_data;
 
 //
 // EX2 stage
 //
-lsu_pipe_issue_t       r_ex2_issue, w_ex2_issue_next;
+myooo_lsu_pkg::lsu_pipe_issue_t       r_ex2_issue, w_ex2_issue_next;
 logic [MEM_Q_SIZE-1: 0] r_ex2_index_oh;
 myooo_pkg::maxaddr_t   r_ex2_addr;
-dc_color_t              r_ex2_color;
 lsu_pipe_ctrl_t         r_ex2_pipe_ctrl;
 myooo_pkg::alen_t      w_ex2_data_tmp;
 myooo_pkg::alen_t      w_ex2_data_sign_ext;
@@ -20761,13 +20572,10 @@ logic                   r_ex2_is_uc;
 logic                   w_ex2_load_mispredicted;
 logic                   r_ex2_haz_detected_from_ex1;
 logic                   w_ex2_l1d_missed;
-logic                   w_ex2_older_same_paddr;
 logic                   w_ex2_readmem_op;
 logic                   r_ex2_except_valid;
 myooo_pkg::except_t    r_ex2_except_type;
 ex2_haz_t               w_ex2_hazard_typ;
-logic [myooo_conf_pkg::LSU_INST_NUM-2: 0] r_ex2_has_older_store;
-logic                   r_ex2_replay_tlb_busy_valid;
 
 myooo_pkg::alenb_t       w_stbuf_fwd_dw;
 myooo_pkg::alen_t        w_stbuf_fwd_aligned_data;
@@ -20779,70 +20587,32 @@ myooo_pkg::alenb_t       w_ex2_expected_fwd_valid;
 myooo_pkg::alenb_t       w_ex2_fwd_success;
 
 logic                   w_ex1_success;
-logic                   w_ex2_success;
+logic                   r_ex2_success;
 logic                   r_ex2_is_lr;
 logic                   r_ex2_is_sc;
 
-logic                   w_ex2_commit_flush;
-logic                   w_ex2_br_flush;
-logic                   r_ex2_sfence_vma_illegal;
+logic w_ex2_commit_flush;
+logic w_ex2_br_flush;
+logic r_ex2_sfence_vma_illegal;
 
 //
 // EX3 stage
 //
-lsu_pipe_issue_t                 r_ex3_issue, w_ex3_issue_next;
+myooo_lsu_pkg::lsu_pipe_issue_t r_ex3_issue, w_ex3_issue_next;
 lsu_pipe_ctrl_t                  r_ex3_pipe_ctrl;
 myooo_pkg::alen_t               r_ex3_aligned_data;
-logic                            r_ex3_mshr_load_valid;
-dc_color_t                       r_ex3_color;
-dc_color_t                       r_ex3_is_uc;
-dc_ways_idx_t                    r_ex3_hit_way;
+logic                            r_ex3_mis_valid;
 logic                            r_ex3_except_valid;
 myooo_pkg::except_t             r_ex3_except_type;
 myooo_pkg::maxaddr_t            r_ex3_addr;
 logic                            r_ex3_sfence_vma_illegal;
 logic                            w_ex3_ldq_br_flush;
 
-logic                            w_ex3_commit_flush;
-logic                            w_ex3_br_flush;
-
-logic                            r_ex3_hazard_valid;
-ex2_haz_t                        r_ex3_hazard_typ;
-logic [HAZARD_INDEX_SIZE-1: 0]   r_ex3_hazard_index;
-
-
-//
-// EX4 stage
-//
-lsu_pipe_issue_t                 r_ex4_issue;
-lsu_pipe_issue_t                 w_ex4_issue_next;
-myooo_pkg::alen_t               r_ex4_aligned_data;
-logic                            r_ex4_wr_valid;
-logic                            r_ex4_except_valid;
-myooo_pkg::except_t             r_ex4_except_type;
-riscv_pkg::xlen_t                r_ex4_except_tval;
-logic                            r_ex4_sfence_vma_illegal;
-logic                            w_ex4_ldq_br_flush;
-
-logic                            r_ex4_hazard_valid;
-ex2_haz_t                        r_ex4_hazard_typ;
-logic [HAZARD_INDEX_SIZE-1: 0]   r_ex4_hazard_index;
-
-logic                            r_flush_report_valid;
-myooo_pkg::cmt_id_t             r_flush_report_cmt_id;
-myooo_pkg::grp_id_t             r_flush_report_grp_id;
-
-
-logic                            w_ex2_haz_detected;
+logic                 w_ex2_haz_detected;
 assign w_ex2_readmem_op = (r_ex2_pipe_ctrl.op == OP_LOAD) | r_ex2_pipe_ctrl.is_amo | r_ex2_is_lr;
 assign w_ex2_haz_detected = r_ex2_haz_detected_from_ex1 |
-                            (w_ex2_readmem_op ? w_ex2_load_mispredicted | (w_ex2_hazard_typ != EX2_HAZ_NONE) : 1'b0);
-
-// -------------------
-// EX0 stage pipeline
-// -------------------
-assign w_ex0_issue    = i_ex0_issue;
-assign w_ex0_index_oh = i_ex0_issue_index_oh;
+                            (w_ex2_hazard_typ != EX2_HAZ_NONE) |
+                            (w_ex2_readmem_op ? w_ex2_load_mispredicted : 1'b0);
 
 //
 // Pipeline Logic
@@ -20850,16 +20620,16 @@ assign w_ex0_index_oh = i_ex0_issue_index_oh;
 always_comb begin
   w_ex1_issue_next       = w_ex0_issue;
   w_ex1_issue_next.valid = w_ex0_issue.valid & ~w_ex0_rs1_mispred & ~w_ex0_commit_flush & ~w_ex0_br_flush;
+  if (br_upd_if.update) begin
+  end
 
   w_ex2_issue_next       = r_ex1_issue;
   w_ex2_issue_next.valid = r_ex1_issue.valid & ~w_ex1_haz_detected & ~w_ex1_commit_flush & ~w_ex1_br_flush;
-  w_ex2_issue_next.rd_regs[0].predict_ready = 'h0;
+  if (br_upd_if.update) begin
+  end
 
   w_ex3_issue_next       = r_ex2_issue;
-  w_ex3_issue_next.valid = r_ex2_issue.valid & ~w_ex2_commit_flush & ~w_ex2_br_flush;
-
-  w_ex4_issue_next       = r_ex3_issue;
-  w_ex4_issue_next.valid = r_ex3_issue.valid & ~r_ex3_hazard_valid & ~w_ex3_commit_flush & ~w_ex3_br_flush;
+  w_ex3_issue_next.valid = r_ex2_issue.valid & (r_ex2_except_valid | ~w_ex2_haz_detected) & ~w_ex2_commit_flush & ~w_ex2_br_flush;
 end
 
 select_mispred_bus ex0_rs1_mispred_select
@@ -20879,12 +20649,6 @@ assign w_ex0_br_flush     = myooo_pkg::is_br_flush_target(w_ex0_issue.cmt_id, w_
                                                            br_upd_if.dead, br_upd_if.mispredict) & br_upd_if.update & w_ex0_issue.valid;
 
 
-// Adjacent pipeline hazard check
-assign lsu_pipe_cmp_master_if.ex0_cmt_id     = w_ex0_issue.cmt_id;
-assign lsu_pipe_cmp_master_if.ex0_grp_id     = w_ex0_issue.grp_id;
-assign lsu_pipe_cmp_master_if.ex2_load_valid = r_ex2_issue.valid & (r_ex2_pipe_ctrl.op == OP_LOAD);
-assign lsu_pipe_cmp_master_if.ex2_paddr      = r_ex2_addr;
-
 riscv_pkg::xlen_t w_ex0_tgt_data [myooo_pkg::TGT_BUS_SIZE];
 for (genvar tgt_idx = 0; tgt_idx < myooo_pkg::TGT_BUS_SIZE; tgt_idx++) begin : ex0_rs_tgt_loop
   assign w_ex0_tgt_data[tgt_idx] = ex1_phy_wr_if[tgt_idx].rd_data;
@@ -20895,9 +20659,15 @@ end
 always_ff @(posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
     r_ex1_issue.valid <= 1'b0;
+    r_ex1_index_oh   <= 'h0;
+
     r_ex2_issue.valid <= 1'b0;
+    r_ex2_index_oh  <= 'h0;
+    r_ex2_haz_detected_from_ex1  <= 1'b0;
+
+    r_ex2_is_uc     <= 1'b0;
+
     r_ex3_issue.valid <= 1'b0;
-    r_ex4_issue.valid <= 1'b0;
   end else begin
     r_ex1_rs1_fwd_data <= w_ex0_tgt_data[w_ex0_issue.rd_regs[0].early_index];
 
@@ -20910,25 +20680,15 @@ always_ff @(posedge i_clk, negedge i_reset_n) begin
     r_ex2_pipe_ctrl <= r_ex1_pipe_ctrl;
     r_ex2_haz_detected_from_ex1  <= r_ex1_issue.valid & w_ex1_haz_detected;
 
-    r_ex2_has_older_store <= lsu_pipe_cmp_master_if.ex1_has_older_store;
-
-    r_ex2_replay_tlb_busy_valid <= w_ex1_tlb_req.valid & ~w_tlb_ready;
-
-    r_ex2_is_uc     <= !w_ex1_tlb_resp.cacheable;
+    r_ex2_is_uc     <= r_ex1_issue.paddr_valid ? r_ex1_issue.is_uc : !w_ex1_tlb_resp.cacheable;
     r_ex2_sfence_vma_illegal <= w_ex1_sfence_vma_illegal;
 
     r_ex3_issue     <= w_ex3_issue_next;
     r_ex3_pipe_ctrl <= r_ex2_pipe_ctrl;
     r_ex3_sfence_vma_illegal <= r_ex2_sfence_vma_illegal;
-
-    r_ex4_issue              <= w_ex4_issue_next;
-    r_ex4_sfence_vma_illegal <= r_ex3_sfence_vma_illegal;
   end // else: !if(!i_reset_n)
 end // always_ff @ (posedge i_clk, negedge i_reset_n)
 
-
-riscv_common_pkg::priv_t csr_priv;
-assign csr_priv = riscv_common_pkg::priv_t'(csr_info.mstatus[`MSTATUS_MPRV] ? csr_info.mstatus[`MSTATUS_MPP] : csr_info.priv);
 
 // TLB
 tlb
@@ -20937,28 +20697,28 @@ tlb
     )
 u_tlb
 (
- .i_clk           (i_clk                 ),
- .i_reset_n       (i_reset_n             ),
+ .i_clk    (i_clk),
+ .i_reset_n(i_reset_n),
 
- .i_kill          (1'b0                  ),
- .sfence_if       (sfence_if_slave       ),
+ .i_kill(1'b0),
+ .sfence_if(sfence_if_slave),
 
- .i_csr_update    (csr_info.update       ),
- .i_status_prv    (csr_priv              ),
- .i_csr_status    (csr_info.mstatus      ),
- .i_csr_satp      (csr_info.satp         ),
+ .i_csr_update (csr_info.update),
+ .i_status_prv(riscv_common_pkg::priv_t'(csr_info.mstatus[`MSTATUS_MPRV] ? csr_info.mstatus[`MSTATUS_MPP] : csr_info.priv)),
+ .i_csr_status(csr_info.mstatus),
+ .i_csr_satp  (csr_info.satp   ),
 
- .i_tlb_req       (w_ex1_tlb_req         ),
- .o_tlb_ready     (w_tlb_ready           ),
- .o_tlb_resp      (w_ex1_tlb_resp        ),
+ .i_tlb_req (w_ex1_tlb_req ),
+ .o_tlb_ready(),
+ .o_tlb_resp(w_ex1_tlb_resp),
 
- .o_tlb_update    (iq_upd_if.tlb_resolve ),
- .o_tlb_resp_miss (                      ),
+ .o_tlb_update(iq_upd_if.tlb_resolve),
+ .o_tlb_resp_miss (),
 
- .ptw_if          (ptw_if                )
+ .ptw_if (ptw_if)
  );
 
-assign w_ex1_addr = w_ex1_tlb_resp.paddr;
+assign w_ex1_addr = r_ex1_issue.paddr_valid ? r_ex1_issue.paddr : w_ex1_tlb_resp.paddr;
 
 decoder_lsu_ctrl
 u_decoder_ls_ctrl
@@ -20972,22 +20732,29 @@ u_decoder_ls_ctrl
    );
 
 //
+// EX0 stage pipeline
+//
+// Pipe selection
+assign w_ex0_issue    = i_ex0_replay_issue;
+assign w_ex0_index_oh = i_ex0_replay_index_oh;
+
+//
 // EX1 stage pipeline
 //
 riscv_pkg::xlen_t w_ex1_tgt_data [myooo_pkg::TGT_BUS_SIZE];
 for (genvar tgt_idx = 0; tgt_idx < myooo_pkg::TGT_BUS_SIZE; tgt_idx++) begin : ex1_rs_tgt_loop
   assign w_ex1_tgt_data[tgt_idx] = ex1_phy_wr_if[tgt_idx].rd_data;
 end
-assign w_ex1_rs1_fwd_data  = w_ex1_tgt_data[r_ex1_issue.rd_regs[0].early_index];
+// assign w_ex1_rs1_fwd_data  = w_ex1_tgt_data[r_ex1_issue.rd_regs[0].early_index];
 
 assign ex0_regread_rs1.valid = w_ex0_issue.valid & w_ex0_issue.rd_regs[0].valid;
 assign ex0_regread_rs1.rnid  = w_ex0_issue.rd_regs[0].rnid;
 
-assign w_ex1_rs1_selected_data = r_ex1_issue.rd_regs[0].predict_ready[0] ? w_ex1_rs1_fwd_data :
+assign w_ex1_rs1_selected_data = r_ex1_issue.rd_regs[0].predict_ready[0] ? w_ex1_tgt_data[r_ex1_issue.rd_regs[0].early_index] :
                                  r_ex1_issue.rd_regs[0].predict_ready[1] ? r_ex1_rs1_fwd_data :
                                  ex0_regread_rs1.data;
 
-assign w_ex1_vaddr = w_ex1_rs1_selected_data + mem_offset(r_ex1_pipe_ctrl.op, r_ex1_issue.inst);
+assign w_ex1_vaddr = w_ex1_rs1_selected_data[riscv_pkg::VADDR_W-1:0] + mem_offset(r_ex1_pipe_ctrl.op, r_ex1_issue.inst);
 
 logic w_ex1_readmem_cmd;
 logic w_ex1_writemem_cmd;
@@ -21002,7 +20769,7 @@ assign w_ex1_is_sc = r_ex1_pipe_ctrl.rmwop == RMWOP_SC;
 assign w_ex1_writemem_cmd = (r_ex1_pipe_ctrl.op == OP_STORE) | r_ex1_pipe_ctrl.is_amo | w_ex1_is_sc;
 
 
-assign w_ex1_tlb_req.valid       = r_ex1_issue.valid & (w_ex1_writemem_cmd | w_ex1_readmem_cmd);
+assign w_ex1_tlb_req.valid       = r_ex1_issue.valid & (w_ex1_writemem_cmd | w_ex1_readmem_cmd) & ~r_ex1_issue.paddr_valid;
 assign w_ex1_tlb_req.cmd         = w_ex1_readmem_cmd ? M_XRD : M_XWR;
 assign w_ex1_tlb_req.vaddr       = w_ex1_vaddr;
 assign w_ex1_tlb_req.size        =
@@ -21012,10 +20779,10 @@ assign w_ex1_tlb_req.size        =
                                    r_ex1_pipe_ctrl.size == SIZE_B  ? 1 : 0;
 assign w_ex1_tlb_req.passthrough = 1'b0;
 
-assign ex2_early_wr_out_if.valid       = r_ex2_issue.valid & r_ex2_issue.wr_reg.valid & !r_ex2_issue.oldest_valid;
-assign ex2_early_wr_out_if.rd_rnid     = r_ex2_issue.wr_reg.rnid;
-assign ex2_early_wr_out_if.rd_type     = r_ex2_issue.wr_reg.typ;
-assign ex2_early_wr_out_if.may_mispred = r_ex2_issue.valid & r_ex2_issue.wr_reg.valid;
+assign ex1_early_wr_out_if.valid       = r_ex1_issue.valid & r_ex1_issue.wr_reg.valid & !r_ex1_issue.oldest_valid & (iq_upd_if.hazard_typ == EX1_HAZ_NONE);
+assign ex1_early_wr_out_if.rd_rnid     = r_ex1_issue.wr_reg.rnid;
+assign ex1_early_wr_out_if.rd_type     = r_ex1_issue.wr_reg.typ;
+assign ex1_early_wr_out_if.may_mispred = r_ex1_issue.valid & r_ex1_issue.wr_reg.valid;
 
 logic w_ex1_ld_except_valid;
 logic w_ex1_st_except_valid;
@@ -21045,13 +20812,10 @@ assign w_ex1_haz_detected = iq_upd_if.hazard_typ != EX1_HAZ_NONE;
 // Interface to EX1 updates
 assign iq_upd_if.update              = r_ex1_issue.valid;
 assign iq_upd_if.index_oh            = r_ex1_index_oh;
-assign iq_upd_if.hazard_typ          = w_ex1_tlb_req.valid & ~r_ex1_issue.paddr_valid & ~w_tlb_ready ? EX1_HAZ_TLB_MISS :  // From IQ, TLB busy
-                                       w_ex1_tlb_req.valid & w_tlb_ready & w_ex1_tlb_resp.miss ? EX1_HAZ_TLB_MISS :
-                                       w_ex1_tlb_req.valid & w_tlb_ready & ~w_ex1_tlb_resp.cacheable & ~r_ex1_issue.oldest_valid & ~(w_ex1_ld_except_valid | w_ex1_st_except_valid) ? EX1_HAZ_UC_ACCESS :
+assign iq_upd_if.hazard_typ          = w_ex1_tlb_req.valid & w_ex1_tlb_resp.miss ? EX1_HAZ_TLB_MISS :
+                                       w_ex1_tlb_req.valid & ~w_ex1_tlb_resp.cacheable & ~r_ex1_issue.oldest_valid & ~(w_ex1_ld_except_valid | w_ex1_st_except_valid) ? EX1_HAZ_UC_ACCESS :
                                        EX1_HAZ_NONE;
 assign iq_upd_if.index_oh            = r_ex1_index_oh;
-
-
 
 `ifdef SIMULATION
 always_ff @ (negedge i_clk, negedge i_reset_n) begin
@@ -21074,15 +20838,16 @@ end
 // Interface to L1D cache
 assign w_ex1_readmem_op = (r_ex1_pipe_ctrl.op == OP_LOAD) | r_ex1_pipe_ctrl.is_amo | w_ex1_is_lr;
 
-assign l1d_rd_if.s0_valid         = r_ex1_issue.valid & w_ex1_readmem_op;
-assign l1d_rd_if.s0_index         = r_ex1_issue.paddr_valid ? myooo_lsu_pkg::gen_dc_pa_index(r_ex1_issue.paddr, r_ex1_issue.color) : myooo_lsu_pkg::gen_dc_index(w_ex1_vaddr);
-assign l1d_rd_if.s0_high_priority = r_ex1_issue.l1d_high_priority;
-
-assign l1d_rd_if.s1_paddr         = r_ex2_addr;
+assign ex1_l1d_rd_if.s0_valid = r_ex1_issue.valid &
+                                w_ex1_readmem_op & !w_ex1_haz_detected;
+assign ex1_l1d_rd_if.s0_paddr = {w_ex1_addr[riscv_pkg::PADDR_W-1:$clog2(DCACHE_DATA_B_W)],
+                                 {$clog2(DCACHE_DATA_B_W){1'b0}}};
+assign ex1_l1d_rd_if.s0_high_priority = r_ex1_issue.l1d_high_priority;
 
 assign w_ex1_commit_flush = myooo_pkg::is_flushed_commit(commit_if.commit_valid, commit_if.payload) & r_ex1_issue.valid;
 assign w_ex1_br_flush     = myooo_pkg::is_br_flush_target(r_ex1_issue.cmt_id, r_ex1_issue.grp_id, br_upd_if.cmt_id, br_upd_if.grp_id,
                                                            br_upd_if.dead, br_upd_if.mispredict) & br_upd_if.update & r_ex1_issue.valid;
+
 
 //
 // EX2 stage pipeline
@@ -21095,20 +20860,20 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
     r_ex2_is_sc <= 1'b0;
   end else begin
     r_ex2_addr         <= w_ex1_ld_except_valid | w_ex1_st_except_valid ? w_ex1_vaddr : w_ex1_addr;
-    r_ex2_color        <= w_ex1_vaddr[12 +: DCACHE_COLOR_W];
 
     r_ex2_except_valid <= w_ex1_ld_except_valid | w_ex1_st_except_valid;
     r_ex2_except_type  <= w_ex1_tlb_except_type;
 
     r_ex2_is_lr <= w_ex1_is_lr;
     r_ex2_is_sc <= w_ex1_is_sc;
+    r_ex2_success <= w_ex1_success;
   end // else: !if(!i_reset_n)
 end // always_ff @ (posedge i_clk, negedge i_reset_n)
 
-assign lrsc_if.lr_update_valid = r_ex2_issue.valid & r_ex2_is_lr /* & ~w_ex2_haz_detected */;
-assign lrsc_if.sc_check_valid  = r_ex2_issue.valid & r_ex2_is_sc /* & ~w_ex2_haz_detected */;
-assign lrsc_if.paddr           = r_ex2_addr;
-assign w_ex2_success           = lrsc_if.sc_success;
+assign lrsc_if.lr_update_valid = r_ex1_issue.valid & w_ex1_is_lr & ~w_ex1_haz_detected;
+assign lrsc_if.sc_check_valid  = r_ex1_issue.valid & w_ex1_is_sc & ~w_ex1_haz_detected;
+assign lrsc_if.paddr           = w_ex1_addr;
+assign w_ex1_success           = lrsc_if.sc_success;
 
 
 logic w_ex2_rmw_haz_vld;
@@ -21117,21 +20882,20 @@ assign w_ex2_rmw_haz_vld = rmw_order_check_if.ex2_stq_haz_vld | rmw_order_check_
 assign w_ex2_load_mispredicted = r_ex2_issue.valid &
                                  w_ex2_readmem_op &
                                  (w_ex2_rmw_haz_vld | stq_haz_check_if.ex2_haz_valid |
-                                  (l1d_rd_if.s1_miss | l1d_rd_if.s1_conflict) & ~(&w_ex2_fwd_success));
+                                  (ex1_l1d_rd_if.s1_miss | ex1_l1d_rd_if.s1_conflict) & ~(&w_ex2_fwd_success));
 assign w_ex2_l1d_missed = r_ex2_issue.valid &
                           w_ex2_readmem_op &
                           ~w_ex2_rmw_haz_vld &
-                          l1d_rd_if.s1_miss &
-                          ~l1d_rd_if.s1_conflict &
+                          ex1_l1d_rd_if.s1_miss &
+                          ~ex1_l1d_rd_if.s1_conflict &
                           ~(&w_ex2_fwd_success);
 
-assign w_ex2_older_same_paddr = |(r_ex2_has_older_store & lsu_pipe_cmp_master_if.ex2_haz_same_paddr_store);
-
-assign l1d_mshr_if.load              = r_ex3_mshr_load_valid;
-assign l1d_mshr_if.req_payload.paddr = r_ex3_addr;
-assign l1d_mshr_if.req_payload.color = r_ex3_color;
-assign l1d_mshr_if.req_payload.is_uc = r_ex3_is_uc;
-assign l1d_mshr_if.req_payload.way   = r_ex3_hit_way;
+assign l1d_missu_if.load              = w_ex2_l1d_missed & !r_ex2_haz_detected_from_ex1 &
+                                        !stq_haz_check_if.ex2_haz_valid & !w_ex2_rmw_haz_vld &
+                                        !r_ex2_except_valid & !(ex1_l1d_rd_if.s1_conflict | ex1_l1d_rd_if.s1_hit);
+assign l1d_missu_if.req_payload.paddr = r_ex2_addr;
+assign l1d_missu_if.req_payload.is_uc = r_ex2_is_uc;
+assign l1d_missu_if.req_payload.way   = ex1_l1d_rd_if.s1_hit_way;
 // L1D replace information
 
 // Interface to LDQ updates
@@ -21143,54 +20907,56 @@ assign ldq_upd_if.ex2_payload.paddr   = r_ex2_addr;
 
 
 // Interface to STQ updates
+assign stq_upd_if.ex1_update          = r_ex1_issue.valid & ~w_ex1_tlb_resp.miss;
+assign stq_upd_if.ex1_payload.cmt_id  = r_ex1_issue.cmt_id;
+assign stq_upd_if.ex1_payload.grp_id  = r_ex1_issue.grp_id;
+assign stq_upd_if.ex1_payload.paddr   = w_ex1_tlb_resp.paddr;
+assign stq_upd_if.ex1_payload.is_uc   = !w_ex1_tlb_resp.cacheable;
+assign stq_upd_if.ex1_payload.rmwop   = r_ex1_pipe_ctrl.rmwop;
+assign stq_upd_if.ex1_payload.size    = r_ex1_pipe_ctrl.size;
 assign stq_upd_if.ex2_update          = r_ex2_issue.valid;
 assign stq_upd_if.ex2_payload.cmt_id  = r_ex2_issue.cmt_id;
 assign stq_upd_if.ex2_payload.grp_id  = r_ex2_issue.grp_id;
-assign stq_upd_if.ex2_payload.paddr   = r_ex2_addr;
-assign stq_upd_if.ex2_payload.color   = r_ex2_color;
-assign stq_upd_if.ex2_payload.is_uc   = r_ex2_is_uc;
-assign stq_upd_if.ex2_payload.rmwop   = r_ex2_pipe_ctrl.rmwop;
-assign stq_upd_if.ex2_payload.size    = r_ex2_pipe_ctrl.size;
-assign stq_upd_if.ex2_payload.success = w_ex2_success;
+assign stq_upd_if.ex2_payload.success = r_ex2_success;
 
-assign w_ex2_hazard_typ = w_ex2_older_same_paddr                         ? EX2_HAZ_OLDER_SAME_ADDR :
-                          stq_haz_check_if.ex2_haz_valid                 ? EX2_HAZ_STQ_NONFWD_HAZ :
-                          w_ex2_rmw_haz_vld                              ? EX2_HAZ_RMW_ORDER_HAZ  :
-                          w_ex2_fwd_miss_valid                           ? EX2_HAZ_STQ_FWD_MISS   :
-                          l1d_rd_if.s1_conflict                          ? EX2_HAZ_L1D_CONFLICT   :
-                          r_ex2_readmem_op & mshr_info_if.is_almost_full ? EX2_HAZ_MSHR_FULL      :
-                          w_ex2_l1d_missed & ~(&w_ex2_fwd_success)       ? EX2_HAZ_MSHR_ASSIGNED  :
+assign w_ex2_hazard_typ = stq_haz_check_if.ex2_haz_valid    ? EX2_HAZ_STQ_NONFWD_HAZ :
+                          w_ex2_rmw_haz_vld                 ? EX2_HAZ_RMW_ORDER_HAZ  :
+                          w_ex2_fwd_miss_valid              ? EX2_HAZ_STQ_FWD_MISS   :
+                          &w_ex2_fwd_success                ? EX2_HAZ_NONE           :
+                          ex1_l1d_rd_if.s1_conflict         ? EX2_HAZ_L1D_CONFLICT   :
+                          l1d_missu_if.load ?
+                          (l1d_missu_if.resp_payload.full   ? EX2_HAZ_MISSU_FULL     :
+                           /* l1d_missu_if.resp_payload.allocated ? */ EX2_HAZ_MISSU_ASSIGNED) :
                           EX2_HAZ_NONE;
 
 // Interface to Replay Queue
 always_comb begin
-  lsu_pipe_haz_if.valid                  = r_ex3_issue.valid & ~r_ex3_except_valid & r_ex3_hazard_valid;
-  lsu_pipe_haz_if.payload.inst           = r_ex3_issue.inst;
-  lsu_pipe_haz_if.payload.cmt_id         = r_ex3_issue.cmt_id;
-  lsu_pipe_haz_if.payload.grp_id         = r_ex3_issue.grp_id;
-  lsu_pipe_haz_if.payload.cat            = r_ex3_issue.cat;
-  lsu_pipe_haz_if.payload.oldest_valid   = r_ex3_issue.oldest_valid;
-  lsu_pipe_haz_if.payload.hazard_typ     = r_ex3_hazard_typ;
-  lsu_pipe_haz_if.payload.rd_reg         = r_ex3_issue.rd_regs[0];
-  lsu_pipe_haz_if.payload.wr_reg         = r_ex3_issue.wr_reg;
-  lsu_pipe_haz_if.payload.paddr          = r_ex3_addr;
-  lsu_pipe_haz_if.payload.color          = r_ex3_color;
-  lsu_pipe_haz_if.payload.is_uc          = r_ex3_is_uc;
-  lsu_pipe_haz_if.payload.hazard_index   = r_ex3_hazard_typ == EX2_HAZ_MSHR_ASSIGNED ? l1d_mshr_if.resp_payload.mshr_index_oh :
-                                           r_ex3_hazard_index;
+  lsu_pipe_haz_if.valid                  = r_ex2_issue.valid & ~r_ex2_except_valid & (w_ex2_hazard_typ != EX2_HAZ_NONE) & ~w_ex2_commit_flush & ~w_ex2_br_flush;
+  lsu_pipe_haz_if.payload.inst           = r_ex2_issue.inst;
+  lsu_pipe_haz_if.payload.cmt_id         = r_ex2_issue.cmt_id;
+  lsu_pipe_haz_if.payload.grp_id         = r_ex2_issue.grp_id;
+  if (br_upd_if.update) begin
+  end
+  lsu_pipe_haz_if.payload.cat            = r_ex2_issue.cat;
+  lsu_pipe_haz_if.payload.oldest_valid   = r_ex2_issue.oldest_valid;
+  lsu_pipe_haz_if.payload.hazard_typ     = w_ex2_hazard_typ;
+  lsu_pipe_haz_if.payload.rd_reg         = r_ex2_issue.rd_regs[0];
+  lsu_pipe_haz_if.payload.wr_reg         = r_ex2_issue.wr_reg;
+  lsu_pipe_haz_if.payload.paddr          = r_ex2_addr;
+  lsu_pipe_haz_if.payload.is_uc          = r_ex2_is_uc;
+  lsu_pipe_haz_if.payload.hazard_index   = w_ex2_hazard_typ == EX2_HAZ_MISSU_ASSIGNED ? l1d_missu_if.resp_payload.missu_index_oh :
+                                           w_ex2_hazard_typ == EX2_HAZ_STQ_FWD_MISS   ? 1 << ex2_fwd_check_if.fwd_miss_haz_index :
+                                           w_ex2_hazard_typ == EX2_HAZ_RMW_ORDER_HAZ  ? 'h1 :
+                                           stq_haz_check_if.ex2_haz_index;
 end
 
 // ---------------------
 // Misprediction Update
 // ---------------------
-always_ff @ (posedge i_clk, negedge i_reset_n) begin
-  if (!i_reset_n) begin
-    ex3_mispred_out_if.mis_valid <= 1'b0;
-  end else begin
-    ex3_mispred_out_if.mis_valid <= w_ex2_load_mispredicted | w_ex2_readmem_op & (w_ex2_haz_detected | r_ex2_haz_detected_from_ex1);
-    ex3_mispred_out_if.rd_type   <= r_ex2_issue.wr_reg.typ;
-    ex3_mispred_out_if.rd_rnid   <= r_ex2_issue.wr_reg.rnid;
-  end
+always_comb begin
+  ex2_mispred_out_if.mis_valid = w_ex2_load_mispredicted | w_ex2_readmem_op & (w_ex2_haz_detected | r_ex2_haz_detected_from_ex1);
+  ex2_mispred_out_if.rd_type   = r_ex2_issue.wr_reg.typ;
+  ex2_mispred_out_if.rd_rnid   = r_ex2_issue.wr_reg.rnid;
 end
 
 
@@ -21199,10 +20965,10 @@ end
 //   if (i_reset_n) begin
 //     if (stq_upd_if.update &
 //         (r_ex2_pipe_ctrl.op == OP_LOAD) &
-//         (stq_upd_if.hazard_typ == EX2_HAZ_MSHR_ASSIGNED) &
-//         !$onehot(stq_upd_if.mshr_index_oh)) begin
-//       $fatal(0, "LSU Pipeline : stq_upd_if.mshr_index_oh should be one-hot. Value=%x\n",
-//              stq_upd_if.mshr_index_oh);
+//         (stq_upd_if.hazard_typ == EX2_HAZ_MISSU_ASSIGNED) &
+//         !$onehot(stq_upd_if.missu_index_oh)) begin
+//       $fatal(0, "LSU Pipeline : stq_upd_if.missu_index_oh should be one-hot. Value=%x\n",
+//              stq_upd_if.missu_index_oh);
 //     end
 //   end // if (i_reset_n)
 // end
@@ -21249,17 +21015,17 @@ assign rmw_order_check_if.ex2_valid  = r_ex2_issue.valid;
 assign rmw_order_check_if.ex2_cmt_id = r_ex2_issue.cmt_id;
 assign rmw_order_check_if.ex2_grp_id = r_ex2_issue.grp_id;
 
-// MSHR Hazard Check
-assign mshr_fwd_if.ex2_valid  = r_ex2_issue.valid & w_ex2_fwd_check_type;
-assign mshr_fwd_if.ex2_paddr  = r_ex2_addr;
+// MISSU Hazard Check
+assign missu_fwd_if.ex2_valid  = r_ex2_issue.valid & w_ex2_fwd_check_type;
+assign missu_fwd_if.ex2_paddr  = r_ex2_addr;
 
 logic w_ex2_fwd_miss_valid;
 
 myooo_pkg::alenb_t                  w_ex2_fwd_dw;
 myooo_pkg::alen_t                    w_ex2_fwd_aligned_data;
 
-myooo_pkg::alenb_t                  w_ex2_mshr_fwd_dw;
-myooo_pkg::alen_t                    w_ex2_mshr_fwd_aligned_data;
+myooo_pkg::alenb_t                  w_ex2_missu_fwd_dw;
+myooo_pkg::alen_t                    w_ex2_missu_fwd_aligned_data;
 
 myooo_pkg::alen_t                    w_ex2_fwd_final_data;
 
@@ -21271,8 +21037,8 @@ always_comb begin
                                                       ex2_fwd_check_if.fwd_dw, ex2_fwd_check_if.fwd_data,
                                                       r_ex2_addr[$clog2(myooo_pkg::ALEN_W/8)-1:0]);
   w_ex2_fwd_miss_valid = ex2_fwd_check_if.fwd_miss_valid;
-  w_ex2_mshr_fwd_aligned_data = mshr_fwd_if.ex2_fwd_data >> w_ex2_dcache_pos;
-  w_ex2_mshr_fwd_dw           = {8{mshr_fwd_if.ex2_fwd_valid}};
+  w_ex2_missu_fwd_aligned_data = missu_fwd_if.ex2_fwd_data >> w_ex2_dcache_pos;
+  w_ex2_missu_fwd_dw           = {8{missu_fwd_if.ex2_fwd_valid}};
 end
 
 
@@ -21296,18 +21062,18 @@ always_comb begin
 end
 
 myooo_pkg::alen_t w_ex2_l1d_data;
-assign w_ex2_l1d_data = l1d_rd_if.s1_data[{r_ex2_addr[$clog2(DCACHE_DATA_B_W)-1:0], 3'b000} +: myooo_pkg::ALEN_W];
+assign w_ex2_l1d_data = ex1_l1d_rd_if.s1_data[{r_ex2_addr[$clog2(DCACHE_DATA_B_W)-1:0], 3'b000} +: myooo_pkg::ALEN_W];
 
 generate for (genvar b_idx = 0; b_idx < myooo_pkg::ALEN_W / 8; b_idx++) begin
-  assign w_ex2_fwd_final_data[b_idx*8 +: 8] = w_ex2_fwd_dw     [b_idx] ? w_ex2_fwd_aligned_data    [b_idx*8 +: 8] :
-                                              w_stbuf_fwd_dw   [b_idx] ? w_stbuf_fwd_aligned_data  [b_idx*8 +: 8] :
-                                              w_ex2_mshr_fwd_dw[b_idx] ? w_ex2_mshr_fwd_aligned_data[b_idx*8 +: 8] :
-                                              w_streq_fwd_dw   [b_idx] ? w_streq_fwd_aligned_data  [b_idx*8 +: 8] :
-                                                                         w_ex2_l1d_data            [b_idx*8 +: 8];
-  assign w_ex2_fwd_success[b_idx] = w_ex2_expected_fwd_valid[b_idx] ? (w_ex2_fwd_dw      [b_idx] |
-                                                                       w_stbuf_fwd_dw    [b_idx] |
-                                                                       w_ex2_mshr_fwd_dw [b_idx] |
-                                                                       w_streq_fwd_dw    [b_idx]) : 1'b1;
+  assign w_ex2_fwd_final_data[b_idx*8 +: 8] = w_ex2_fwd_dw    [b_idx] ? w_ex2_fwd_aligned_data    [b_idx*8 +: 8] :
+                                              w_stbuf_fwd_dw  [b_idx] ? w_stbuf_fwd_aligned_data  [b_idx*8 +: 8] :
+                                              w_ex2_missu_fwd_dw[b_idx] ? w_ex2_missu_fwd_aligned_data[b_idx*8 +: 8] :
+                                              w_streq_fwd_dw  [b_idx] ? w_streq_fwd_aligned_data  [b_idx*8 +: 8] :
+                                                                        w_ex2_l1d_data            [b_idx*8 +: 8];
+  assign w_ex2_fwd_success[b_idx] = w_ex2_expected_fwd_valid[b_idx] ? (w_ex2_fwd_dw     [b_idx] |
+                                                                       w_stbuf_fwd_dw   [b_idx] |
+                                                                       w_ex2_missu_fwd_dw [b_idx] |
+                                                                       w_streq_fwd_dw   [b_idx]) : 1'b1;
 end
 endgenerate
 
@@ -21347,88 +21113,41 @@ assign w_ex2_br_flush     = myooo_pkg::is_br_flush_target(r_ex2_issue.cmt_id, r_
 always_ff @ (posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
     r_ex3_aligned_data <= 'h0;
+    r_ex3_mis_valid <= 1'b0;
   end else begin
-    r_ex3_aligned_data <= r_ex2_pipe_ctrl.rmwop == RMWOP_SC ? !w_ex2_success : w_ex2_data_sign_ext;
-
-    r_ex3_mshr_load_valid <= w_ex2_l1d_missed & !r_ex2_haz_detected_from_ex1 &
-                             !stq_haz_check_if.ex2_haz_valid & !w_ex2_rmw_haz_vld &
-                             !r_ex2_except_valid & !(l1d_rd_if.s1_conflict | l1d_rd_if.s1_hit);
-
-    r_ex3_addr    <= r_ex2_addr;
-    r_ex3_color   <= r_ex2_color;
-    r_ex3_is_uc   <= r_ex2_is_uc;
-    r_ex3_hit_way <= l1d_rd_if.s1_hit_way;
+    r_ex3_aligned_data <= r_ex2_pipe_ctrl.rmwop == RMWOP_SC ? !r_ex2_success : w_ex2_data_sign_ext;
+    r_ex3_mis_valid <= ex2_mispred_out_if.mis_valid;
+    r_ex3_addr      <= r_ex2_addr;
 
     r_ex3_except_valid <= r_ex2_except_valid;
     r_ex3_except_type  <= r_ex2_except_type;
-
-    r_ex3_hazard_valid <= w_ex2_haz_detected & ~r_ex2_except_valid; // When exception detected, disable hazards
-    r_ex3_hazard_typ   <= w_ex2_hazard_typ;
-    r_ex3_hazard_index <= w_ex2_hazard_typ == EX2_HAZ_STQ_FWD_MISS  ? 1 << ex2_fwd_check_if.fwd_miss_haz_index :
-                          w_ex2_hazard_typ == EX2_HAZ_RMW_ORDER_HAZ ? 'h1 :
-                          stq_haz_check_if.ex2_haz_index;
   end
 end // always_ff @ (posedge i_clk, negedge i_reset_n)
 
-assign w_ex3_commit_flush = myooo_pkg::is_flushed_commit(commit_if.commit_valid, commit_if.payload) & r_ex3_issue.valid;
-assign w_ex3_br_flush     = myooo_pkg::is_br_flush_target(r_ex3_issue.cmt_id, r_ex3_issue.grp_id, br_upd_if.cmt_id, br_upd_if.grp_id,
-                                                           br_upd_if.dead, br_upd_if.mispredict) & br_upd_if.update & r_ex3_issue.valid;
-
-// -------------------
-// EX4 stage pipeline
-// -------------------
-always_ff @ (posedge i_clk) begin
-  r_ex4_aligned_data <= r_ex3_aligned_data;
-  r_ex4_wr_valid <= w_ex4_issue_next.valid &
-                    r_ex3_issue.wr_reg.valid &
-                    (r_ex3_issue.wr_reg.typ == myooo_pkg::GPR ? (r_ex3_issue.wr_reg.regidx != 'h0) :
-                     r_ex3_issue.wr_reg.typ == myooo_pkg::FPR ? 1'b1 :
-                     1'b1) &
-                    ~ex3_mispred_out_if.mis_valid;;
-
-  r_ex4_except_valid <= r_ex3_except_valid;
-  r_ex4_except_type  <= r_ex3_except_type;
-  r_ex4_except_tval  <= r_ex3_except_type == myooo_pkg::ILLEGAL_INST ? r_ex3_issue.inst :
-                        {{(riscv_pkg::XLEN_W-riscv_pkg::VADDR_W){r_ex3_addr[riscv_pkg::VADDR_W-1]}}, r_ex3_addr[riscv_pkg::VADDR_W-1: 0]};
-
-  r_ex4_hazard_typ   <= r_ex3_hazard_typ;
-  r_ex4_hazard_index <= r_ex3_hazard_index;
-
-  r_flush_report_valid  <= r_ex3_issue.valid & ldq_haz_check_if.ex3_haz_valid & ~w_ex3_ldq_br_flush;
-  r_flush_report_cmt_id <= ldq_haz_check_if.ex3_haz_cmt_id;
-  r_flush_report_grp_id <= ldq_haz_check_if.ex3_haz_grp_id;
-
-end // always_ff @ (posedge i_clk, negedge i_reset_n)
-
-
-assign done_report_if.valid         = r_ex4_issue.valid;
-assign done_report_if.cmt_id        = r_ex4_issue.cmt_id;
-assign done_report_if.grp_id        = r_ex4_issue.grp_id;
-assign done_report_if.except_valid  = r_ex4_except_valid;
-assign done_report_if.except_type   = r_ex4_except_type;
-assign done_report_if.except_tval   = r_ex4_except_tval;
-
-// assign done_report_if.valid         = r_ex3_issue.valid;
-// assign done_report_if.cmt_id        = r_ex3_issue.cmt_id;
-// assign done_report_if.grp_id        = r_ex3_issue.grp_id;
-// assign done_report_if.except_valid  = r_ex3_except_valid;
-// assign done_report_if.except_type   = r_ex3_except_type;
-// assign done_report_if.except_tval   = r_ex3_except_type == myooo_pkg::ILLEGAL_INST ? r_ex3_issue.inst :
-//                                      {{(riscv_pkg::XLEN_W-riscv_pkg::VADDR_W){r_ex3_addr[riscv_pkg::VADDR_W-1]}}, r_ex3_addr[riscv_pkg::VADDR_W-1: 0]};r_ex3_except_tval;
-
-
+assign done_report_if.valid         = r_ex3_issue.valid;
+assign done_report_if.cmt_id        = r_ex3_issue.cmt_id;
+assign done_report_if.grp_id        = r_ex3_issue.grp_id;
+assign done_report_if.except_valid  = r_ex3_except_valid;
+assign done_report_if.except_type   = r_ex3_except_type;
+assign done_report_if.except_tval   = r_ex3_except_type == myooo_pkg::ILLEGAL_INST ? r_ex3_issue.inst :
+                                      {{(riscv_pkg::XLEN_W-riscv_pkg::VADDR_W){r_ex3_addr[riscv_pkg::VADDR_W-1]}}, r_ex3_addr[riscv_pkg::VADDR_W-1: 0]};
 
 assign w_ex3_ldq_br_flush = myooo_pkg::is_br_flush_target(ldq_haz_check_if.ex3_haz_cmt_id, ldq_haz_check_if.ex3_haz_grp_id, br_upd_if.cmt_id, br_upd_if.grp_id,
                                                            br_upd_if.dead, br_upd_if.mispredict) & br_upd_if.update & ldq_haz_check_if.ex3_haz_valid;
 
-assign flush_report_if.valid  = r_flush_report_valid;
-assign flush_report_if.cmt_id = r_flush_report_cmt_id;
-assign flush_report_if.grp_id = r_flush_report_grp_id;
+assign flush_report_if.valid  = r_ex3_issue.valid & ldq_haz_check_if.ex3_haz_valid & ~w_ex3_ldq_br_flush;
+assign flush_report_if.cmt_id = ldq_haz_check_if.ex3_haz_cmt_id;
+assign flush_report_if.grp_id = ldq_haz_check_if.ex3_haz_grp_id;
 
-assign ex4_phy_wr_out_if.valid   = r_ex4_wr_valid;
-assign ex4_phy_wr_out_if.rd_rnid = r_ex4_issue.wr_reg.rnid;
-assign ex4_phy_wr_out_if.rd_type = r_ex4_issue.wr_reg.typ;
-assign ex4_phy_wr_out_if.rd_data = r_ex4_aligned_data;
+assign ex3_phy_wr_out_if.valid   = r_ex3_issue.valid &
+                                   r_ex3_issue.wr_reg.valid &
+                                   (r_ex3_issue.wr_reg.typ == myooo_pkg::GPR ? (r_ex3_issue.wr_reg.regidx != 'h0) :
+                                    r_ex3_issue.wr_reg.typ == myooo_pkg::FPR ? 1'b1 :
+                                    1'b1) &
+                                   ~r_ex3_mis_valid;
+assign ex3_phy_wr_out_if.rd_rnid = r_ex3_issue.wr_reg.rnid;
+assign ex3_phy_wr_out_if.rd_type = r_ex3_issue.wr_reg.typ;
+assign ex3_phy_wr_out_if.rd_data = r_ex3_aligned_data;
 
 
 // ------------
@@ -21496,22 +21215,6 @@ end // always_ff @ (posedge i_clk, negedge i_reset_n)
 assign o_fence_i = w_fencecommit_if_match;
 
 
-// ---------------------
-// Pipeline Age Checker
-// ---------------------
-generate for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM-1; p_idx++) begin : gen_pipe_cmp
-  always_ff @ (posedge i_clk) begin
-    lsu_pipe_cmp_slave_if.ex1_has_older_store[p_idx] <= (w_ex0_pipe_ctrl.op == OP_STORE) &
-                                                        myooo_pkg::id0_is_older_than_id1(w_ex0_issue.cmt_id, w_ex0_issue.grp_id,
-                                                                                          lsu_pipe_cmp_slave_if.ex0_cmt_id[p_idx],
-                                                                                          lsu_pipe_cmp_slave_if.ex0_grp_id[p_idx]);
-  end
-
-  assign lsu_pipe_cmp_slave_if.ex2_haz_same_paddr_store[p_idx] = r_ex2_addr[riscv_pkg::PADDR_W-1: 3] ==
-                                                                 lsu_pipe_cmp_slave_if.ex2_paddr[p_idx][riscv_pkg::PADDR_W-1: 3];
-
-end endgenerate
-
 `ifdef SIMULATION
   `ifdef KANATA_DUMP
 // Kanata
@@ -21541,7 +21244,7 @@ end // always_ff @ (negedge i_clk, negedge i_reset_n)
 `endif // SIMULATION
 
 
-endmodule // myooo_lsu_vipt_pipe
+endmodule // myooo_lsu_pipe
 // ------------------------------------------------------------------------
 // NAME : MYOOO Load Requseter (LRQ) for L1D
 // TYPE : module
@@ -21557,13 +21260,14 @@ module myooo_l1d_mshr
    input logic  i_reset_n,
 
    // from Pipeline for Load + STQ Load
-   l1d_mshr_if.slave l1d_mshr   [myooo_conf_pkg::LSU_INST_NUM + 1],
+   l1d_missu_if.slave l1d_missu[myooo_conf_pkg::LSU_INST_NUM + 1],
    // from LS-Pipe hazard check
-   mshr_fwd_if.slave mshr_fwd_if[myooo_conf_pkg::LSU_INST_NUM],
+   missu_fwd_if.slave missu_fwd_if[myooo_conf_pkg::LSU_INST_NUM],
 
-   // Information of MSHR
-   output myooo_lsu_pkg::mshr_resolve_t o_mshr_resolve,
-   mshr_info_if.master                   mshr_info_if,
+   // Information of MISSU
+   output myooo_lsu_pkg::missu_resolve_t o_missu_resolve,
+   output logic                         o_missu_is_full,
+   output logic                         o_missu_is_empty,
 
    // L2 External Interface
    l2_req_if.master  l1d_ext_rd_req,
@@ -21574,8 +21278,8 @@ module myooo_l1d_mshr
    // Interface to L1D eviction to Store Requestor
    l1d_evict_if.master l1d_evict_if,
 
-   // Search MSHR entry
-   mshr_pa_search_if.slave    mshr_pa_search_if,
+   // Search MISSU entry
+   missu_pa_search_if.slave    missu_pa_search_if,
    mshr_stbuf_search_if.master mshr_stbuf_search_if,
 
    // Store Requestor Monitor
@@ -21589,78 +21293,75 @@ module myooo_l1d_mshr
 localparam NORMAL_REQ_PORT_NUM = myooo_conf_pkg::LSU_INST_NUM;
 localparam REQ_PORT_NUM        = myooo_conf_pkg::LSU_INST_NUM + 1;
 
-typedef logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] mshr_size_t;
-typedef logic [$clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE)-1: 0] mshr_index_t;
-
-mshr_size_t                             w_in_ptr_oh;
-mshr_size_t                             w_out_ptr_oh;
-mshr_index_t                            w_out_ptr;
-logic                                   w_in_valid;
-logic                                   w_out_valid;
-mshr_size_t                             w_entry_finish;
-mshr_size_t                             w_entry_valids;
-mshr_size_t                             w_l1d_wr_updating;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1:0] w_in_ptr_oh;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1:0] w_out_ptr_oh;
+logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1:0] w_out_ptr;
+logic                                             w_in_valid;
+logic                                             w_out_valid;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]             w_entry_finish;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_entry_valids;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]             w_l1d_wr_updating;
 
 logic [REQ_PORT_NUM-1: 0]   w_resp_conflict;
 logic [REQ_PORT_NUM-1: 0]   w_resp_evict_conflict;
 
-logic [REQ_PORT_NUM-1: 0]   w_l1d_mshr_loads;
-mshr_size_t w_load_picked_valid [REQ_PORT_NUM] ;
-logic [$clog2(REQ_PORT_NUM)-1: 0]     w_l1d_mshr_picked_index[REQ_PORT_NUM];
-logic [REQ_PORT_NUM-1: 0]             w_l1d_mshr_picked_valids;
-logic [REQ_PORT_NUM-1: 0]             w_l1d_mshr_picked_index_oh[REQ_PORT_NUM];
-myooo_lsu_pkg::mshr_req_t           w_l1d_req_payloads        [REQ_PORT_NUM];
-myooo_lsu_pkg::mshr_req_t           w_l1d_picked_req_payloads [REQ_PORT_NUM];
-logic [REQ_PORT_NUM-1: 0]             w_l1d_mshr_loads_no_conflicts;
+logic [REQ_PORT_NUM-1: 0]   w_l1d_missu_loads;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_load_picked_valid [REQ_PORT_NUM] ;
+logic [$clog2(REQ_PORT_NUM)-1: 0]     w_l1d_missu_picked_index[REQ_PORT_NUM];
+logic [REQ_PORT_NUM-1: 0]             w_l1d_missu_picked_valids;
+logic [REQ_PORT_NUM-1: 0]             w_l1d_missu_picked_index_oh[REQ_PORT_NUM];
+myooo_lsu_pkg::missu_req_t               w_l1d_req_payloads        [REQ_PORT_NUM];
+myooo_lsu_pkg::missu_req_t               w_l1d_picked_req_payloads [REQ_PORT_NUM];
+logic [REQ_PORT_NUM-1: 0]             w_l1d_missu_loads_no_conflicts;
 
-mshr_size_t w_load_entry_valid;
-myooo_lsu_pkg::mshr_entry_t w_mshr_entries[myooo_conf_pkg::MSHR_ENTRY_SIZE];
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_load_entry_valid;
+myooo_lsu_pkg::mshr_entry_t w_missu_entries[myooo_conf_pkg::MISSU_ENTRY_SIZE];
 
-logic [$clog2(REQ_PORT_NUM): 0] w_l1d_mshr_valid_load_cnt;
-logic [$clog2(REQ_PORT_NUM): 0] w_l1d_mshr_loads_cnt;
-logic [$clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE):0] r_mshr_remained_size;
+logic [$clog2(REQ_PORT_NUM): 0] w_l1d_missu_valid_load_cnt;
+logic [$clog2(REQ_PORT_NUM): 0] w_l1d_missu_loads_cnt;
+logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE):0] r_missu_remained_size;
 
-logic [myooo_conf_pkg::LSU_INST_NUM-1: 0]     w_uc_fwd_hit [myooo_conf_pkg::MSHR_ENTRY_SIZE] ;
+logic [myooo_conf_pkg::LSU_INST_NUM-1: 0]     w_uc_fwd_hit [myooo_conf_pkg::MISSU_ENTRY_SIZE] ;
 
 //
-// MSHR Request selection
+// MISSU Request selection
 //
-myooo_lsu_pkg::mshr_entry_t             w_mshr_ready_to_send_entry;
-mshr_size_t w_mshr_ready_to_send;
-mshr_size_t w_mshr_ready_to_send_oh;
-mshr_index_t w_mshr_send_tag;
+myooo_lsu_pkg::mshr_entry_t             w_missu_ready_to_send_entry;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_ready_to_send;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_ready_to_send_oh;
+logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0] w_missu_send_tag;
 
 logic                                         w_ext_rd_resp_valid;
-mshr_index_t w_ext_rd_resp_tag;
+logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0] w_ext_rd_resp_tag;
 
 //
 // Write L1D
 //
-mshr_size_t         w_wr_req_valid;
-mshr_size_t         w_wr_req_valid_oh;
-myooo_lsu_pkg::mshr_entry_t                    w_wr_mshr_entry_sel;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]         w_wr_req_valid;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]         w_wr_req_valid_oh;
+myooo_lsu_pkg::mshr_entry_t                    w_wr_missu_entry_sel;
 
 //
 // Evict Information
 //
-myooo_lsu_pkg::mshr_entry_t             w_mshr_ready_to_evict_entry;
-mshr_size_t w_mshr_entry_evict_ready;
-mshr_size_t w_mshr_ready_to_evict;
-mshr_size_t w_mshr_ready_to_evict_oh;
-mshr_index_t w_mshr_evict_tag;
+myooo_lsu_pkg::mshr_entry_t             w_missu_ready_to_evict_entry;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_entry_evict_ready;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_ready_to_evict;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_ready_to_evict_oh;
+logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0] w_missu_evict_tag;
 
 
-bit_cnt #(.WIDTH(REQ_PORT_NUM)) u_mshr_req_cnt(.in(w_l1d_mshr_loads_no_conflicts), .out(w_l1d_mshr_loads_cnt));
+bit_cnt #(.WIDTH(REQ_PORT_NUM)) u_missu_req_cnt(.in(w_l1d_missu_loads_no_conflicts), .out(w_l1d_missu_loads_cnt));
 /* verilator lint_off WIDTH */
-assign w_l1d_mshr_valid_load_cnt = r_mshr_remained_size > w_l1d_mshr_loads_cnt ? w_l1d_mshr_loads_cnt : r_mshr_remained_size;
+assign w_l1d_missu_valid_load_cnt = r_missu_remained_size > w_l1d_missu_loads_cnt ? w_l1d_missu_loads_cnt : r_missu_remained_size;
 
 
 always_ff @ (posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
-    r_mshr_remained_size <= myooo_conf_pkg::MSHR_ENTRY_SIZE;
+    r_missu_remained_size <= myooo_conf_pkg::MISSU_ENTRY_SIZE;
   end else begin
-    r_mshr_remained_size <= r_mshr_remained_size -
-                           (w_in_valid ? w_l1d_mshr_valid_load_cnt : 'h0) +
+    r_missu_remained_size <= r_missu_remained_size -
+                           (w_in_valid ? w_l1d_missu_valid_load_cnt : 'h0) +
                            (w_out_valid ? 'h1 : 'h0);
   end
 end
@@ -21668,64 +21369,64 @@ end
 `ifdef SIMULATION
 always_ff @ (negedge i_clk, negedge i_reset_n) begin
   if (i_reset_n) begin
-    if (r_mshr_remained_size > myooo_conf_pkg::MSHR_ENTRY_SIZE) begin
-      $fatal (0, "MSHR remained size must not exceed default value %d\n",
-            myooo_conf_pkg::MSHR_ENTRY_SIZE);
+    if (r_missu_remained_size > myooo_conf_pkg::MISSU_ENTRY_SIZE) begin
+      $fatal (0, "MISSU remained size must not exceed default value %d\n",
+            myooo_conf_pkg::MISSU_ENTRY_SIZE);
     end
-    if (r_mshr_remained_size != myooo_conf_pkg::MSHR_ENTRY_SIZE - $countones(w_entry_valids)) begin
-      $fatal (0, "MSHR counter size and emptied MSHR entry size is different %d != %d\n",
-              r_mshr_remained_size, myooo_conf_pkg::MSHR_ENTRY_SIZE - $countones(w_entry_valids));
+    if (r_missu_remained_size != myooo_conf_pkg::MISSU_ENTRY_SIZE - $countones(w_entry_valids)) begin
+      $fatal (0, "MISSU counter size and emptied MISSU entry size is different %d != %d\n",
+              r_missu_remained_size, myooo_conf_pkg::MISSU_ENTRY_SIZE - $countones(w_entry_valids));
     end
   end
 end
 
 final begin
-  if (r_mshr_remained_size != myooo_conf_pkg::MSHR_ENTRY_SIZE) begin
-    $fatal (0, "MSHR remained size must return to default value %d, but currently %d\n",
-            myooo_conf_pkg::MSHR_ENTRY_SIZE, r_mshr_remained_size);
+  if (r_missu_remained_size != myooo_conf_pkg::MISSU_ENTRY_SIZE) begin
+    $fatal (0, "MISSU remained size must return to default value %d, but currently %d\n",
+            myooo_conf_pkg::MISSU_ENTRY_SIZE, r_missu_remained_size);
   end
 end
 `endif // SIMULATION
 
 //
-// MSHR Pointer
+// MISSU Pointer
 //
-assign w_in_valid  = |w_l1d_mshr_loads_no_conflicts;
+assign w_in_valid  = |w_l1d_missu_loads_no_conflicts;
 assign w_out_valid = |w_entry_finish;
 
-inoutptr_var_oh #(.SIZE(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_req_ptr(.i_clk (i_clk), .i_reset_n(i_reset_n),
+inoutptr_var_oh #(.SIZE(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_req_ptr(.i_clk (i_clk), .i_reset_n(i_reset_n),
                                                                   .i_rollback(1'b0),
                                                                   .i_in_valid (w_in_valid ),
                                                                   /* verilator lint_off WIDTH */
-                                                                  .i_in_val({{($clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE)-$clog2(myooo_conf_pkg::LSU_INST_NUM)){1'b0}}, w_l1d_mshr_valid_load_cnt}),
+                                                                  .i_in_val({{($clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-$clog2(myooo_conf_pkg::LSU_INST_NUM)){1'b0}}, w_l1d_missu_valid_load_cnt}),
                                                                   .o_in_ptr_oh (w_in_ptr_oh ),
 
                                                                   .i_out_valid(w_out_valid),
-                                                                  .i_out_val({{($clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE)){1'b0}}, 1'b1}),
+                                                                  .i_out_val({{($clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)){1'b0}}, 1'b1}),
                                                                   .o_out_ptr_oh(w_out_ptr_oh));
 
-encoder #(.SIZE(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_bit_out_ptr_encoder (.i_in(w_out_ptr_oh), .o_out(w_out_ptr));
+encoder #(.SIZE(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_bit_out_ptr_encoder (.i_in(w_out_ptr_oh), .o_out(w_out_ptr));
 
 
 // -------------------------------------
-// Conflict Check of Normal MSHR Entries
+// Conflict Check of Normal MISSU Entries
 // -------------------------------------
-function automatic logic hit_mshr_same_pa (logic valid, myooo_pkg::paddr_t req_paddr,
-                                          myooo_lsu_pkg::mshr_entry_t mshr_entry,
-                                          mshr_index_t entry_idx);
+function automatic logic hit_missu_same_pa (logic valid, myooo_pkg::paddr_t req_paddr,
+                                          myooo_lsu_pkg::mshr_entry_t missu_entry,
+                                          logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0] entry_idx);
 
-  return valid & mshr_entry.valid & ~w_entry_finish[entry_idx] &
-    (mshr_entry.paddr[riscv_pkg::PADDR_W-1:$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
+  return valid & missu_entry.valid & ~w_entry_finish[entry_idx] &
+    (missu_entry.paddr[riscv_pkg::PADDR_W-1:$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
      req_paddr[riscv_pkg::PADDR_W-1:$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)]);
 
-endfunction // hit_mshr_same_pa
+endfunction // hit_missu_same_pa
 
-function automatic logic hit_mshr_same_evict_pa (logic valid, myooo_pkg::paddr_t req_evict_paddr,
-                                                myooo_lsu_pkg::mshr_entry_t mshr_entry,
-                                                mshr_index_t entry_idx);
+function automatic logic hit_missu_same_evict_pa (logic valid, myooo_pkg::paddr_t req_evict_paddr,
+                                                myooo_lsu_pkg::mshr_entry_t missu_entry,
+                                                logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0] entry_idx);
   return 1'b0;
 
-endfunction // hit_mshr_same_pa
+endfunction // hit_missu_same_pa
 
 
 function automatic logic hit_port_pa (logic p0_valid, logic p1_valid,
@@ -21739,21 +21440,21 @@ endfunction // hit_port_pa
 
 /* verilator lint_off UNOPTFLAT */
 logic [$clog2(REQ_PORT_NUM): 0] w_valid_load_index[REQ_PORT_NUM];
-mshr_size_t w_mshr_index_oh[REQ_PORT_NUM];
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_index_oh[REQ_PORT_NUM];
 
 generate for (genvar p_idx = 0; p_idx < REQ_PORT_NUM; p_idx++) begin : port_loop
   if (p_idx == 0) begin
-    assign w_valid_load_index[p_idx] = w_l1d_mshr_loads_no_conflicts[p_idx] ? 1 : 0;
+    assign w_valid_load_index[p_idx] = w_l1d_missu_loads_no_conflicts[p_idx] ? 1 : 0;
   end else begin
-    assign w_valid_load_index[p_idx] = w_l1d_mshr_loads_no_conflicts[p_idx] ? w_valid_load_index[p_idx-1] + 'h1 :
+    assign w_valid_load_index[p_idx] = w_l1d_missu_loads_no_conflicts[p_idx] ? w_valid_load_index[p_idx-1] + 'h1 :
                                        w_valid_load_index[p_idx-1];
   end
 
-  // 1. check the address with exist mshr
-  mshr_size_t w_hit_mshr_same_pa;
-  for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++) begin : entry_loop
-    assign w_hit_mshr_same_pa[e_idx] = hit_mshr_same_pa (l1d_mshr[p_idx].load, l1d_mshr[p_idx].req_payload.paddr,
-                                                       w_mshr_entries[e_idx], e_idx);
+  // 1. check the address with exist missu
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_hit_missu_same_pa;
+  for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; e_idx++) begin : entry_loop
+    assign w_hit_missu_same_pa[e_idx] = hit_missu_same_pa (l1d_missu[p_idx].load, l1d_missu[p_idx].req_payload.paddr,
+                                                       w_missu_entries[e_idx], e_idx);
   end
 
   // 2. check the address with different pipeline
@@ -21762,60 +21463,60 @@ generate for (genvar p_idx = 0; p_idx < REQ_PORT_NUM; p_idx++) begin : port_loop
     if (p_idx <= p2_idx) begin
       assign w_hit_port_same_pa[p2_idx] = 1'b0;
     end else begin
-      assign w_hit_port_same_pa[p2_idx] = hit_port_pa (l1d_mshr[p_idx].load, l1d_mshr[p2_idx].load,
-                                                       l1d_mshr[p_idx ].req_payload.paddr,
-                                                       l1d_mshr[p2_idx].req_payload.paddr);
+      assign w_hit_port_same_pa[p2_idx] = hit_port_pa (l1d_missu[p_idx].load, l1d_missu[p2_idx].load,
+                                                       l1d_missu[p_idx ].req_payload.paddr,
+                                                       l1d_missu[p2_idx].req_payload.paddr);
     end
   end
 
   logic [REQ_PORT_NUM-1: 0] w_hit_port_same_pa_lsb;
-  mshr_size_t hit_port_same_pa_entry_idx_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] hit_port_same_pa_entry_idx_oh;
   bit_extract_lsb #(.WIDTH(REQ_PORT_NUM)) u_same_port_lsb (.in(w_hit_port_same_pa), .out(w_hit_port_same_pa_lsb));
-  bit_oh_or #(.T(logic[myooo_conf_pkg::MSHR_ENTRY_SIZE-1:0]), .WORDS(REQ_PORT_NUM)) select_port_pa_entry  (.i_oh(w_hit_port_same_pa_lsb), .i_data(w_mshr_index_oh), .o_selected(hit_port_same_pa_entry_idx_oh));
+  bit_oh_or #(.T(logic[myooo_conf_pkg::MISSU_ENTRY_SIZE-1:0]), .WORDS(REQ_PORT_NUM)) select_port_pa_entry  (.i_oh(w_hit_port_same_pa_lsb), .i_data(w_missu_index_oh), .o_selected(hit_port_same_pa_entry_idx_oh));
 
-  // 3. check the evicted address with existed evict MSHR
-  mshr_size_t   w_hit_mshr_same_evict_pa;
-  assign w_hit_mshr_same_evict_pa = 'h0;
+  // 3. check the evicted address with existed evict MISSU
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]   w_hit_missu_same_evict_pa;
+  assign w_hit_missu_same_evict_pa = 'h0;
 
   // 4. check the evicted address with different pipeline
   logic [REQ_PORT_NUM-1: 0]             w_hit_port_same_evict_pa;
   assign w_hit_port_same_evict_pa = 'h0;
 
   logic [REQ_PORT_NUM-1: 0] w_hit_port_same_evict_pa_lsb;
-  mshr_size_t w_hit_port_same_evict_pa_idx_oh;
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_hit_port_same_evict_pa_idx_oh;
   bit_extract_lsb #(.WIDTH(REQ_PORT_NUM)) u_same_port_evict_lsb (.in(w_hit_port_same_evict_pa), .out(w_hit_port_same_evict_pa_lsb));
-  bit_oh_or #(.T(logic[myooo_conf_pkg::MSHR_ENTRY_SIZE-1:0]), .WORDS(REQ_PORT_NUM)) select_port_evict_pa_entry  (.i_oh(w_hit_port_same_evict_pa_lsb), .i_data(w_mshr_index_oh), .o_selected(w_hit_port_same_evict_pa_idx_oh));
+  bit_oh_or #(.T(logic[myooo_conf_pkg::MISSU_ENTRY_SIZE-1:0]), .WORDS(REQ_PORT_NUM)) select_port_evict_pa_entry  (.i_oh(w_hit_port_same_evict_pa_lsb), .i_data(w_missu_index_oh), .o_selected(w_hit_port_same_evict_pa_idx_oh));
 
-  assign w_resp_conflict[p_idx] = (|w_hit_mshr_same_pa) |  // 1. hazard
+  assign w_resp_conflict[p_idx] = (|w_hit_missu_same_pa) |  // 1. hazard
                                   (|w_hit_port_same_pa);   // 2. hazard
 
-  assign w_resp_evict_conflict[p_idx] = (|w_hit_mshr_same_evict_pa) |  // 3. hazard
+  assign w_resp_evict_conflict[p_idx] = (|w_hit_missu_same_evict_pa) |  // 3. hazard
                                         (|w_hit_port_same_evict_pa);   // 4. hazard
 
-  assign w_mshr_index_oh[p_idx] = w_l1d_mshr_loads_no_conflicts[p_idx] ? w_load_picked_valid[w_l1d_mshr_picked_index[p_idx]] : // Success Load
-                                  |w_hit_mshr_same_pa                  ? w_hit_mshr_same_pa                   :                // 1. hazard
-                                  |w_hit_port_same_pa                  ? hit_port_same_pa_entry_idx_oh        :                // 2. hazard
-                                  |w_hit_mshr_same_evict_pa            ? w_hit_mshr_same_evict_pa             :                // 3. hazard
-                                  |w_hit_port_same_evict_pa            ? w_hit_port_same_evict_pa_idx_oh      :                // 4. hazard
-                                  'h0;
+  assign w_missu_index_oh[p_idx] = w_l1d_missu_loads_no_conflicts[p_idx] ? w_load_picked_valid[w_l1d_missu_picked_index[p_idx]] : // Success Load
+                                   |w_hit_missu_same_pa                  ? w_hit_missu_same_pa                   :                // 1. hazard
+                                   |w_hit_port_same_pa                   ? hit_port_same_pa_entry_idx_oh         :                // 2. hazard
+                                   |w_hit_missu_same_evict_pa            ? w_hit_missu_same_evict_pa             :                // 3. hazard
+                                   |w_hit_port_same_evict_pa             ? w_hit_port_same_evict_pa_idx_oh       :                // 4. hazard
+                                   'h0;
 
-  assign l1d_mshr[p_idx].resp_payload.full           = (w_valid_load_index[p_idx] > w_l1d_mshr_valid_load_cnt);
-  assign l1d_mshr[p_idx].resp_payload.evict_conflict = w_resp_evict_conflict[p_idx];
-  assign l1d_mshr[p_idx].resp_payload.allocated      = w_l1d_mshr_loads_no_conflicts[p_idx] | w_resp_conflict[p_idx];
-  assign l1d_mshr[p_idx].resp_payload.mshr_index_oh = w_mshr_index_oh[p_idx];
+  assign l1d_missu[p_idx].resp_payload.full           = (w_valid_load_index[p_idx] > w_l1d_missu_valid_load_cnt);
+  assign l1d_missu[p_idx].resp_payload.evict_conflict = w_resp_evict_conflict[p_idx];
+  assign l1d_missu[p_idx].resp_payload.allocated      = w_l1d_missu_loads_no_conflicts[p_idx] | w_resp_conflict[p_idx];
+  assign l1d_missu[p_idx].resp_payload.missu_index_oh = w_missu_index_oh[p_idx];
 
 end // block: port_loop
 endgenerate
 
 // ===================================
-// MSHR Load Pickup
+// MISSU Load Pickup
 // ===================================
 generate for (genvar p_idx = 0; p_idx < REQ_PORT_NUM; p_idx++) begin : lsu_req_loop
 
   always_comb begin
-    w_l1d_mshr_loads[p_idx] = l1d_mshr[p_idx].load;
-    w_l1d_req_payloads[p_idx] = l1d_mshr[p_idx].req_payload;
-    w_l1d_mshr_loads_no_conflicts[p_idx] = w_l1d_mshr_loads[p_idx] &
+    w_l1d_missu_loads[p_idx] = l1d_missu[p_idx].load;
+    w_l1d_req_payloads[p_idx] = l1d_missu[p_idx].req_payload;
+    w_l1d_missu_loads_no_conflicts[p_idx] = w_l1d_missu_loads[p_idx] &
                                             !w_resp_conflict[p_idx] &
                                             !w_resp_evict_conflict[p_idx];
   end
@@ -21823,22 +21524,22 @@ generate for (genvar p_idx = 0; p_idx < REQ_PORT_NUM; p_idx++) begin : lsu_req_l
   bit_pick_1_index
     #(.NUM(p_idx),
       .SEL_WIDTH (REQ_PORT_NUM),
-      .DATA_WIDTH($size(myooo_lsu_pkg::mshr_req_t))
+      .DATA_WIDTH($size(myooo_lsu_pkg::missu_req_t))
       )
   u_l1d_req_pick
     (
-     .i_valids    (w_l1d_mshr_loads_no_conflicts),
+     .i_valids    (w_l1d_missu_loads_no_conflicts),
      .i_data      (w_l1d_req_payloads),
 
-     .o_valid     (w_l1d_mshr_picked_valids  [p_idx]),
+     .o_valid     (w_l1d_missu_picked_valids  [p_idx]),
      .o_data      (w_l1d_picked_req_payloads  [p_idx]),
-     .o_picked_pos(w_l1d_mshr_picked_index_oh[p_idx])
+     .o_picked_pos(w_l1d_missu_picked_index_oh[p_idx])
      );
 
   logic [REQ_PORT_NUM-1: 0] selected_index_oh;
   bit_matrix_pick_column #(.WIDTH(REQ_PORT_NUM), .WORDS(REQ_PORT_NUM), .H_IDX(p_idx)) pick_selected_index
-    (.in(w_l1d_mshr_picked_index_oh), .out(selected_index_oh));
-  encoder #(.SIZE(REQ_PORT_NUM)) encode_picked_index (.i_in(selected_index_oh), .o_out(w_l1d_mshr_picked_index[p_idx]));
+    (.in(w_l1d_missu_picked_index_oh), .out(selected_index_oh));
+  encoder #(.SIZE(REQ_PORT_NUM)) encode_picked_index (.i_in(selected_index_oh), .o_out(w_l1d_missu_picked_index[p_idx]));
 
 end
 endgenerate
@@ -21849,33 +21550,33 @@ endgenerate
 // Entries
 // ----------------------
 
-generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++) begin : entry_loop
+generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; e_idx++) begin : entry_loop
 
   // ----------------------------
   // Load Miss Request
   // ----------------------------
-  for (genvar p_idx = 0; p_idx < REQ_PORT_NUM; p_idx++) begin : mshr_port_loop
-    mshr_size_t  w_entry_ptr_oh;
-    bit_rotate_left #(.WIDTH(myooo_conf_pkg::MSHR_ENTRY_SIZE), .VAL(p_idx)) target_bit_rotate (.i_in(w_in_ptr_oh), .o_out(w_entry_ptr_oh));
-    assign w_load_picked_valid[p_idx][e_idx] = w_l1d_mshr_picked_valids[p_idx] & w_entry_ptr_oh[e_idx] & (p_idx < w_l1d_mshr_valid_load_cnt);
+  for (genvar p_idx = 0; p_idx < REQ_PORT_NUM; p_idx++) begin : missu_port_loop
+    logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]  w_entry_ptr_oh;
+    bit_rotate_left #(.WIDTH(myooo_conf_pkg::MISSU_ENTRY_SIZE), .VAL(p_idx)) target_bit_rotate (.i_in(w_in_ptr_oh), .o_out(w_entry_ptr_oh));
+    assign w_load_picked_valid[p_idx][e_idx] = w_l1d_missu_picked_valids[p_idx] & w_entry_ptr_oh[e_idx] & (p_idx < w_l1d_missu_valid_load_cnt);
   end
 
   logic                                    w_ext_req_sent;
   logic                                    w_evict_sent;
   logic [REQ_PORT_NUM-1: 0]                w_sel_load_valid;
-  bit_matrix_pick_column #(.WIDTH(myooo_conf_pkg::MSHR_ENTRY_SIZE), .WORDS(REQ_PORT_NUM), .H_IDX(e_idx)) pick_load_valid (.in(w_load_picked_valid), .out(w_sel_load_valid));
+  bit_matrix_pick_column #(.WIDTH(myooo_conf_pkg::MISSU_ENTRY_SIZE), .WORDS(REQ_PORT_NUM), .H_IDX(e_idx)) pick_load_valid (.in(w_load_picked_valid), .out(w_sel_load_valid));
 
   assign w_load_entry_valid[e_idx] = |w_sel_load_valid;
 
-  myooo_lsu_pkg::mshr_req_t w_l1d_picked_req_payloads_oh;
-  bit_oh_or #(.T(myooo_lsu_pkg::mshr_req_t), .WORDS(REQ_PORT_NUM)) pick_entry (.i_oh(w_sel_load_valid), .i_data(w_l1d_picked_req_payloads), .o_selected(w_l1d_picked_req_payloads_oh));
+  myooo_lsu_pkg::missu_req_t w_l1d_picked_req_payloads_oh;
+  bit_oh_or #(.T(myooo_lsu_pkg::missu_req_t), .WORDS(REQ_PORT_NUM)) pick_entry (.i_oh(w_sel_load_valid), .i_data(w_l1d_picked_req_payloads), .o_selected(w_l1d_picked_req_payloads_oh));
 
   myooo_lsu_pkg::mshr_entry_t w_load_entry;
   assign w_load_entry = myooo_lsu_pkg::assign_mshr_entry(w_load_entry_valid[e_idx],
                                                           w_l1d_picked_req_payloads_oh);
 
-  assign w_evict_sent   = l1d_evict_if.valid   & l1d_evict_if.ready   & w_mshr_ready_to_evict_oh[e_idx];
-  assign w_ext_req_sent = l1d_ext_rd_req.valid & l1d_ext_rd_req.ready & w_mshr_ready_to_send_oh [e_idx];
+  assign w_evict_sent   = l1d_evict_if.valid   & l1d_evict_if.ready   & w_missu_ready_to_evict_oh[e_idx];
+  assign w_ext_req_sent = l1d_ext_rd_req.valid & l1d_ext_rd_req.ready & w_missu_ready_to_send_oh [e_idx];
 
   myooo_l1d_mshr_entry
     u_entry
@@ -21892,7 +21593,7 @@ generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++
        .i_sent         (w_ext_req_sent),
        .i_evict_sent   (w_evict_sent),
 
-       .o_ext_req_ready (w_mshr_ready_to_send[e_idx]),
+       .o_ext_req_ready (w_missu_ready_to_send[e_idx]),
 
        .o_wr_req_valid         (w_wr_req_valid   [e_idx]),
        .i_wr_accepted          (w_wr_req_valid_oh[e_idx]),
@@ -21907,46 +21608,45 @@ generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++
 
        .i_busy_by_snoop (snoop_info_if.busy),
 
-       .o_entry        (w_mshr_entries[e_idx]),
-       .o_evict_ready  (w_mshr_entry_evict_ready[e_idx]),
+       .o_entry        (w_missu_entries[e_idx]),
+       .o_evict_ready  (w_missu_entry_evict_ready[e_idx]),
 
        .i_out_ptr_valid (w_out_ptr_oh[e_idx]),
        .o_entry_finish (w_entry_finish[e_idx])
        );
 
-  assign w_entry_valids[e_idx] = w_mshr_entries[e_idx].valid;
+  assign w_entry_valids[e_idx] = w_missu_entries[e_idx].valid;
 
 end // block: entry_loop
 endgenerate
 
-localparam TAG_FILLER_W = myooo_lsu_pkg::L2_CMD_TAG_W - 2 - $clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE);
+localparam TAG_FILLER_W = myooo_lsu_pkg::L2_CMD_TAG_W - 2 - $clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE);
 
 // selection of external memory request
-generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++) begin : mshr_sel_loop
-  assign w_mshr_ready_to_evict[e_idx] = w_mshr_entries[e_idx].valid &
-                                         w_mshr_entry_evict_ready[e_idx];
+generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; e_idx++) begin : missu_sel_loop
+  assign w_missu_ready_to_evict[e_idx] = w_missu_entries[e_idx].valid &
+                                         w_missu_entry_evict_ready[e_idx];
 end
 endgenerate
-bit_extract_lsb_ptr #(.WIDTH(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_bit_send_sel (.in(w_mshr_ready_to_send), .i_ptr(w_out_ptr), .out(w_mshr_ready_to_send_oh));
-encoder#(.SIZE(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_bit_send_tag_encoder (.i_in(w_mshr_ready_to_send_oh), .o_out(w_mshr_send_tag));
-bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MSHR_ENTRY_SIZE)) select_send_entry  (.i_oh(w_mshr_ready_to_send_oh), .i_data(w_mshr_entries), .o_selected(w_mshr_ready_to_send_entry));
+bit_extract_lsb_ptr #(.WIDTH(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_bit_send_sel (.in(w_missu_ready_to_send), .i_ptr(w_out_ptr), .out(w_missu_ready_to_send_oh));
+encoder#(.SIZE(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_bit_send_tag_encoder (.i_in(w_missu_ready_to_send_oh), .o_out(w_missu_send_tag));
+bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MISSU_ENTRY_SIZE)) select_send_entry  (.i_oh(w_missu_ready_to_send_oh), .i_data(w_missu_entries), .o_selected(w_missu_ready_to_send_entry));
 
-bit_extract_lsb_ptr #(.WIDTH(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_bit_evict_sel (.in(w_mshr_ready_to_evict), .i_ptr(w_out_ptr), .out(w_mshr_ready_to_evict_oh));
-encoder#(.SIZE(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_bit_evict_tag_encoder (.i_in(w_mshr_ready_to_evict_oh), .o_out(w_mshr_evict_tag));
-bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MSHR_ENTRY_SIZE)) select_evict_entry  (.i_oh(w_mshr_ready_to_evict_oh), .i_data(w_mshr_entries), .o_selected(w_mshr_ready_to_evict_entry));
+bit_extract_lsb_ptr #(.WIDTH(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_bit_evict_sel (.in(w_missu_ready_to_evict), .i_ptr(w_out_ptr), .out(w_missu_ready_to_evict_oh));
+encoder#(.SIZE(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_bit_evict_tag_encoder (.i_in(w_missu_ready_to_evict_oh), .o_out(w_missu_evict_tag));
+bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MISSU_ENTRY_SIZE)) select_evict_entry  (.i_oh(w_missu_ready_to_evict_oh), .i_data(w_missu_entries), .o_selected(w_missu_ready_to_evict_entry));
 
 
-assign l1d_ext_rd_req.valid           = |w_mshr_ready_to_send;
+assign l1d_ext_rd_req.valid           = |w_missu_ready_to_send;
 assign l1d_ext_rd_req.payload.cmd     = myooo_lsu_pkg::M_XRD;
-assign l1d_ext_rd_req.payload.addr    = w_mshr_ready_to_send_entry.paddr;
-assign l1d_ext_rd_req.payload.color   = w_mshr_ready_to_send_entry.color;
-assign l1d_ext_rd_req.tag             = {myooo_lsu_pkg::L2_UPPER_TAG_RD_L1D, {TAG_FILLER_W{1'b0}}, w_mshr_send_tag};
+assign l1d_ext_rd_req.payload.addr    = w_missu_ready_to_send_entry.paddr;
+assign l1d_ext_rd_req.tag             = {myooo_lsu_pkg::L2_UPPER_TAG_RD_L1D, {TAG_FILLER_W{1'b0}}, w_missu_send_tag};
 assign l1d_ext_rd_req.payload.data    = 'h0;
 assign l1d_ext_rd_req.payload.byte_en = 'h0;
 
 assign w_ext_rd_resp_valid = l1d_ext_rd_resp.valid &
                              (l1d_ext_rd_resp.tag        [myooo_lsu_pkg::L2_CMD_TAG_W-1 -: 2] == myooo_lsu_pkg::L2_UPPER_TAG_RD_L1D);
-assign w_ext_rd_resp_tag = l1d_ext_rd_resp.tag[$clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE)-1: 0];
+assign w_ext_rd_resp_tag = l1d_ext_rd_resp.tag[$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0];
 
 assign l1d_ext_rd_resp.ready = 1'b1;
 
@@ -21955,58 +21655,54 @@ assign l1d_ext_rd_resp.ready = 1'b1;
 // ------------------------
 
 assign l1d_wr_if.s0_valid = |w_wr_req_valid;
-bit_extract_lsb_ptr #(.WIDTH(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_bit_wr_req_select (.in(w_wr_req_valid), .i_ptr(w_out_ptr), .out(w_wr_req_valid_oh));
-bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MSHR_ENTRY_SIZE))
-select_l1d_wr_req_entry (.i_oh(w_wr_req_valid_oh), .i_data(w_mshr_entries), .o_selected(w_wr_mshr_entry_sel));
+bit_extract_lsb_ptr #(.WIDTH(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_bit_wr_req_select (.in(w_wr_req_valid), .i_ptr(w_out_ptr), .out(w_wr_req_valid_oh));
+bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MISSU_ENTRY_SIZE))
+select_l1d_wr_req_entry (.i_oh(w_wr_req_valid_oh), .i_data(w_missu_entries), .o_selected(w_wr_missu_entry_sel));
 
-assign l1d_wr_if.s0_wr_req.s0_paddr = w_wr_mshr_entry_sel.paddr;
-assign l1d_wr_if.s0_wr_req.s0_color = w_wr_mshr_entry_sel.color;
+assign l1d_wr_if.s0_wr_req.s0_paddr = w_wr_missu_entry_sel.paddr;
 generate for (genvar b_idx = 0; b_idx < myooo_lsu_pkg::DCACHE_DATA_B_W; b_idx++) begin : l1d_wr_be_loop
   assign l1d_wr_if.s0_wr_req.s0_data[b_idx*8 +: 8]  = mshr_stbuf_search_if.stbuf_be[b_idx] ? mshr_stbuf_search_if.stbuf_data[b_idx*8 +: 8] :
-                                                      w_wr_mshr_entry_sel.data[b_idx*8 +: 8];
+                                                      w_wr_missu_entry_sel.data[b_idx*8 +: 8];
   assign l1d_wr_if.s0_wr_req.s0_be  [b_idx       ]  = 1'b1;
 end endgenerate
-assign l1d_wr_if.s0_wr_req.s0_way   = w_wr_mshr_entry_sel.way;
+assign l1d_wr_if.s0_wr_req.s0_way   = w_wr_missu_entry_sel.way;
 assign l1d_wr_if.s0_wr_req.s0_mesi  = myooo_lsu_pkg::MESI_EXCLUSIVE;
 
 // -----------------
 // Eviction Request
 // -----------------
-assign l1d_evict_if.valid = |w_mshr_ready_to_evict;
-assign l1d_evict_if.payload.paddr = w_mshr_ready_to_evict_entry.paddr;
-assign l1d_evict_if.payload.color = w_mshr_ready_to_evict_entry.color;
-assign l1d_evict_if.payload.data  = w_mshr_ready_to_evict_entry.data;
+assign l1d_evict_if.valid = |w_missu_ready_to_evict;
+assign l1d_evict_if.payload.paddr = w_missu_ready_to_evict_entry.paddr;
+assign l1d_evict_if.payload.data  = w_missu_ready_to_evict_entry.data;
 
-// Notification to MSHR resolve to LDQ
-// Note: Now searching from MSHR means L1D will be written and resolve confliction
+// Notification to MISSU resolve to LDQ
+// Note: Now searching from MISSU means L1D will be written and resolve confliction
 assign mshr_stbuf_search_if.mshr_index_oh = w_wr_req_valid_oh;
 
-assign o_mshr_resolve.valid              = w_ext_rd_resp_valid;
-assign o_mshr_resolve.resolve_index_oh   = 1 << w_ext_rd_resp_tag;
-assign o_mshr_resolve.mshr_entry_valids = w_entry_valids;
-
-assign mshr_info_if.is_full        = &w_entry_valids;
-assign mshr_info_if.is_almost_full = r_mshr_remained_size < 2;
-assign mshr_info_if.is_empty       = ~|w_entry_valids;
+assign o_missu_resolve.valid              = w_ext_rd_resp_valid;
+assign o_missu_resolve.resolve_index_oh   = 1 << w_ext_rd_resp_tag;
+assign o_missu_resolve.missu_entry_valids = w_entry_valids;
+assign o_missu_is_full  = &w_entry_valids;
+assign o_missu_is_empty = ~|w_entry_valids;
 
 // Eviction Hazard Check
 generate for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM; p_idx++) begin : lsu_haz_loop
-  mshr_size_t w_mshr_fwd_hit;
-  for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++) begin : buffer_loop
-    assign w_mshr_fwd_hit[e_idx] = w_mshr_entries[e_idx].valid &
-                                    w_mshr_entries[e_idx].get_data &
-                                    mshr_fwd_if[p_idx].ex2_valid &
-                                    (w_mshr_entries[e_idx].paddr [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
-                                     mshr_fwd_if[p_idx].ex2_paddr[riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)]);
+  logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_missu_fwd_hit;
+  for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; e_idx++) begin : buffer_loop
+    assign w_missu_fwd_hit[e_idx] = w_missu_entries[e_idx].valid &
+                                    w_missu_entries[e_idx].get_data &
+                                    missu_fwd_if[p_idx].ex2_valid &
+                                    (w_missu_entries[e_idx].paddr [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
+                                     missu_fwd_if[p_idx].ex2_paddr[riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)]);
 
-    assign w_uc_fwd_hit[e_idx][p_idx] = w_mshr_fwd_hit[e_idx];
+    assign w_uc_fwd_hit[e_idx][p_idx] = w_missu_fwd_hit[e_idx];
   end
 
-  myooo_lsu_pkg::mshr_entry_t w_mshr_fwd_entry;
-  bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MSHR_ENTRY_SIZE)) select_evict_entry  (.i_oh(w_mshr_fwd_hit), .i_data(w_mshr_entries), .o_selected(w_mshr_fwd_entry));
+  myooo_lsu_pkg::mshr_entry_t w_missu_fwd_entry;
+  bit_oh_or #(.T(myooo_lsu_pkg::mshr_entry_t), .WORDS(myooo_conf_pkg::MISSU_ENTRY_SIZE)) select_evict_entry  (.i_oh(w_missu_fwd_hit), .i_data(w_missu_entries), .o_selected(w_missu_fwd_entry));
 
-  assign mshr_fwd_if[p_idx].ex2_fwd_valid = |w_mshr_fwd_hit;
-  assign mshr_fwd_if[p_idx].ex2_fwd_data  = w_mshr_fwd_entry.data;
+  assign missu_fwd_if[p_idx].ex2_fwd_valid = |w_missu_fwd_hit;
+  assign missu_fwd_if[p_idx].ex2_fwd_data  = w_missu_fwd_entry.data;
 
 end
 endgenerate
@@ -22016,25 +21712,25 @@ endgenerate
 
 
 // --------------------------
-// MSHR search from ST-Buffer
+// MISSU search from ST-Buffer
 // --------------------------
-mshr_size_t w_stbuf_mshr_hit_array_next;
-mshr_size_t w_stbuf_mshr_update_hit_array_next;
-mshr_size_t w_stbuf_mshr_evict_hit_array_next;
-generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++) begin : stbuf_mshr_loop
-  assign w_stbuf_mshr_hit_array_next[e_idx] = mshr_pa_search_if.s0_valid &
-                                               w_mshr_entries[e_idx].valid &
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_stbuf_missu_hit_array_next;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_stbuf_missu_update_hit_array_next;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] w_stbuf_missu_evict_hit_array_next;
+generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; e_idx++) begin : stbuf_missu_loop
+  assign w_stbuf_missu_hit_array_next[e_idx] = missu_pa_search_if.s0_valid &
+                                               w_missu_entries[e_idx].valid &
                                                !w_entry_finish[e_idx] &
-                                               (w_mshr_entries[e_idx].paddr [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
-                                                mshr_pa_search_if.s0_paddr  [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)]);
-  assign w_stbuf_mshr_update_hit_array_next[e_idx] = w_stbuf_mshr_hit_array_next[e_idx] & w_l1d_wr_updating[e_idx];
+                                               (w_missu_entries[e_idx].paddr [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
+                                                missu_pa_search_if.s0_paddr  [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)]);
+  assign w_stbuf_missu_update_hit_array_next[e_idx] = w_stbuf_missu_hit_array_next[e_idx] & w_l1d_wr_updating[e_idx];
 
   always_ff @ (posedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
-      mshr_pa_search_if.s1_hit_index_oh[e_idx] <= 1'b0;
+      missu_pa_search_if.s1_hit_index_oh[e_idx] <= 1'b0;
     end else begin
-      mshr_pa_search_if.s1_hit_index_oh       [e_idx] <= w_stbuf_mshr_hit_array_next[e_idx];
-      mshr_pa_search_if.s1_hit_update_index_oh[e_idx] <= w_stbuf_mshr_update_hit_array_next[e_idx];
+      missu_pa_search_if.s1_hit_index_oh       [e_idx] <= w_stbuf_missu_hit_array_next[e_idx];
+      missu_pa_search_if.s1_hit_update_index_oh[e_idx] <= w_stbuf_missu_update_hit_array_next[e_idx];
     end
   end
 
@@ -22044,20 +21740,20 @@ endgenerate
 
 
 // --------------------------
-// MSHR Snoop Search
+// MISSU Snoop Search
 // --------------------------
-mshr_size_t         w_snoop_mshr_hit_array_next;
-mshr_size_t         w_snoop_mshr_evict_hit_array_next;
-mshr_index_t w_snoop_mshr_evict_hit_enc_next;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]         w_snoop_missu_hit_array_next;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0]         w_snoop_missu_evict_hit_array_next;
+logic [$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1: 0] w_snoop_missu_evict_hit_enc_next;
 
-generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++) begin : snoop_mshr_loop
-  assign w_snoop_mshr_hit_array_next[e_idx] = mshr_snoop_if.req_s0_valid &
-                                               w_mshr_entries[e_idx].valid &
+generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; e_idx++) begin : snoop_missu_loop
+  assign w_snoop_missu_hit_array_next[e_idx] = mshr_snoop_if.req_s0_valid &
+                                               w_missu_entries[e_idx].valid &
                                                !w_entry_finish[e_idx] &
-                                               (w_mshr_entries[e_idx].paddr[riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
+                                               (w_missu_entries[e_idx].paddr[riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)] ==
                                                 mshr_snoop_if.req_s0_paddr  [riscv_pkg::PADDR_W-1: $clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)]);
-  assign w_snoop_mshr_evict_hit_array_next[e_idx] = w_snoop_mshr_hit_array_next[e_idx] &
-                                                     w_mshr_entry_evict_ready   [e_idx];
+  assign w_snoop_missu_evict_hit_array_next[e_idx] = w_snoop_missu_hit_array_next[e_idx] &
+                                                     w_missu_entry_evict_ready   [e_idx];
   always_ff @ (posedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
       // mshr_snoop_if.s1_hit_evict_index[e_idx] <= 1'b0;
@@ -22065,15 +21761,15 @@ generate for (genvar e_idx = 0; e_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; e_idx++
       mshr_snoop_if.entry_valid       [e_idx] <= 1'b0;
       mshr_snoop_if.entry_resolved    [e_idx] <= 1'b0;
     end else begin
-      // mshr_snoop_if.s1_hit_evict_index[e_idx] <= w_snoop_mshr_evict_hit_array_next[e_idx];
-      mshr_snoop_if.resp_s1_hit_index [e_idx] <= w_snoop_mshr_hit_array_next[e_idx];
-      mshr_snoop_if.entry_valid       [e_idx] <= w_mshr_entries[e_idx].valid;
+      // mshr_snoop_if.s1_hit_evict_index[e_idx] <= w_snoop_missu_evict_hit_array_next[e_idx];
+      mshr_snoop_if.resp_s1_hit_index [e_idx] <= w_snoop_missu_hit_array_next[e_idx];
+      mshr_snoop_if.entry_valid       [e_idx] <= w_missu_entries[e_idx].valid;
       mshr_snoop_if.entry_resolved    [e_idx] <= w_ext_rd_resp_valid;
     end
   end
 end endgenerate
 
-encoder #(.SIZE(myooo_conf_pkg::MSHR_ENTRY_SIZE)) u_hit_enc (.i_in(w_snoop_mshr_evict_hit_array_next), .o_out(w_snoop_mshr_evict_hit_enc_next));
+encoder #(.SIZE(myooo_conf_pkg::MISSU_ENTRY_SIZE)) u_hit_enc (.i_in(w_snoop_missu_evict_hit_array_next), .o_out(w_snoop_missu_evict_hit_enc_next));
 
 logic w_l1d_wr_s0_valid  = l1d_wr_if.s0_valid;
 logic r_l1d_wr_s1_valid;
@@ -22089,25 +21785,25 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
     r_l1d_wr_s2_valid <= r_l1d_wr_s1_valid;
 
     mshr_snoop_if.resp_s1_valid <= mshr_snoop_if.req_s0_valid &
-                                   (|w_snoop_mshr_evict_hit_array_next |
+                                   (|w_snoop_missu_evict_hit_array_next |
                                     ~(w_l1d_wr_s0_valid | r_l1d_wr_s1_valid | r_l1d_wr_s2_valid)); // If L1D wr response with eviction, MSHR entry should be search on next cycle.
-    mshr_snoop_if.resp_s1_evict_valid <= |w_snoop_mshr_evict_hit_array_next;
-    mshr_snoop_if.resp_s1_be   <= {myooo_lsu_pkg::DCACHE_DATA_B_W{|w_snoop_mshr_evict_hit_array_next}};
-    mshr_snoop_if.resp_s1_data <= w_mshr_entries[w_snoop_mshr_evict_hit_enc_next].data;
+    mshr_snoop_if.resp_s1_evict_valid <= |w_snoop_missu_evict_hit_array_next;
+    mshr_snoop_if.resp_s1_be   <= {myooo_lsu_pkg::DCACHE_DATA_B_W{|w_snoop_missu_evict_hit_array_next}};
+    mshr_snoop_if.resp_s1_data <= w_missu_entries[w_snoop_missu_evict_hit_enc_next].data;
   end
 end
 
 
 
 initial begin
-  assert (myooo_lsu_pkg::L2_CMD_TAG_W >= $clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE) + 1);
+  assert (myooo_lsu_pkg::L2_CMD_TAG_W >= $clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE) + 1);
 end
 
 `ifdef SIMULATION
 function void dump_entry_json(int fp, myooo_lsu_pkg::mshr_entry_t entry, int index);
 
   if (entry.valid) begin
-    $fwrite(fp, "    \"mshr_entry[%02d]\" : {", index[$clog2(myooo_conf_pkg::MSHR_ENTRY_SIZE)-1:0]);
+    $fwrite(fp, "    \"missu_entry[%02d]\" : {", index[$clog2(myooo_conf_pkg::MISSU_ENTRY_SIZE)-1:0]);
     $fwrite(fp, "valid:%d, ", entry.valid);
     $fwrite(fp, "paddr:\"0x%0x\", ", entry.paddr);
     $fwrite(fp, "sent:\"%01d\", ", entry.sent);
@@ -22119,9 +21815,9 @@ endfunction // dump_json
 
 function void dump_json(int fp);
   if (|w_entry_valids) begin
-    $fwrite(fp, "  \"myooo_mshr\" : {\n");
-    for (int c_idx = 0; c_idx < myooo_conf_pkg::MSHR_ENTRY_SIZE; c_idx++) begin
-      dump_entry_json (fp, w_mshr_entries[c_idx], c_idx);
+    $fwrite(fp, "  \"myooo_missu\" : {\n");
+    for (int c_idx = 0; c_idx < myooo_conf_pkg::MISSU_ENTRY_SIZE; c_idx++) begin
+      dump_entry_json (fp, w_missu_entries[c_idx], c_idx);
     end
     $fwrite(fp, "  },\n");
   end
@@ -22423,13 +22119,11 @@ always_comb begin
   l1d_ext_wr_req.payload.cmd     = M_XWR;
   if (!st_ext_arbiter) begin
     l1d_ext_wr_req.payload.addr    = r_ext_evict_payload.paddr;
-    l1d_ext_wr_req.payload.color   = r_ext_evict_payload.color;
     l1d_ext_wr_req.tag             = {L2_UPPER_TAG_WR_L1D, {(L2_CMD_TAG_W-2){1'b0}}};
     l1d_ext_wr_req.payload.data    = r_ext_evict_payload.data;
     l1d_ext_wr_req.payload.byte_en = {DCACHE_DATA_B_W{1'b1}};
   end else begin
     l1d_ext_wr_req.payload.addr    = r_uc_wr_paddr;
-    l1d_ext_wr_req.payload.color   = 'h0;
     l1d_ext_wr_req.tag             = {L2_UPPER_TAG_WR_L1D, {(L2_CMD_TAG_W-2){1'b0}}};
     l1d_ext_wr_req.payload.data    = r_uc_wr_data;
     l1d_ext_wr_req.payload.byte_en = r_uc_wr_strb;
@@ -22583,7 +22277,8 @@ module myooo_ldq
    // Hazard check for STQ -> LDQ
    ldq_haz_check_if.slave      ldq_haz_check_if[myooo_conf_pkg::LSU_INST_NUM],
 
-   input mshr_resolve_t     i_mshr_resolve,
+   input missu_resolve_t     i_missu_resolve,
+   input logic             i_missu_is_full,
 
    // Updates from LSU Pipeline EX2 stage
    ldq_upd_if.slave  ldq_upd_if[myooo_conf_pkg::LSU_INST_NUM],
@@ -22753,7 +22448,8 @@ generate for (genvar l_idx = 0; l_idx < myooo_conf_pkg::LDQ_SIZE; l_idx++) begin
      .i_ex2_q_valid   (w_ex2_q_valid  ),
      .i_ex2_q_updates (w_ex2_q_updates),
 
-     .i_mshr_resolve (i_mshr_resolve),
+     .i_missu_resolve (i_missu_resolve),
+     .i_missu_is_full (i_missu_is_full),
 
      .i_st_buffer_empty (st_buffer_if.is_empty),
      .i_st_requester_empty (uc_write_if.is_empty),
@@ -22901,8 +22597,8 @@ function void dump_entry_json(int fp, ldq_entry_t entry, int index);
     //   LDQ_WAIT_COMMIT     : $fwrite(fp, "LDQ_WAIT_COMMIT");
     //   LDQ_WAIT_ENTRY_CLR  : $fwrite(fp, "LDQ_WAIT_ENTRY_CLR");
     //   LDQ_ISSUED          : $fwrite(fp, "LDQ_ISSUED");
-    //   LDQ_MSHR_EVICT_HAZ  : $fwrite(fp, "LDQ_MSHR_EVICT_HAZ");
-    //   LDQ_MSHR_FULL       : $fwrite(fp, "LDQ_MSHR_FULL");
+    //   LDQ_MISSU_EVICT_HAZ : $fwrite(fp, "LDQ_MISSU_EVICT_HAZ");
+    //   LDQ_MISSU_FULL      : $fwrite(fp, "LDQ_MISSU_FULL");
     //   LDQ_WAIT_OLDEST     : $fwrite(fp, "LDQ_WAIT_OLDEST");
     //   LDQ_NONFWD_HAZ_WAIT : $fwrite(fp, "LDQ_NONFWD_HAZ_WAIT");
     //   default             : $fatal(0, "State Log lacked. %d\n", entry.state);
@@ -23016,7 +22712,8 @@ module myooo_ldq_entry
   input logic                            i_ex2_q_valid,
   input myooo_lsu_pkg::ldq_ex2_update_t i_ex2_q_updates,
 
- input mshr_resolve_t                           i_mshr_resolve,
+ input                                           missu_resolve_t i_missu_resolve,
+ input logic                                     i_missu_is_full,
  // Commit notification
  commit_if.monitor                               commit_if,
  br_upd_if.slave                                 br_upd_if,
@@ -23044,9 +22741,10 @@ logic                                            w_dead_state_clear;
 logic                                            w_entry_commit;
 logic                                            w_oldest_ready;
 
-logic                                            w_mshr_is_assigned;
-logic                                            w_mshr_resolve_match;
-logic                                            w_mshr_evict_is_hazard;
+logic                                            w_missu_is_full;
+logic                                            w_missu_is_assigned;
+logic                                            w_missu_resolve_match;
+logic                                            w_missu_evict_is_hazard;
 
 myooo_pkg::rnid_t                                 w_rs_rnid[2];
 myooo_pkg::reg_t                                  w_rs_type[2];
@@ -23079,7 +22777,7 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
     r_entry.is_valid <= 1'b0;
     // r_entry.state <= LDQ_INIT;
-    // r_entry.mshr_haz_index_oh <= 'h0;
+    // r_entry.missu_haz_index_oh <= 'h0;
 
   end else begin
     r_entry <= w_entry_next;
@@ -23129,8 +22827,8 @@ end // always_comb
 // `ifdef SIMULATION
 // always_ff @ (negedge i_clk, negedge i_reset_n) begin
 //   if (i_reset_n & (r_entry.state == LDQ_EX2_RUN) & ~i_flush_valid & i_ex1_q_valid) begin
-//     if (w_mshr_is_assigned & !$onehot(i_ex1_q_updates.mshr_index_oh)) begin
-//       $fatal (0, "When MSHR is assigned, MSHR index ID must be one hot but actually %x\n", i_ex1_q_updates.mshr_index_oh);
+//     if (w_missu_is_assigned & !$onehot(i_ex1_q_updates.missu_index_oh)) begin
+//       $fatal (0, "When MISSU is assigned, MISSU index ID must be one hot but actually %x\n", i_ex1_q_updates.missu_index_oh);
 //     end
 //   end
 // end
@@ -23219,6 +22917,8 @@ module myooo_stq
 
    // RMW Ordere Hazard Check
    rmw_order_check_if.slave  rmw_order_check_if[myooo_conf_pkg::LSU_INST_NUM],
+
+   input logic           i_missu_is_empty,
 
    output logic          o_stq_rmw_existed,
 
@@ -23458,6 +23158,12 @@ generate for (genvar s_idx = 0; s_idx < myooo_conf_pkg::STQ_SIZE; s_idx++) begin
   bit_oh_or #(.T(logic[myooo_conf_pkg::DISP_SIZE-1:0]),     .WORDS(myooo_conf_pkg::MEM_DISP_SIZE)) bit_oh_grp_id   (.i_oh(w_input_valid), .i_data(disp_picked_grp_id), .o_selected(w_disp_grp_id));
   bit_oh_or #(.T(logic[myooo_conf_pkg::LSU_INST_NUM-1: 0]), .WORDS(myooo_conf_pkg::MEM_DISP_SIZE)) bit_oh_pipe_sel (.i_oh(w_input_valid), .i_data(w_pipe_sel_idx_oh), .o_selected(w_disp_pipe_sel_oh));
 
+  // Selection of EX2 Update signal
+  stq_ex1_update_t w_ex1_q_updates;
+  logic        w_ex1_q_valid;
+  stq_ex1_upd_select u_stq_ex1_upd_select (.stq_upd_if(stq_upd_if), .i_cmt_id(w_stq_entries[s_idx].inst.cmt_id), .i_grp_id(w_stq_entries[s_idx].inst.grp_id),
+                                           .o_ex1_q_valid(w_ex1_q_valid), .o_ex1_q_updates(w_ex1_q_updates));
+
   stq_ex2_update_t w_ex2_q_updates;
   logic        w_ex2_q_valid;
   stq_ex2_upd_select u_stq_ex2_upd_select (.stq_upd_if(stq_upd_if), .i_cmt_id(w_stq_entries[s_idx].inst.cmt_id), .i_grp_id(w_stq_entries[s_idx].inst.grp_id),
@@ -23481,6 +23187,9 @@ generate for (genvar s_idx = 0; s_idx < myooo_conf_pkg::STQ_SIZE; s_idx++) begin
      .early_wr_in_if (early_wr_in_if),
      .phy_wr_in_if   (phy_wr_in_if  ),
 
+     .i_ex1_q_valid  (|w_ex1_q_valid),
+     .i_ex1_q_updates(w_ex1_q_updates),
+
      .i_ex2_q_valid  (|w_ex2_q_valid),
      .i_ex2_q_updates(w_ex2_q_updates),
 
@@ -23492,6 +23201,8 @@ generate for (genvar s_idx = 0; s_idx < myooo_conf_pkg::STQ_SIZE; s_idx++) begin
      .i_rs2_phy_data          (w_ex1_rs2_phy_data          [rs2_regrd_port_idx]),
 
      .o_entry    (w_stq_entries   [s_idx]),
+
+     .i_missu_is_empty(i_missu_is_empty),
 
      .commit_if (commit_if),
      .br_upd_if (br_upd_if),
@@ -23912,7 +23623,6 @@ assign w_stbuf_accepted_disp = ~w_sq_stb_ready_inv;
 // Make Store Buffer Request
 assign st_buffer_if.valid = |w_stbuf_accepted_disp;
 assign st_buffer_if.paddr = w_stq_cmt_head_entry.addr;
-assign st_buffer_if.color = w_stq_cmt_head_entry.color;
 
 generate for(genvar b_idx = 0; b_idx < myooo_lsu_pkg::ST_BUF_WIDTH/8; b_idx++) begin : loop_st_buf_strb
   myooo_pkg::grp_id_t w_strb_array;
@@ -24082,6 +23792,32 @@ endfunction // dump_json
 
 endmodule // myooo_stq
 
+module stq_ex1_upd_select
+  import myooo_lsu_pkg::*;
+  (
+   stq_upd_if.slave           stq_upd_if[myooo_conf_pkg::LSU_INST_NUM],
+   input myooo_pkg::cmt_id_t i_cmt_id,
+   input myooo_pkg::grp_id_t i_grp_id,
+   output logic               o_ex1_q_valid,
+   output stq_ex1_update_t    o_ex1_q_updates
+   );
+
+logic [myooo_conf_pkg::LSU_INST_NUM-1: 0] w_ex1_update_match;
+stq_ex1_update_t w_ex1_payloads[myooo_conf_pkg::LSU_INST_NUM];
+
+generate for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM; p_idx++) begin : ex2_update_loop
+  assign w_ex1_update_match[p_idx] = (stq_upd_if[p_idx].ex1_update &&
+                                      stq_upd_if[p_idx].ex1_payload.cmt_id == i_cmt_id &&
+                                      stq_upd_if[p_idx].ex1_payload.grp_id == i_grp_id);
+  assign w_ex1_payloads[p_idx] = stq_upd_if[p_idx].ex1_payload;
+end endgenerate
+
+assign o_ex1_q_valid = |w_ex1_update_match;
+bit_oh_or #(.T(stq_ex1_update_t), .WORDS(myooo_conf_pkg::LSU_INST_NUM)) bit_oh_update (.i_oh(w_ex1_update_match), .i_data(w_ex1_payloads), .o_selected(o_ex1_q_updates));
+
+endmodule // stq_ex1_upd_select
+
+
 module stq_ex2_upd_select
   import myooo_lsu_pkg::*;
   (
@@ -24136,6 +23872,8 @@ module myooo_stq_entry
    phy_wr_if.slave   phy_wr_in_if  [myooo_pkg::TGT_BUS_SIZE],
 
    // Updates from LSU Pipeline EX2 stage
+   input logic            i_ex1_q_valid,
+   input stq_ex1_update_t i_ex1_q_updates,
    input logic            i_ex2_q_valid,
    input stq_ex2_update_t i_ex2_q_updates,
 
@@ -24152,6 +23890,8 @@ module myooo_stq_entry
    // Commit notification
    commit_if.monitor               commit_if,
    br_upd_if.slave                            br_upd_if,
+
+   input logic                                i_missu_is_empty,
 
    output logic                               o_stbuf_req_valid,
    input logic                                i_stbuf_accept,
@@ -24219,7 +23959,7 @@ assign o_stbuf_req_valid = r_entry.is_valid & r_entry.is_committed & ~r_entry.de
                             (r_entry.rmwop != decoder_lsu_ctrl_pkg::RMWOP_SC | r_entry.paddr_valid) & i_st_buffer_empty & i_stq_outptr_valid :
                             1'b1);
 
-assign o_uc_write_req_valid = r_entry.is_valid & r_entry.is_committed & r_entry.paddr_valid & r_entry.is_uc;
+assign o_uc_write_req_valid = r_entry.is_valid & r_entry.is_committed & !r_entry.dead & r_entry.paddr_valid & r_entry.is_uc;
 
 assign o_stq_entry_st_finish = r_entry.is_valid &
                                (r_entry.st_buf_finished |
@@ -24277,13 +24017,14 @@ always_comb begin
   end else begin
     if (w_entry_flush) begin
       w_entry_next.dead = 1'b1;
+    end else if (~r_entry.paddr_valid & i_ex1_q_valid) begin
+      w_entry_next.addr         = i_ex1_q_updates.paddr;
+      w_entry_next.size         = i_ex1_q_updates.size;
+      w_entry_next.is_uc        = i_ex1_q_updates.is_uc;
+      w_entry_next.rmwop        = i_ex1_q_updates.rmwop;
+      w_entry_next.paddr_valid  = (i_ex1_q_updates.rmwop != decoder_lsu_ctrl_pkg::RMWOP_SC) ? 1'b1 : 1'b0;
     end else if (~r_entry.paddr_valid & i_ex2_q_valid) begin
-      w_entry_next.addr         = i_ex2_q_updates.paddr;
-      w_entry_next.size         = i_ex2_q_updates.size;
-      w_entry_next.is_uc        = i_ex2_q_updates.is_uc;
-      w_entry_next.rmwop        = i_ex2_q_updates.rmwop;
-      w_entry_next.paddr_valid  = (i_ex2_q_updates.rmwop == decoder_lsu_ctrl_pkg::RMWOP_SC) ? i_ex2_q_updates.success : 1'b1;
-      w_entry_next.color        = i_ex2_q_updates.color;
+      w_entry_next.paddr_valid  = r_entry.rmwop == decoder_lsu_ctrl_pkg::RMWOP_SC ? i_ex2_q_updates.success : r_entry.paddr_valid;
     end
 
     if (w_ready_to_mv_stbuf) begin
@@ -24408,7 +24149,7 @@ endmodule // myooo_stq_rs2_pipe
 //
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_st_buffer
+module myooo_st_buffer
   import decoder_lsu_ctrl_pkg::*;
   import myooo_lsu_pkg::*;
 (
@@ -24417,10 +24158,10 @@ module myooo_lsu_vipt_st_buffer
 
  st_buffer_if.slave st_buffer_if,
  // L1D Miss/Hit Interface
- l1d_rd_pipt_if.master l1d_rd_if,
+ l1d_rd_if.master l1d_rd_if,
 
  // Interface of Missed Data for Store
- l1d_mshr_if.master l1d_mshr_stq_miss_if,
+ l1d_missu_if.master l1d_missu_stq_miss_if,
  // Write Data to DCache
  l1d_wr_if.master l1d_stbuf_wr_if,
  // Watch for write successfuly with merged data
@@ -24434,15 +24175,15 @@ module myooo_lsu_vipt_st_buffer
  // RMW Ordere Hazard Check
  rmw_order_check_if.slave rmw_order_check_if[myooo_conf_pkg::LSU_INST_NUM],
 
- // Search MSHR entry: same cycle as L1D Search
- mshr_pa_search_if.master   mshr_pa_search_if,
+ // Search MISSU entry: same cycle as L1D Search
+ missu_pa_search_if.master   missu_pa_search_if,
 
  // Snoop Interface
  snoop_info_if.monitor snoop_info_if,
  stbuf_snoop_if.slave  stbuf_snoop_if,
 
- // MSHR Resolve Notofication
- input       mshr_resolve_t i_mshr_resolve
+ // MISSU Resolve Notofication
+ input       missu_resolve_t i_missu_resolve
  );
 
 
@@ -24468,8 +24209,8 @@ logic [ST_BUF_ENTRY_SIZE-1: 0] w_entry_finish;
 logic [ST_BUF_ENTRY_SIZE-1: 0] w_merge_accept;
 logic [ST_BUF_ENTRY_SIZE-1: 0] w_merge_refused;
 
-logic [ST_BUF_ENTRY_SIZE-1: 0] w_entry_mshr_req;
-logic [ST_BUF_ENTRY_SIZE-1: 0] w_entry_mshr_req_oh;
+logic [ST_BUF_ENTRY_SIZE-1: 0] w_entry_missu_req;
+logic [ST_BUF_ENTRY_SIZE-1: 0] w_entry_missu_req_oh;
 
 logic                          r_l1d_rd_if_resp;
 
@@ -24518,7 +24259,7 @@ assign w_init_load = assign_st_buffer(
 `ifdef SIMULATION
                                       st_buffer_if.cmt_id, st_buffer_if.grp_id,
 `endif // SIMULATION
-                                      st_buffer_if.paddr, st_buffer_if.color, st_buffer_if.strb, st_buffer_if.data,
+                                      st_buffer_if.paddr, st_buffer_if.strb, st_buffer_if.data,
                                       st_buffer_if.rmwop, st_buffer_if.size);
 
 assign st_buffer_if.resp = w_st_buffer_allocated ? ST_BUF_ALLOC :
@@ -24536,7 +24277,7 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
   assign w_load = st_buffer_if.valid & (st_buffer_if.is_rmw ? e_idx == 0 : w_in_ptr_oh[e_idx]) & w_st_buffer_allocated;
 
   if (e_idx == 0) begin
-    myooo_lsu_vipt_st_buffer_amo_entry
+    myooo_st_buffer_amo_entry
       u_entry
         (
          .i_clk    (i_clk    ),
@@ -24549,13 +24290,13 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
          .o_l1d_rd_req(w_entry_l1d_rd_req[e_idx]),
          .i_l1d_rd_accepted (w_entry_l1d_rd_req_oh[e_idx]),
 
-         .o_mshr_req      (w_entry_mshr_req   [e_idx]),
-         .i_mshr_accepted (w_entry_mshr_req_oh[e_idx]),
+         .o_missu_req      (w_entry_missu_req   [e_idx]),
+         .i_missu_accepted (w_entry_missu_req_oh[e_idx]),
 
-         .i_mshr_search_update_hit(mshr_pa_search_if.s1_hit_update_index_oh),
-         .i_mshr_search_hit       (mshr_pa_search_if.s1_hit_index_oh),
-         .i_mshr_evict_search_hit (mshr_pa_search_if.s1_evict_hit_index_oh),
-         .i_mshr_evict_sent       (mshr_pa_search_if.s1_evict_sent),
+         .i_missu_search_update_hit(missu_pa_search_if.s1_hit_update_index_oh),
+         .i_missu_search_hit       (missu_pa_search_if.s1_hit_index_oh),
+         .i_missu_evict_search_hit (missu_pa_search_if.s1_evict_hit_index_oh),
+         .i_missu_evict_sent       (missu_pa_search_if.s1_evict_sent),
 
          // Forward check interface from LSU Pipeline
          .stbuf_fwd_check_if (stbuf_fwd_check_if    ),
@@ -24573,8 +24314,8 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
          .i_l1d_wr_s1_resp_conflict (l1d_stbuf_wr_if.s1_wr_resp.s1_conflict),
 
          .i_snoop_busy     (snoop_info_if.busy),
-         .i_st_mshr_resp  (l1d_mshr_stq_miss_if.resp_payload ),
-         .i_mshr_resolve (i_mshr_resolve),
+         .i_st_missu_resp  (l1d_missu_stq_miss_if.resp_payload ),
+         .i_missu_resolve (i_missu_resolve),
 
          .amo_op_if (w_amo_op_if),
 
@@ -24587,7 +24328,7 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
          .i_finish_accepted(w_out_ptr_oh[e_idx])
          );
   end else begin // if (e_idx == 0)
-    myooo_lsu_vipt_st_buffer_entry
+    myooo_st_buffer_entry
       u_entry
         (
          .i_clk    (i_clk    ),
@@ -24600,13 +24341,13 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
          .o_l1d_rd_req(w_entry_l1d_rd_req[e_idx]),
          .i_l1d_rd_accepted (w_entry_l1d_rd_req_oh[e_idx]),
 
-         .o_mshr_req      (w_entry_mshr_req   [e_idx]),
-         .i_mshr_accepted (w_entry_mshr_req_oh[e_idx]),
+         .o_missu_req      (w_entry_missu_req   [e_idx]),
+         .i_missu_accepted (w_entry_missu_req_oh[e_idx]),
 
-         .i_mshr_search_update_hit(mshr_pa_search_if.s1_hit_update_index_oh),
-         .i_mshr_search_hit       (mshr_pa_search_if.s1_hit_index_oh),
-         .i_mshr_evict_search_hit (mshr_pa_search_if.s1_evict_hit_index_oh),
-         .i_mshr_evict_sent       (mshr_pa_search_if.s1_evict_sent),
+         .i_missu_search_update_hit(missu_pa_search_if.s1_hit_update_index_oh),
+         .i_missu_search_hit       (missu_pa_search_if.s1_hit_index_oh),
+         .i_missu_evict_search_hit (missu_pa_search_if.s1_evict_hit_index_oh),
+         .i_missu_evict_sent       (missu_pa_search_if.s1_evict_sent),
 
          // Forward check interface from LSU Pipeline
          .stbuf_fwd_check_if (stbuf_fwd_check_if    ),
@@ -24624,8 +24365,8 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
          .i_l1d_wr_s1_resp_conflict (l1d_stbuf_wr_if.s1_wr_resp.s1_conflict),
 
          .i_snoop_busy     (snoop_info_if.busy),
-         .i_st_mshr_resp  (l1d_mshr_stq_miss_if.resp_payload ),
-         .i_mshr_resolve (i_mshr_resolve),
+         .i_st_missu_resp  (l1d_missu_stq_miss_if.resp_payload ),
+         .i_missu_resolve (i_missu_resolve),
 
          .l1d_mshr_wr_if   (l1d_mshr_wr_if),
          .o_ready_to_merge (w_ready_to_merge),
@@ -24654,7 +24395,7 @@ generate for (genvar e_idx = 0; e_idx < ST_BUF_ENTRY_SIZE; e_idx++) begin : entr
   // MSHR L1D update & Merge
   assign w_entry_l1d_merge_hit[e_idx] = w_entries[e_idx].valid & (w_state[e_idx] == ST_BUF_WAIT_REFILL) &
                                         (w_entries[e_idx].rmwop == decoder_lsu_ctrl_pkg::RMWOP__) &
-                                        |(w_entries[e_idx].mshr_index_oh & mshr_stbuf_search_if.mshr_index_oh);
+                                        |(w_entries[e_idx].missu_index_oh & mshr_stbuf_search_if.mshr_index_oh);
 
 end // block: entry_loop
 endgenerate
@@ -24683,26 +24424,25 @@ select_l1d_rd_entry_oh
 assign l1d_rd_if.s0_valid         = |w_entry_l1d_rd_req;
 assign l1d_rd_if.s0_high_priority = w_l1d_rd_entry.l1d_high_priority;
 assign l1d_rd_if.s0_paddr         = w_l1d_rd_entry.paddr;
-assign l1d_rd_if.s0_color         = w_l1d_rd_entry.color;
 
 // -----------------
-// MSHR entry search
+// MISSU entry search
 // -----------------
-assign mshr_pa_search_if.s0_valid = l1d_rd_if.s0_valid;
-assign mshr_pa_search_if.s0_paddr = l1d_rd_if.s0_paddr;
+assign missu_pa_search_if.s0_valid = l1d_rd_if.s0_valid;
+assign missu_pa_search_if.s0_paddr = l1d_rd_if.s0_paddr;
 
 // ------------------------
-// Make MSHR Refill request-
+// Make MISSU Refill request-
 // -----------------------
-st_buffer_entry_t  w_mshr_target_entry;
-bit_extract_lsb_ptr_oh #(.WIDTH(ST_BUF_ENTRY_SIZE)) u_mshr_req_sel (.in(w_entry_mshr_req), .i_ptr_oh(w_out_ptr_oh), .out(w_entry_mshr_req_oh));
+st_buffer_entry_t  w_missu_target_entry;
+bit_extract_lsb_ptr_oh #(.WIDTH(ST_BUF_ENTRY_SIZE)) u_missu_req_sel (.in(w_entry_missu_req), .i_ptr_oh(w_out_ptr_oh), .out(w_entry_missu_req_oh));
 bit_oh_or
   #(.T(st_buffer_entry_t), .WORDS(ST_BUF_ENTRY_SIZE))
-select_mshr_entry_oh
+select_missu_entry_oh
   (
-   .i_oh(w_entry_mshr_req_oh),
+   .i_oh(w_entry_missu_req_oh),
    .i_data(w_entries),
-   .o_selected(w_mshr_target_entry)
+   .o_selected(w_missu_target_entry)
    );
 
 // Eviction: Replaced Address
@@ -24711,14 +24451,14 @@ logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] r_s2_replace_way;
 logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]       r_s2_replace_data;
 myooo_pkg::paddr_t                 r_s2_replace_paddr;
 logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] r_s2_hit_way;
-// logic [myooo_conf_pkg::DCACHE_WAYS-1: 0]         r_s2_mshr_evict_hit_ways;
+// logic [myooo_conf_pkg::DCACHE_WAYS-1: 0]         r_s2_missu_evict_hit_ways;
 // logic [myooo_conf_pkg::DCACHE_WAYS-1: 0]         w_s2_conflict_evict_addr;
 
 always_ff @ (posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
     r_s2_replace_valid <= 1'b0;
 
-    // r_s2_mshr_evict_hit_ways <= 'h0;
+    // r_s2_missu_evict_hit_ways <= 'h0;
   end else begin
     r_s2_hit_way <= l1d_rd_if.s1_hit_way;
 
@@ -24727,10 +24467,9 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
   end // else: !if(!i_reset_n)
 end // always_ff @ (posedge i_clk, negedge i_reset_n)
 
-assign l1d_mshr_stq_miss_if.load = |w_entry_mshr_req; /* & w_s2_conflict_evict_addrxo; */
-assign l1d_mshr_stq_miss_if.req_payload.paddr = w_mshr_target_entry.paddr;
-assign l1d_mshr_stq_miss_if.req_payload.color = w_mshr_target_entry.color;
-assign l1d_mshr_stq_miss_if.req_payload.way   = w_mshr_target_entry.l1d_way;
+assign l1d_missu_stq_miss_if.load = |w_entry_missu_req; /* & w_s2_conflict_evict_addrxo; */
+assign l1d_missu_stq_miss_if.req_payload.paddr = w_missu_target_entry.paddr;
+assign l1d_missu_stq_miss_if.req_payload.way   = w_missu_target_entry.l1d_way;
 
 
 // --------------------------------------------
@@ -24751,7 +24490,6 @@ always_comb begin
   l1d_stbuf_wr_if.s0_valid                   = |w_entry_l1d_wr_req_oh;
   l1d_stbuf_wr_if.s0_wr_req.s0_way           = w_l1d_wr_entry.l1d_way;
   l1d_stbuf_wr_if.s0_wr_req.s0_paddr         = {w_l1d_wr_entry.paddr[riscv_pkg::PADDR_W-1:$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)], {($clog2(myooo_lsu_pkg::DCACHE_DATA_B_W)){1'b0}}};
-  l1d_stbuf_wr_if.s0_wr_req.s0_color         = w_l1d_wr_entry.color;
   l1d_stbuf_wr_if.s0_wr_req.s0_data          = {multiply_dc_stbuf_width{w_l1d_wr_entry.data}};
   l1d_stbuf_wr_if.s0_wr_req.s0_mesi          = myooo_lsu_pkg::MESI_MODIFIED;
 end
@@ -24929,7 +24667,7 @@ end
 
 `endif //  `ifdef SIMULATION
 
-endmodule // myooo_lsu_vipt_st_buffer
+endmodule // myooo_st_buffer
 // ------------------------------------------------------------------------
 // NAME : MYOOO Store Buffer Entry
 // TYPE : module
@@ -24939,7 +24677,7 @@ endmodule // myooo_lsu_vipt_st_buffer
 //
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_st_buffer_entry
+module myooo_st_buffer_entry
   import myooo_lsu_pkg::*;
 (
  input logic  i_clk,
@@ -24952,13 +24690,13 @@ module myooo_lsu_vipt_st_buffer_entry
  output logic o_l1d_rd_req, // Read Request of L1D
  input logic  i_l1d_rd_accepted,
 
- output logic o_mshr_req, // Refill request to MSHR
- input logic  i_mshr_accepted,
+ output logic o_missu_req, // Refill request to MISSU
+ input logic  i_missu_accepted,
 
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_search_update_hit,
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_search_hit,
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_evict_search_hit,
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_evict_sent,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_search_update_hit,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_search_hit,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_evict_search_hit,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_evict_sent,
 
  // Forward check interface from LSU Pipeline
  fwd_check_if.slave stbuf_fwd_check_if[myooo_conf_pkg::LSU_INST_NUM],
@@ -24975,8 +24713,8 @@ module myooo_lsu_vipt_st_buffer_entry
  input logic     i_l1d_wr_s1_resp_conflict,
 
  input logic           i_snoop_busy,
- input mshr_resp_t    i_st_mshr_resp,
- input mshr_resolve_t i_mshr_resolve,
+ input missu_resp_t    i_st_missu_resp,
+ input missu_resolve_t i_missu_resolve,
 
  l1d_wr_if.watch     l1d_mshr_wr_if,
 
@@ -24998,8 +24736,8 @@ logic         w_l1d_rd_req_next;
 
 logic [myooo_conf_pkg::LSU_INST_NUM-1: 0] w_fwd_lsu_hit;
 
-logic                                      w_mshr_resolve_vld;
-assign w_mshr_resolve_vld = |(~i_mshr_resolve.mshr_entry_valids & r_entry.mshr_index_oh);
+logic                                      w_missu_resolve_vld;
+assign w_missu_resolve_vld = |(~i_missu_resolve.missu_entry_valids & r_entry.missu_index_oh);
 
 always_ff @ (posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
@@ -25056,30 +24794,30 @@ always_comb begin
     ST_BUF_RESP_L1D: begin
       if (i_snoop_busy) begin
         w_state_next = ST_BUF_WAIT_SNOOP;
-      end else if (i_mshr_search_update_hit != 'h0) begin
+      end else if (i_missu_search_update_hit != 'h0) begin
         w_state_next = ST_BUF_RD_L1D;
-      end else if (i_mshr_search_hit != 'h0) begin
-        if (i_mshr_resolve.valid &
-            (i_mshr_resolve.resolve_index_oh == i_mshr_search_hit)) begin
-          // MSHR hit and resolve immediately : replay again
+      end else if (i_missu_search_hit != 'h0) begin
+        if (i_missu_resolve.valid &
+            (i_missu_resolve.resolve_index_oh == i_missu_search_hit)) begin
+          // MISSU hit and resolve immediately : replay again
           w_state_next = ST_BUF_RD_L1D;
         end else begin
           w_state_next = ST_BUF_WAIT_REFILL; // Replay
-          w_entry_next.mshr_index_oh = i_mshr_search_hit;
+          w_entry_next.missu_index_oh = i_missu_search_hit;
         end
-      end else if (i_mshr_evict_search_hit != 0) begin
-        if (|(i_mshr_evict_search_hit & i_mshr_evict_sent)) begin
+      end else if (i_missu_evict_search_hit != 0) begin
+        if (|(i_missu_evict_search_hit & i_missu_evict_sent)) begin
           // Already evicted
-          w_state_next = ST_BUF_MSHR_REFILL;
+          w_state_next = ST_BUF_MISSU_REFILL;
         end else begin
           w_state_next = ST_BUF_WAIT_REFILL; // Todo: Should be merge
-          w_entry_next.mshr_index_oh = i_mshr_search_hit;
+          w_entry_next.missu_index_oh = i_missu_search_hit;
         end
       end else if (i_l1d_rd_s1_conflict) begin
         w_entry_next.l1d_high_priority = 1'b1;
         w_state_next = ST_BUF_RD_L1D;
       end else if (i_l1d_rd_s1_miss) begin
-        w_state_next = ST_BUF_MSHR_REFILL;
+        w_state_next = ST_BUF_MISSU_REFILL;
         w_entry_next.l1d_way = i_l1d_s1_way;
       end else begin
         w_entry_next.l1d_way = i_l1d_s1_way;
@@ -25100,32 +24838,32 @@ always_comb begin
         w_state_next = ST_BUF_WAIT_FINISH;
       end
     end
-    ST_BUF_MSHR_REFILL: begin
-      if (i_mshr_accepted) begin
-        if (i_st_mshr_resp.evict_conflict) begin
+    ST_BUF_MISSU_REFILL: begin
+      if (i_missu_accepted) begin
+        if (i_st_missu_resp.evict_conflict) begin
           w_state_next = ST_BUF_WAIT_EVICT;
-          w_entry_next.mshr_index_oh = i_st_mshr_resp.mshr_index_oh;
-        end else if (i_st_mshr_resp.mshr_index_oh != 'h0) begin
+          w_entry_next.missu_index_oh = i_st_missu_resp.missu_index_oh;
+        end else if (i_st_missu_resp.missu_index_oh != 'h0) begin
           w_state_next = ST_BUF_WAIT_REFILL; // Replay
-          w_entry_next.mshr_index_oh = i_st_mshr_resp.mshr_index_oh;
-        end else if (i_st_mshr_resp.full) begin
+          w_entry_next.missu_index_oh = i_st_missu_resp.missu_index_oh;
+        end else if (i_st_missu_resp.full) begin
           w_state_next = ST_BUF_WAIT_FULL;
         end else begin
-          // if index_oh is zero, it means MSHR is correctly allocated,
+          // if index_oh is zero, it means MISSU is correctly allocated,
           // so move to STQ_COMMIT and rerun, and set index_oh conflict bit set again.
           w_state_next = ST_BUF_RD_L1D; // Replay
         end
       end
-    end // case: ST_BUF_MSHR_REFILL
+    end // case: ST_BUF_MISSU_REFILL
     ST_BUF_WAIT_EVICT : begin
-      if (w_mshr_resolve_vld) begin
+      if (w_missu_resolve_vld) begin
         w_state_next = ST_BUF_RD_L1D; // Replay
       end
     end
     ST_BUF_WAIT_REFILL: begin
       if (i_mshr_l1d_wr_merged) begin
         w_state_next = ST_BUF_L1D_MERGE;
-      end else if (w_mshr_resolve_vld) begin
+      end else if (w_missu_resolve_vld) begin
         w_state_next = ST_BUF_RD_L1D;
       end
     end
@@ -25135,7 +24873,7 @@ always_comb begin
       end
     end
     ST_BUF_WAIT_FULL: begin
-      if (!i_st_mshr_resp.full) begin
+      if (!i_st_missu_resp.full) begin
         w_state_next = ST_BUF_RD_L1D; // Replay
       end
     end
@@ -25176,7 +24914,7 @@ assign o_ready_to_merge = r_entry.valid &
                           (r_state != ST_BUF_L1D_MERGE2) &
                           (r_state != ST_BUF_WAIT_FINISH);
 assign o_l1d_rd_req = r_entry.valid & (r_state == ST_BUF_RD_L1D);
-assign o_mshr_req   = r_entry.valid & (r_state == ST_BUF_MSHR_REFILL);
+assign o_missu_req    = r_entry.valid & (r_state == ST_BUF_MISSU_REFILL);
 assign o_l1d_wr_req = r_entry.valid & (r_state == ST_BUF_L1D_UPDATE);
 
 // -----------------------------------
@@ -25198,7 +24936,7 @@ final begin
 end
 `endif // SIMULATION
 
-endmodule // myooo_lsu_vipt_st_buffer_entry
+endmodule // myooo_st_buffer_entry
 // ------------------------------------------------------------------------
 // NAME : MYOOO Store Buffer Entry
 // TYPE : module
@@ -25208,7 +24946,7 @@ endmodule // myooo_lsu_vipt_st_buffer_entry
 //
 // ------------------------------------------------------------------------
 
-module myooo_lsu_vipt_st_buffer_amo_entry
+module myooo_st_buffer_amo_entry
   import myooo_lsu_pkg::*;
 (
  input logic  i_clk,
@@ -25221,13 +24959,13 @@ module myooo_lsu_vipt_st_buffer_amo_entry
  output logic o_l1d_rd_req, // Read Request of L1D
  input logic  i_l1d_rd_accepted,
 
- output logic o_mshr_req, // Refill request to MSHR
- input logic  i_mshr_accepted,
+ output logic o_missu_req, // Refill request to MISSU
+ input logic  i_missu_accepted,
 
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_search_update_hit,
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_search_hit,
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_evict_search_hit,
- input logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] i_mshr_evict_sent,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_search_update_hit,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_search_hit,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_evict_search_hit,
+ input logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] i_missu_evict_sent,
 
  // Forward check interface from LSU Pipeline
  fwd_check_if.slave stbuf_fwd_check_if[myooo_conf_pkg::LSU_INST_NUM],
@@ -25244,8 +24982,8 @@ module myooo_lsu_vipt_st_buffer_amo_entry
  input logic     i_l1d_wr_s1_resp_conflict,
 
  input logic           i_snoop_busy,
- input mshr_resp_t    i_st_mshr_resp,
- input mshr_resolve_t i_mshr_resolve,
+ input missu_resp_t    i_st_missu_resp,
+ input missu_resolve_t i_missu_resolve,
 
  // Atomic Operation
  amo_op_if.master amo_op_if,
@@ -25273,8 +25011,8 @@ logic         w_l1d_rd_req_next;
 
 logic [myooo_conf_pkg::LSU_INST_NUM-1: 0] w_fwd_lsu_hit;
 
-logic                                      w_mshr_resolve_vld;
-assign w_mshr_resolve_vld = |(~i_mshr_resolve.mshr_entry_valids & r_entry.mshr_index_oh);
+logic                                      w_missu_resolve_vld;
+assign w_missu_resolve_vld = |(~i_missu_resolve.missu_entry_valids & r_entry.missu_index_oh);
 
 riscv_pkg::xlen_t w_amo_op_result;
 riscv_pkg::xlen_t r_amo_l1d_data;
@@ -25346,30 +25084,30 @@ always_comb begin
     ST_BUF_RESP_L1D: begin
       if (i_snoop_busy) begin
         w_state_next = ST_BUF_WAIT_SNOOP;
-      end else if (i_mshr_search_update_hit != 'h0) begin
+      end else if (i_missu_search_update_hit != 'h0) begin
         w_state_next = ST_BUF_RD_L1D;
-      end else if (i_mshr_search_hit != 'h0) begin
-        if (i_mshr_resolve.valid &
-            (i_mshr_resolve.resolve_index_oh == i_mshr_search_hit)) begin
-          // MSHR hit and resolve immediately : replay again
+      end else if (i_missu_search_hit != 'h0) begin
+        if (i_missu_resolve.valid &
+            (i_missu_resolve.resolve_index_oh == i_missu_search_hit)) begin
+          // MISSU hit and resolve immediately : replay again
           w_state_next = ST_BUF_RD_L1D;
         end else begin
           w_state_next = ST_BUF_WAIT_REFILL; // Replay
-          w_entry_next.mshr_index_oh = i_mshr_search_hit;
+          w_entry_next.missu_index_oh = i_missu_search_hit;
         end
-      end else if (i_mshr_evict_search_hit != 0) begin
-        if (|(i_mshr_evict_search_hit & i_mshr_evict_sent)) begin
+      end else if (i_missu_evict_search_hit != 0) begin
+        if (|(i_missu_evict_search_hit & i_missu_evict_sent)) begin
           // Already evicted
-          w_state_next = ST_BUF_MSHR_REFILL;
+          w_state_next = ST_BUF_MISSU_REFILL;
         end else begin
           w_state_next = ST_BUF_WAIT_REFILL; // Todo: Should be merge
-          w_entry_next.mshr_index_oh = i_mshr_search_hit;
+          w_entry_next.missu_index_oh = i_missu_search_hit;
         end
       end else if (i_l1d_rd_s1_conflict) begin
         w_entry_next.l1d_high_priority = 1'b1;
         w_state_next = ST_BUF_RD_L1D;
       end else if (i_l1d_rd_s1_miss) begin
-        w_state_next = ST_BUF_MSHR_REFILL;
+        w_state_next = ST_BUF_MISSU_REFILL;
         w_entry_next.l1d_way = i_l1d_s1_way;
       end else begin
         if (is_entry_amo & !r_entry.amo_op_done) begin
@@ -25398,38 +25136,38 @@ always_comb begin
         w_state_next = ST_BUF_WAIT_FINISH;
       end
     end
-    ST_BUF_MSHR_REFILL: begin
-      if (i_mshr_accepted) begin
-        if (i_st_mshr_resp.evict_conflict) begin
+    ST_BUF_MISSU_REFILL: begin
+      if (i_missu_accepted) begin
+        if (i_st_missu_resp.evict_conflict) begin
           w_state_next = ST_BUF_WAIT_EVICT;
-          w_entry_next.mshr_index_oh = i_st_mshr_resp.mshr_index_oh;
-        end else if (i_st_mshr_resp.mshr_index_oh != 'h0) begin
+          w_entry_next.missu_index_oh = i_st_missu_resp.missu_index_oh;
+        end else if (i_st_missu_resp.missu_index_oh != 'h0) begin
           w_state_next = ST_BUF_WAIT_REFILL; // Replay
-          w_entry_next.mshr_index_oh = i_st_mshr_resp.mshr_index_oh;
-        end else if (i_st_mshr_resp.full) begin
+          w_entry_next.missu_index_oh = i_st_missu_resp.missu_index_oh;
+        end else if (i_st_missu_resp.full) begin
           w_state_next = ST_BUF_WAIT_FULL;
         end else begin
-          // if index_oh is zero, it means MSHR is correctly allocated,
+          // if index_oh is zero, it means MISSU is correctly allocated,
           // so move to STQ_COMMIT and rerun, and set index_oh conflict bit set again.
           w_state_next = ST_BUF_RD_L1D; // Replay
         end
       end
-    end // case: ST_BUF_MSHR_REFILL
+    end // case: ST_BUF_MISSU_REFILL
     ST_BUF_WAIT_EVICT : begin
-      if (w_mshr_resolve_vld) begin
+      if (w_missu_resolve_vld) begin
         w_state_next = ST_BUF_RD_L1D; // Replay
       end
     end
     ST_BUF_WAIT_REFILL: begin
       if (is_entry_rmw) begin
-        if (w_mshr_resolve_vld) begin
-          // Finish MSHR L1D update
+        if (w_missu_resolve_vld) begin
+          // Finish MISSU L1D update
           w_state_next = ST_BUF_RD_L1D;
         end
       end else begin
         if (i_mshr_l1d_wr_merged) begin
           w_state_next = ST_BUF_L1D_MERGE;
-        end else if (w_mshr_resolve_vld) begin
+        end else if (w_missu_resolve_vld) begin
           w_state_next = ST_BUF_RD_L1D;
         end
       end // else: !if(is_entry_rmw)
@@ -25440,7 +25178,7 @@ always_comb begin
       end
     end
     ST_BUF_WAIT_FULL: begin
-      if (!i_st_mshr_resp.full) begin
+      if (!i_st_missu_resp.full) begin
         w_state_next = ST_BUF_RD_L1D; // Replay
       end
     end
@@ -25492,7 +25230,7 @@ assign o_ready_to_merge = r_entry.valid &
                           (r_state != ST_BUF_L1D_MERGE2) &
                           (r_state != ST_BUF_WAIT_FINISH);
 assign o_l1d_rd_req = r_entry.valid & (r_state == ST_BUF_RD_L1D);
-assign o_mshr_req    = r_entry.valid & (r_state == ST_BUF_MSHR_REFILL);
+assign o_missu_req    = r_entry.valid & (r_state == ST_BUF_MISSU_REFILL);
 assign o_l1d_wr_req = r_entry.valid & (r_state == ST_BUF_L1D_UPDATE);
 
 // ------------------
@@ -25524,7 +25262,7 @@ final begin
 end
 `endif // SIMULATION
 
-endmodule // myooo_lsu_vipt_st_buffer_amo_entry
+endmodule // myooo_st_buffer_amo_entry
 // ------------------------------------------------------------------------
 // NAME : myooo_amo_operation
 // TYPE : module
@@ -25588,29 +25326,27 @@ endmodule // myooo_amo_operation
 // ------------------------------------------------------------------------
 
 
-module myooo_lsu_vipt_dcache
+module myooo_dcache
   import myooo_lsu_pkg::*;
+#(
+  parameter RD_PORT_NUM = myooo_conf_pkg::LSU_INST_NUM + 1 + 1 + 1
+  )
 (
    input logic i_clk,
    input logic i_reset_n,
 
-   // LSU_INST_NUM ports from pipe, and
-   l1d_rd_vipt_if.slave l1d_rd_vipt_if[myooo_conf_pkg::LSU_INST_NUM],
-   // STQ read and update port, PTW
-   l1d_rd_pipt_if.slave l1d_rd_pipt_if[myooo_lsu_pkg::L1D_PIPT_PORT_NUM],
+   // LSU_INST_NUM ports from pipe, and STQ read and update port, PTW
+   l1d_rd_if.slave l1d_rd_if[RD_PORT_NUM],
    l1d_wr_if.slave stbuf_l1d_wr_if,
 
    l1d_wr_if.slave stbuf_l1d_merge_if,
-   l1d_wr_if.slave mshr_l1d_wr_if,
+   l1d_wr_if.slave missu_l1d_wr_if,
 
    l1d_wr_if.slave snoop_wr_if
    );
 
-localparam RD_PORT_NUM = myooo_conf_pkg::LSU_INST_NUM +   // VIPT
-                         L1D_PIPT_PORT_NUM;                // PIPT
-
 dc_read_resp_t[myooo_conf_pkg::DCACHE_BANKS-1: 0] w_dc_read_resp[RD_PORT_NUM];
-dc_wr_req_t                                        w_s0_dc_wr_req;
+dc_wr_req_t                                      w_s0_dc_wr_req;
 
 logic [myooo_conf_pkg::DCACHE_BANKS-1: 0] r_dc_read_val[RD_PORT_NUM];
 
@@ -25636,7 +25372,7 @@ generate for (genvar bank_idx = 0; bank_idx < myooo_conf_pkg::DCACHE_BANKS; bank
     w_s0_dc_wr_req_bank.s0_valid = w_s0_dc_wr_req.s0_valid & w_s0_wr_bank_valid[bank_idx];
   end
 
-  myooo_lsu_vipt_dcache_array
+  myooo_dcache_array
     #(.READ_PORT_NUM(RD_PORT_NUM))
   u_dcache_array
     (
@@ -25651,16 +25387,15 @@ generate for (genvar bank_idx = 0; bank_idx < myooo_conf_pkg::DCACHE_BANKS; bank
      .o_dc_read_resp (w_dc_read_resp_bank  )
      );
 
-  for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM; p_idx++) begin : port_vipt_loop
+  for (genvar p_idx = 0; p_idx < RD_PORT_NUM; p_idx++) begin : port_loop
     logic [$clog2(myooo_conf_pkg::DCACHE_BANKS)-1: 0] w_rd_paddr_bank;
     logic                                            w_rd_bank_valid;
-    assign w_rd_paddr_bank = l1d_rd_vipt_if[p_idx].s0_index[DCACHE_BANK_HIGH:DCACHE_BANK_LOW];
+    assign w_rd_paddr_bank = l1d_rd_if[p_idx].s0_paddr[DCACHE_BANK_HIGH:DCACHE_BANK_LOW];
     assign w_rd_bank_valid = (w_rd_paddr_bank == bank_idx[$clog2(myooo_conf_pkg::DCACHE_BANKS)-1: 0]);
 
-    assign w_dc_read_req [p_idx].valid         = l1d_rd_vipt_if[p_idx].s0_valid & w_rd_bank_valid;
-    assign w_dc_read_req [p_idx].index         = l1d_rd_vipt_if[p_idx].s0_index;
-    assign w_dc_read_req [p_idx].paddr_d1      = l1d_rd_vipt_if[p_idx].s1_paddr;
-    assign w_dc_read_req [p_idx].high_priority = l1d_rd_vipt_if[p_idx].s0_high_priority;
+    assign w_dc_read_req [p_idx].valid = l1d_rd_if[p_idx].s0_valid & w_rd_bank_valid;
+    assign w_dc_read_req [p_idx].paddr = l1d_rd_if[p_idx].s0_paddr;
+    assign w_dc_read_req [p_idx].high_priority = l1d_rd_if[p_idx].s0_high_priority;
 
     always_ff @ (posedge i_clk, negedge i_reset_n) begin
       if (!i_reset_n) begin
@@ -25672,35 +25407,7 @@ generate for (genvar bank_idx = 0; bank_idx < myooo_conf_pkg::DCACHE_BANKS; bank
 
     // Reply distribution
     assign w_dc_read_resp[p_idx][bank_idx] = w_dc_read_resp_bank[p_idx];
-  end // block: port_vipt_loop
-
-  for (genvar p_idx = 0; p_idx < L1D_PIPT_PORT_NUM; p_idx++) begin : port_pipt_loop
-    logic [$clog2(myooo_conf_pkg::DCACHE_BANKS)-1: 0] w_rd_paddr_bank;
-    logic                                              w_rd_bank_valid;
-    assign w_rd_paddr_bank = l1d_rd_pipt_if[p_idx].s0_paddr[DCACHE_BANK_HIGH:DCACHE_BANK_LOW];
-    assign w_rd_bank_valid = (w_rd_paddr_bank == bank_idx[$clog2(myooo_conf_pkg::DCACHE_BANKS)-1: 0]);
-
-    myooo_pkg::paddr_t r_paddr_d;
-    always_ff @ (posedge i_clk) begin
-      r_paddr_d <= l1d_rd_pipt_if[p_idx].s0_paddr;
-    end
-
-    assign w_dc_read_req [myooo_conf_pkg::LSU_INST_NUM + p_idx].valid         = l1d_rd_pipt_if[p_idx].s0_valid & w_rd_bank_valid;
-    assign w_dc_read_req [myooo_conf_pkg::LSU_INST_NUM + p_idx].index         = gen_dc_pa_index(l1d_rd_pipt_if[p_idx].s0_paddr, l1d_rd_pipt_if[p_idx].s0_color);
-    assign w_dc_read_req [myooo_conf_pkg::LSU_INST_NUM + p_idx].paddr_d1      = r_paddr_d;
-    assign w_dc_read_req [myooo_conf_pkg::LSU_INST_NUM + p_idx].high_priority = l1d_rd_pipt_if[p_idx].s0_high_priority;
-
-    always_ff @ (posedge i_clk, negedge i_reset_n) begin
-      if (!i_reset_n) begin
-        r_dc_read_val[myooo_conf_pkg::LSU_INST_NUM + p_idx][bank_idx] <= 1'b0;
-      end else begin
-        r_dc_read_val[myooo_conf_pkg::LSU_INST_NUM + p_idx][bank_idx] <= w_dc_read_req [myooo_conf_pkg::LSU_INST_NUM + p_idx].valid;
-      end
-    end
-
-    // Reply distribution
-    assign w_dc_read_resp[myooo_conf_pkg::LSU_INST_NUM + p_idx][bank_idx] = w_dc_read_resp_bank[myooo_conf_pkg::LSU_INST_NUM + p_idx];
-  end // block: port_pipt_loop
+  end
 
   always_ff @ (posedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
@@ -25716,35 +25423,20 @@ end // block: bank_loop
 endgenerate
 
 
-generate for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM; p_idx++) begin : rd_vipt_resp_loop
+generate for (genvar p_idx = 0; p_idx < RD_PORT_NUM; p_idx++) begin : rd_resp_loop
   dc_read_resp_t w_dc_read_resp_port;
 
   bit_oh_or_packed #(.T(dc_read_resp_t), .WORDS(myooo_conf_pkg::DCACHE_BANKS))
   resp_bit_or (.i_data(w_dc_read_resp[p_idx]), .i_oh(r_dc_read_val[p_idx]), .o_selected(w_dc_read_resp_port));
 
-  assign l1d_rd_vipt_if[p_idx].s1_hit      = w_dc_read_resp_port.hit ;
-  assign l1d_rd_vipt_if[p_idx].s1_hit_way  = w_dc_read_resp_port.hit_way ;
-  assign l1d_rd_vipt_if[p_idx].s1_miss     = w_dc_read_resp_port.miss;
-  assign l1d_rd_vipt_if[p_idx].s1_conflict = w_dc_read_resp_port.conflict;
-  assign l1d_rd_vipt_if[p_idx].s1_data     = w_dc_read_resp_port.data;
+  assign l1d_rd_if[p_idx].s1_hit      = w_dc_read_resp_port.hit ;
+  assign l1d_rd_if[p_idx].s1_hit_way  = w_dc_read_resp_port.hit_way ;
+  assign l1d_rd_if[p_idx].s1_miss     = w_dc_read_resp_port.miss;
+  assign l1d_rd_if[p_idx].s1_conflict = w_dc_read_resp_port.conflict;
+  assign l1d_rd_if[p_idx].s1_data     = w_dc_read_resp_port.data;
 
-end endgenerate // block: rd_vipt_resp_loop
-
-
-generate for (genvar p_idx = 0; p_idx < L1D_PIPT_PORT_NUM; p_idx++) begin : rd_pipt_resp_loop
-  dc_read_resp_t w_dc_read_resp_port;
-
-  bit_oh_or_packed #(.T(dc_read_resp_t), .WORDS(myooo_conf_pkg::DCACHE_BANKS))
-  resp_bit_or (.i_data(w_dc_read_resp[myooo_conf_pkg::LSU_INST_NUM + p_idx]), .i_oh(r_dc_read_val[myooo_conf_pkg::LSU_INST_NUM + p_idx]), .o_selected(w_dc_read_resp_port));
-
-  assign l1d_rd_pipt_if[p_idx].s1_hit      = w_dc_read_resp_port.hit ;
-  assign l1d_rd_pipt_if[p_idx].s1_hit_way  = w_dc_read_resp_port.hit_way ;
-  assign l1d_rd_pipt_if[p_idx].s1_miss     = w_dc_read_resp_port.miss;
-  assign l1d_rd_pipt_if[p_idx].s1_conflict = w_dc_read_resp_port.conflict;
-  assign l1d_rd_pipt_if[p_idx].s1_data     = w_dc_read_resp_port.data;
-
-end endgenerate // block: rd_vipt_resp_loop
-
+end // block: rd_resp_loop
+endgenerate
 
 
 // -------------
@@ -25753,10 +25445,10 @@ end endgenerate // block: rd_vipt_resp_loop
 logic                                     w_s0_merge_valid;
 logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0] w_s0_merge_data;
 myooo_lsu_pkg::mesi_t                      w_s0_merge_mesi;
-assign w_s0_merge_valid = mshr_l1d_wr_if.s0_valid | stbuf_l1d_merge_if.s0_valid;
+assign w_s0_merge_valid = missu_l1d_wr_if.s0_valid | stbuf_l1d_merge_if.s0_valid;
 generate for (genvar b_idx = 0; b_idx < DCACHE_DATA_B_W; b_idx++) begin : merge_byte_loop
   assign w_s0_merge_data[b_idx*8 +: 8] = stbuf_l1d_merge_if.s0_wr_req.s0_be[b_idx] ? stbuf_l1d_merge_if.s0_wr_req.s0_data[b_idx*8 +: 8] :
-                                          mshr_l1d_wr_if.s0_wr_req.s0_data[b_idx*8 +: 8];
+                                          missu_l1d_wr_if.s0_wr_req.s0_data[b_idx*8 +: 8];
 end
 endgenerate
 
@@ -25772,40 +25464,37 @@ s2_resp_bit_or (.i_data(w_s0_dc_wr_resp_bank), .i_oh(r_s2_wr_bank_valid), .o_sel
 assign w_s0_dc_wr_req.s0_valid            = w_s0_merge_valid | stbuf_l1d_wr_if.s0_valid | snoop_wr_if.s0_valid;
 assign w_s0_dc_wr_req.s0_tag_update_valid = w_s0_merge_valid | snoop_wr_if.s0_valid;
 assign w_s0_dc_wr_req.s0_paddr            = snoop_wr_if.s0_valid     ? snoop_wr_if.s0_wr_req.s0_paddr     :
-                                            mshr_l1d_wr_if.s0_valid ? mshr_l1d_wr_if.s0_wr_req.s0_paddr :
+                                            missu_l1d_wr_if.s0_valid ? missu_l1d_wr_if.s0_wr_req.s0_paddr :
                                             stbuf_l1d_wr_if.s0_wr_req.s0_paddr;
-assign w_s0_dc_wr_req.s0_color            = snoop_wr_if.s0_valid     ? snoop_wr_if.s0_wr_req.s0_color     :
-                                            mshr_l1d_wr_if.s0_valid ? mshr_l1d_wr_if.s0_wr_req.s0_color :
-                                            stbuf_l1d_wr_if.s0_wr_req.s0_color;
 assign w_s0_dc_wr_req.s0_data             = snoop_wr_if.s0_valid     ? snoop_wr_if.s0_wr_req.s0_data     :
-                                            mshr_l1d_wr_if.s0_valid ? w_s0_merge_data :
+                                            missu_l1d_wr_if.s0_valid ? w_s0_merge_data :
                                             stbuf_l1d_wr_if.s0_wr_req.s0_data;
 assign w_s0_dc_wr_req.s0_be               = snoop_wr_if.s0_valid     ? snoop_wr_if.s0_wr_req.s0_be     :
-                                            mshr_l1d_wr_if.s0_valid ? mshr_l1d_wr_if.s0_wr_req.s0_be :
+                                            missu_l1d_wr_if.s0_valid ? missu_l1d_wr_if.s0_wr_req.s0_be :
                                             stbuf_l1d_wr_if.s0_wr_req.s0_be;
 assign w_s0_dc_wr_req.s0_mesi             = snoop_wr_if.s0_valid     ? snoop_wr_if.s0_wr_req.s0_mesi     :
-                                            mshr_l1d_wr_if.s0_valid ? mshr_l1d_wr_if.s0_wr_req.s0_mesi :
+                                            missu_l1d_wr_if.s0_valid ? missu_l1d_wr_if.s0_wr_req.s0_mesi :
                                             stbuf_l1d_wr_if.s0_wr_req.s0_mesi;
 assign w_s0_dc_wr_req.s0_way              = snoop_wr_if.s0_valid     ? snoop_wr_if.s0_wr_req.s0_way     :
-                                            mshr_l1d_wr_if.s0_valid ? mshr_l1d_wr_if.s0_wr_req.s0_way :
+                                            missu_l1d_wr_if.s0_valid ? missu_l1d_wr_if.s0_wr_req.s0_way :
                                             stbuf_l1d_wr_if.s0_wr_req.s0_way;
 logic w_s0_st_wr_conflict;
-logic w_s0_mshr_wr_conflict;
+logic w_s0_missu_wr_conflict;
 assign w_s0_st_wr_conflict    = (w_s0_merge_valid | snoop_wr_if.s0_valid) & stbuf_l1d_wr_if.s0_valid;
-assign w_s0_mshr_wr_conflict = (                   snoop_wr_if.s0_valid) & mshr_l1d_wr_if.s0_valid;
+assign w_s0_missu_wr_conflict = (                   snoop_wr_if.s0_valid) & missu_l1d_wr_if.s0_valid;
 always_ff @ (posedge i_clk, negedge i_reset_n) begin
   if (!i_reset_n) begin
     stbuf_l1d_wr_if.s1_resp_valid          <= 1'b0;
     stbuf_l1d_wr_if.s1_wr_resp.s1_conflict <= 1'b0;
 
-    mshr_l1d_wr_if.s1_resp_valid          <= 1'b0;
-    mshr_l1d_wr_if.s1_wr_resp.s1_conflict <= 1'b0;
+    missu_l1d_wr_if.s1_resp_valid          <= 1'b0;
+    missu_l1d_wr_if.s1_wr_resp.s1_conflict <= 1'b0;
   end else begin
     stbuf_l1d_wr_if.s1_resp_valid          <= stbuf_l1d_wr_if.s0_valid;
     stbuf_l1d_wr_if.s1_wr_resp.s1_conflict <= w_s0_st_wr_conflict;
 
-    mshr_l1d_wr_if.s1_resp_valid          <= mshr_l1d_wr_if.s0_valid;
-    mshr_l1d_wr_if.s1_wr_resp.s1_conflict <= w_s0_mshr_wr_conflict;
+    missu_l1d_wr_if.s1_resp_valid          <= missu_l1d_wr_if.s0_valid;
+    missu_l1d_wr_if.s1_wr_resp.s1_conflict <= w_s0_missu_wr_conflict;
   end
 end
 assign stbuf_l1d_wr_if.s1_wr_resp.s1_hit  = w_s1_wr_selected_resp.s1_hit;
@@ -25814,14 +25503,13 @@ assign stbuf_l1d_wr_if.s2_done            = 1'b0;
 assign stbuf_l1d_wr_if.s2_wr_resp.s2_evicted_valid = w_s2_wr_selected_resp.s2_evicted_valid;
 assign stbuf_l1d_wr_if.s2_wr_resp.s2_evicted_data  = w_s2_wr_selected_resp.s2_evicted_data;
 assign stbuf_l1d_wr_if.s2_wr_resp.s2_evicted_paddr = w_s2_wr_selected_resp.s2_evicted_paddr;
-assign stbuf_l1d_wr_if.s2_wr_resp.s2_evicted_color = w_s2_wr_selected_resp.s2_evicted_color;
 assign stbuf_l1d_wr_if.s2_wr_resp.s2_evicted_mesi  = w_s2_wr_selected_resp.s2_evicted_mesi;
 
 
-assign mshr_l1d_wr_if.s1_wr_resp.s1_hit  = w_s1_wr_selected_resp.s1_hit;
-assign mshr_l1d_wr_if.s1_wr_resp.s1_miss = w_s1_wr_selected_resp.s1_miss;
-assign mshr_l1d_wr_if.s2_done    = stbuf_l1d_wr_if.s2_done;
-assign mshr_l1d_wr_if.s2_wr_resp = stbuf_l1d_wr_if.s2_wr_resp;
+assign missu_l1d_wr_if.s1_wr_resp.s1_hit  = w_s1_wr_selected_resp.s1_hit;
+assign missu_l1d_wr_if.s1_wr_resp.s1_miss = w_s1_wr_selected_resp.s1_miss;
+assign missu_l1d_wr_if.s2_done    = stbuf_l1d_wr_if.s2_done;
+assign missu_l1d_wr_if.s2_wr_resp = stbuf_l1d_wr_if.s2_wr_resp;
 
 `ifdef SIMULATION
   `ifdef COMPARE_ISS
@@ -25880,7 +25568,7 @@ always_ff @ (negedge i_clk, negedge i_reset_n) begin
   end
 end
 
-generate for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM; p_idx++) begin : perf_vipt_port_loop
+generate for (genvar p_idx = 0; p_idx < RD_PORT_NUM; p_idx++) begin : perf_port_loop
   logic r_s1_valid;
   always_ff @ (negedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
@@ -25889,60 +25577,28 @@ generate for (genvar p_idx = 0; p_idx < myooo_conf_pkg::LSU_INST_NUM; p_idx++) b
       r_miss_count [p_idx] <= 'h0;
       r_conflict_count [p_idx] <= 'h0;
     end else begin
-      r_s1_valid <= l1d_rd_vipt_if[p_idx].s0_valid;
+      r_s1_valid <= l1d_rd_if[p_idx].s0_valid;
       if (r_cycle_count % sim_pkg::COUNT_UNIT == sim_pkg::COUNT_UNIT-1) begin
         r_req_valid_count [p_idx] <= 'h0;
-        r_hit_count       [p_idx] <= 'h0;
-        r_miss_count      [p_idx] <= 'h0;
-        r_conflict_count  [p_idx] <= 'h0;
+        r_hit_count [p_idx] <= 'h0;
+        r_miss_count [p_idx] <= 'h0;
+        r_conflict_count [p_idx] <= 'h0;
       end else begin
         if (r_s1_valid) begin
           r_req_valid_count [p_idx] <= r_req_valid_count [p_idx] + 'h1;
-          if (rd_vipt_resp_loop[p_idx].w_dc_read_resp_port.conflict) begin
+          if (rd_resp_loop[p_idx].w_dc_read_resp_port.conflict) begin
             r_conflict_count [p_idx] <= r_conflict_count [p_idx] + 'h1;
-          end else if (rd_vipt_resp_loop[p_idx].w_dc_read_resp_port.miss) begin
+          end else if (rd_resp_loop[p_idx].w_dc_read_resp_port.miss) begin
             r_miss_count [p_idx] <= r_miss_count [p_idx] + 'h1;
-          end else if (rd_vipt_resp_loop[p_idx].w_dc_read_resp_port.hit) begin
+          end else if (rd_resp_loop[p_idx].w_dc_read_resp_port.hit) begin
             r_hit_count [p_idx] <= r_hit_count [p_idx] + 'h1;
           end
         end
       end // else: !if(r_cycle_count % sim_pkg::COUNT_UNIT == sim_pkg::COUNT_UNIT-1)
     end // else: !if(!i_reset_n)
   end // always_ff @ (negedge i_clk, negedge i_reset_n)
-end endgenerate
-
-
-generate for (genvar p_idx = 0; p_idx < L1D_PIPT_PORT_NUM; p_idx++) begin : perf_pipt_port_loop
-  logic r_s1_valid;
-  always_ff @ (negedge i_clk, negedge i_reset_n) begin
-    if (!i_reset_n) begin
-      r_req_valid_count [p_idx] <= 'h0;
-      r_hit_count [p_idx] <= 'h0;
-      r_miss_count [p_idx] <= 'h0;
-      r_conflict_count [p_idx] <= 'h0;
-    end else begin
-      r_s1_valid <= l1d_rd_pipt_if[p_idx].s0_valid;
-      if (r_cycle_count % sim_pkg::COUNT_UNIT == sim_pkg::COUNT_UNIT-1) begin
-        r_req_valid_count [p_idx] <= 'h0;
-        r_hit_count       [p_idx] <= 'h0;
-        r_miss_count      [p_idx] <= 'h0;
-        r_conflict_count  [p_idx] <= 'h0;
-      end else begin
-        if (r_s1_valid) begin
-          r_req_valid_count [p_idx] <= r_req_valid_count [p_idx] + 'h1;
-          if (rd_pipt_resp_loop[p_idx].w_dc_read_resp_port.conflict) begin
-            r_conflict_count [p_idx] <= r_conflict_count [p_idx] + 'h1;
-          end else if (rd_pipt_resp_loop[p_idx].w_dc_read_resp_port.miss) begin
-            r_miss_count [p_idx] <= r_miss_count [p_idx] + 'h1;
-          end else if (rd_pipt_resp_loop[p_idx].w_dc_read_resp_port.hit) begin
-            r_hit_count [p_idx] <= r_hit_count [p_idx] + 'h1;
-          end
-        end
-      end // else: !if(r_cycle_count % sim_pkg::COUNT_UNIT == sim_pkg::COUNT_UNIT-1)
-    end // else: !if(!i_reset_n)
-  end // always_ff @ (negedge i_clk, negedge i_reset_n)
-end endgenerate
-
+end // block: port_loop
+endgenerate
 
 integer total_valids[myooo_conf_pkg::DCACHE_BANKS][myooo_conf_pkg::DCACHE_WAYS];
 
@@ -25985,7 +25641,7 @@ endfunction // dump_perf
 `endif // SIMULATION
 
 
-endmodule // myooo_lsu_vipt_dcache
+endmodule // myooo_dcache
 // ------------------------------------------------------------------------
 // NAME : myooo_dcache_array
 // TYPE : module
@@ -25996,23 +25652,22 @@ endmodule // myooo_lsu_vipt_dcache
 // ------------------------------------------------------------------------
 
 
-module myooo_lsu_vipt_dcache_array
-  import myooo_lsu_pkg::*;
-#(
-  // from LSU Pipeline + STQ Update + PTW
-  parameter READ_PORT_NUM = myooo_conf_pkg::LSU_INST_NUM + 1 + 1 + 1
-  )
-(
+module myooo_dcache_array
+  #(
+    // from LSU Pipeline + STQ Update + PTW
+    parameter READ_PORT_NUM = myooo_conf_pkg::LSU_INST_NUM + 1 + 1 + 1
+    )
+  (
    input logic i_clk,
    input logic i_reset_n,
 
    input logic [$clog2(myooo_conf_pkg::DCACHE_BANKS)-1: 0] i_bank,   // static
 
-   input dc_wr_req_t     i_dc_wr_req,
-   output dc_wr_resp_t   o_dc_wr_resp,
-   input dc_read_req_t   i_dc_read_req [READ_PORT_NUM],
-   output dc_read_resp_t o_dc_read_resp[READ_PORT_NUM]
- );
+   input myooo_lsu_pkg::dc_wr_req_t     i_dc_wr_req,
+   output myooo_lsu_pkg::dc_wr_resp_t   o_dc_wr_resp,
+   input myooo_lsu_pkg::dc_read_req_t   i_dc_read_req [READ_PORT_NUM],
+   output myooo_lsu_pkg::dc_read_resp_t o_dc_read_resp[READ_PORT_NUM]
+   );
 
 //
 //                            <------> log2(NWORDS/DCACHE_BANKS) = log2(DCACHE_WORDS_PER_BANK)
@@ -26031,21 +25686,20 @@ module myooo_lsu_vipt_dcache_array
 // 55                       11 10   7 6 5 4     0
 //
 //
-localparam COLOR_BITS = $clog2(DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_WORDS) > 12 ? $clog2(DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_WORDS) - 12 : 0;
-localparam TAG_SIZE = DCACHE_TAG_HIGH - DCACHE_TAG_LOW + 1;
+localparam TAG_SIZE = myooo_lsu_pkg::DCACHE_TAG_HIGH - myooo_lsu_pkg::DCACHE_TAG_LOW + 1;
 localparam DCACHE_WORDS_PER_BANK = myooo_conf_pkg::DCACHE_WORDS / myooo_conf_pkg::DCACHE_BANKS;
 
 logic [READ_PORT_NUM-1:0] w_s0_dc_read_req_valid;
 logic [READ_PORT_NUM-1:0] w_s0_dc_read_priority;
 logic [READ_PORT_NUM-1:0] w_s0_dc_read_req_valid_with_priority;
 logic [READ_PORT_NUM-1:0] w_s0_dc_read_req_valid_oh;
-dc_read_req_t w_s0_dc_selected_read_req;
+myooo_lsu_pkg::dc_read_req_t w_s0_dc_selected_read_req;
 logic [READ_PORT_NUM-1:0]       w_s0_dc_read_req_norm_valid_oh;
 
 logic                              w_s0_dc_tag_valid;
 logic                              w_s0_dc_tag_wr_valid;
 logic                              r_s1_dc_tag_wr_valid;
-myooo_pkg::paddr_t                w_s0_dc_tag_index;
+myooo_pkg::paddr_t                  w_s0_dc_tag_addr;
 logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] w_s0_dc_tag_way;
 
 logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] r_s1_dc_tag_way;
@@ -26053,20 +25707,19 @@ logic [$clog2(myooo_conf_pkg::DCACHE_WAYS)-1: 0] r_s1_dc_tag_way;
 logic [READ_PORT_NUM-1:0]       r_s1_dc_read_req_valid;
 logic [READ_PORT_NUM-1:0]       r_s1_dc_read_req_valid_oh;
 logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0] w_s1_data[myooo_conf_pkg::DCACHE_WAYS];
-mesi_t                                      w_s1_mesi[myooo_conf_pkg::DCACHE_WAYS];
+myooo_lsu_pkg::mesi_t                      w_s1_mesi[myooo_conf_pkg::DCACHE_WAYS];
 logic [myooo_conf_pkg::DCACHE_WAYS-1 : 0]  w_s1_tag_valid;
-logic [TAG_SIZE-1:0]                        w_s1_tag [myooo_conf_pkg::DCACHE_WAYS];
+logic [TAG_SIZE-1:0]                      w_s1_tag[myooo_conf_pkg::DCACHE_WAYS];
 
 myooo_pkg::paddr_t          r_s1_dc_tag_addr;
 
-logic [myooo_conf_pkg::DCACHE_WAYS-1 : 0] w_s1_wr_tag_hit;
-logic                                      r_s1_wr_req_valid;
-logic [myooo_conf_pkg::DCACHE_DATA_W-1:0] r_s1_wr_data;
-mesi_t                                     r_s1_wr_mesi;
-logic [DCACHE_DATA_B_W-1:0]                r_s1_wr_be;
-logic                                      r_s1_wr_data_valid;
-logic                                      w_s1_wr_data_valid;
-myooo_pkg::paddr_t                        r_s1_wr_paddr;
+logic [myooo_conf_pkg::DCACHE_WAYS-1 : 0]  w_s1_wr_tag_hit;
+logic                                     r_s1_wr_req_valid;
+logic [myooo_conf_pkg::DCACHE_DATA_W-1:0]  r_s1_wr_data;
+myooo_lsu_pkg::mesi_t                      r_s1_wr_mesi;
+logic [myooo_lsu_pkg::DCACHE_DATA_B_W-1:0] r_s1_wr_be;
+logic                                     r_s1_wr_data_valid;
+logic                                     w_s1_wr_data_valid;
 
 logic [READ_PORT_NUM-1: 0]                        w_s0_dc_rd_wr_conflict;
 logic [READ_PORT_NUM-1: 0]                        r_s1_dc_rd_wr_conflict;
@@ -26082,28 +25735,29 @@ generate for (genvar p_idx = 0; p_idx < READ_PORT_NUM; p_idx++) begin : rd_port_
 
   logic w_s0_dc_read_tag_same;
   logic r_s1_dc_read_tag_same;
-  logic [riscv_pkg::PADDR_W-1:DCACHE_TAG_LOW] r_s1_dc_lsu_tag_addr;
+  logic [riscv_pkg::PADDR_W-1:myooo_lsu_pkg::DCACHE_TAG_LOW] r_s1_dc_lsu_tag_addr;
   logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]                 w_s1_selected_data;
-  mesi_t                                      w_s1_selected_mesi;
+  myooo_lsu_pkg::mesi_t                                      w_s1_selected_mesi;
   logic [$clog2(DCACHE_WORDS_PER_BANK)-1: 0]                r_s1_dc_tag_low;
 
-  assign w_s0_dc_read_tag_same = w_s0_dc_tag_index == i_dc_read_req[p_idx].index;
-
-  assign r_s1_dc_lsu_tag_addr  = i_dc_read_req[p_idx].paddr_d1[riscv_pkg::PADDR_W-1:DCACHE_TAG_LOW];
+  assign w_s0_dc_read_tag_same = w_s0_dc_tag_addr[$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W) +: myooo_lsu_pkg::DCACHE_TAG_LOW] ==
+                                 i_dc_read_req[p_idx].paddr[$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W) +: myooo_lsu_pkg::DCACHE_TAG_LOW];
   always_ff @ (posedge i_clk, negedge i_reset_n) begin
     if (!i_reset_n) begin
       r_s1_dc_read_tag_same <= 1'b0;
+      r_s1_dc_lsu_tag_addr  <= 'h0;
       r_s1_dc_tag_low       <= 'h0;
     end else begin
       r_s1_dc_read_tag_same <= w_s0_dc_read_tag_same;
-      r_s1_dc_tag_low       <= w_s0_dc_tag_index[DCACHE_TAG_LOW-1 -: $clog2(DCACHE_WORDS_PER_BANK)];
+      r_s1_dc_lsu_tag_addr  <= i_dc_read_req[p_idx].paddr[riscv_pkg::PADDR_W-1:myooo_lsu_pkg::DCACHE_TAG_LOW];
+      r_s1_dc_tag_low       <= w_s0_dc_tag_addr[myooo_lsu_pkg::DCACHE_TAG_LOW-1 -: $clog2(DCACHE_WORDS_PER_BANK)];
     end
   end
 
   logic [myooo_conf_pkg::DCACHE_WAYS-1 : 0] w_s1_tag_hit;
   for(genvar way_idx = 0; way_idx < myooo_conf_pkg::DCACHE_WAYS; way_idx++) begin : dcache_way_loop
     assign w_s1_tag_hit[way_idx] = (r_s1_dc_lsu_tag_addr == w_s1_tag[way_idx]) & w_s1_tag_valid[way_idx] &
-                                   (w_s1_mesi[way_idx] != MESI_INVALID);
+                                   (w_s1_mesi[way_idx] != myooo_lsu_pkg::MESI_INVALID);
   end
 
 `ifdef SIMULATION
@@ -26118,7 +25772,7 @@ generate for (genvar p_idx = 0; p_idx < READ_PORT_NUM; p_idx++) begin : rd_port_
 
   bit_oh_or #(.T(logic[myooo_conf_pkg::DCACHE_DATA_W-1:0]), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
   cache_data_sel (.i_oh (w_s1_tag_hit), .i_data(w_s1_data), .o_selected(w_s1_selected_data));
-  bit_oh_or #(.T(mesi_t), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
+  bit_oh_or #(.T(myooo_lsu_pkg::mesi_t), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
   cache_mesi_sel (.i_oh (w_s1_tag_hit), .i_data(w_s1_mesi), .o_selected(w_s1_selected_mesi));
 
   logic w_s1_read_req_valid;
@@ -26151,12 +25805,12 @@ endgenerate
 assign w_s0_dc_read_req_valid_with_priority = w_s0_dc_read_priority == 'h0 ? w_s0_dc_read_req_valid : w_s0_dc_read_priority;
 bit_extract_lsb #(.WIDTH(READ_PORT_NUM)) u_bit_req_sel (.in(w_s0_dc_read_req_valid_with_priority), .out(w_s0_dc_read_req_norm_valid_oh));
 assign w_s0_dc_read_req_valid_oh = w_s0_dc_read_req_norm_valid_oh;
-bit_oh_or #(.T(dc_read_req_t), .WORDS(READ_PORT_NUM)) select_rerun_oh  (.i_oh(w_s0_dc_read_req_valid_oh), .i_data(i_dc_read_req), .o_selected(w_s0_dc_selected_read_req));
+bit_oh_or #(.T(myooo_lsu_pkg::dc_read_req_t), .WORDS(READ_PORT_NUM)) select_rerun_oh  (.i_oh(w_s0_dc_read_req_valid_oh), .i_data(i_dc_read_req), .o_selected(w_s0_dc_selected_read_req));
 
 assign w_s0_dc_tag_valid    = i_dc_wr_req.s0_valid | (|w_s0_dc_read_req_valid);
 assign w_s0_dc_tag_wr_valid = i_dc_wr_req.s0_valid & i_dc_wr_req.s0_tag_update_valid;
 
-assign w_s0_dc_tag_index    = i_dc_wr_req.s0_valid ? gen_dc_pa_index(i_dc_wr_req.s0_paddr, i_dc_wr_req.s0_color) : w_s0_dc_selected_read_req.index;
+assign w_s0_dc_tag_addr     = i_dc_wr_req.s0_valid ? i_dc_wr_req.s0_paddr : w_s0_dc_selected_read_req.paddr;
 assign w_s0_dc_tag_way      = i_dc_wr_req.s0_way;
 
 assign w_s0_dc_rd_wr_conflict = w_s0_dc_read_req_valid & {READ_PORT_NUM{w_s1_wr_data_valid}};
@@ -26172,13 +25826,12 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
     r_s1_dc_rd_wr_conflict    <= w_s0_dc_rd_wr_conflict;
     r_s1_dc_read_req_valid_oh <= w_s0_dc_read_req_valid_oh;
     r_s1_dc_read_req_valid    <= w_s0_dc_read_req_valid;
-    r_s1_dc_tag_addr          <= w_s0_dc_tag_index;
+    r_s1_dc_tag_addr          <= w_s0_dc_tag_addr;
 
     r_s1_wr_req_valid <= i_dc_wr_req.s0_valid;
     r_s1_wr_be        <= i_dc_wr_req.s0_be;
     r_s1_wr_data      <= i_dc_wr_req.s0_data;
     r_s1_wr_mesi      <= i_dc_wr_req.s0_mesi;
-    r_s1_wr_paddr     <= i_dc_wr_req.s0_paddr;
 
     r_s1_wr_data_valid <= i_dc_wr_req.s0_valid & ~i_dc_wr_req.s0_tag_update_valid;
     r_s1_dc_tag_wr_valid  <= w_s0_dc_tag_wr_valid;
@@ -26189,11 +25842,11 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
 end
 
 logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0] w_s2_evicted_data[myooo_conf_pkg::DCACHE_WAYS];
-mesi_t                      w_s2_evicted_mesi[myooo_conf_pkg::DCACHE_WAYS];
+myooo_lsu_pkg::mesi_t                      w_s2_evicted_mesi[myooo_conf_pkg::DCACHE_WAYS];
 
 assign w_s1_wr_data_valid = r_s1_wr_data_valid & (|w_s1_wr_tag_hit) | r_s1_dc_tag_wr_valid;
 for(genvar way = 0; way < myooo_conf_pkg::DCACHE_WAYS; way++) begin : dcache_way_loop
-  assign w_s1_wr_tag_hit[way] = (r_s1_wr_paddr[riscv_pkg::PADDR_W-1:DCACHE_TAG_LOW] == w_s1_tag[way]) &
+  assign w_s1_wr_tag_hit[way] = (r_s1_dc_tag_addr[riscv_pkg::PADDR_W-1:myooo_lsu_pkg::DCACHE_TAG_LOW] == w_s1_tag[way]) &
                                 w_s1_tag_valid[way];
   assign w_s2_evicted_data[way] = w_s1_data[way];  // Actually this is evicted data at s2 stage
   always_ff @ (posedge i_clk) begin
@@ -26210,7 +25863,7 @@ logic                                    w_s1_evicted_sel_tag_valid;
 logic [myooo_conf_pkg::DCACHE_WAYS-1: 0]  r_s2_dc_tag_way_oh;
 logic [TAG_SIZE-1:0]                     r_s2_tag[myooo_conf_pkg::DCACHE_WAYS];
 logic [myooo_conf_pkg::DCACHE_DATA_W-1:0] w_s2_evicted_sel_data;
-mesi_t                     w_s2_evicted_sel_mesi;
+myooo_lsu_pkg::mesi_t                     w_s2_evicted_sel_mesi;
 logic [TAG_SIZE-1:0]                     r_s2_evicted_sel_tag;
 logic                                    r_s2_evicted_valid;
 myooo_pkg::paddr_t          r_s2_dc_tag_addr;
@@ -26219,7 +25872,7 @@ assign w_s1_dc_tag_way_oh = 'h1 << r_s1_dc_tag_way;
 
 bit_oh_or #(.T(logic[myooo_conf_pkg::DCACHE_DATA_W-1:0]), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
 cache_evicted_data_sel (.i_oh (r_s2_dc_tag_way_oh), .i_data(w_s2_evicted_data), .o_selected(w_s2_evicted_sel_data));
-bit_oh_or #(.T(mesi_t), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
+bit_oh_or #(.T(myooo_lsu_pkg::mesi_t), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
 cache_evicted_mesi_sel (.i_oh (r_s2_dc_tag_way_oh), .i_data(w_s2_evicted_mesi), .o_selected(w_s2_evicted_sel_mesi));
 
 bit_oh_or #(.T(logic[TAG_SIZE-1:0]), .WORDS(myooo_conf_pkg::DCACHE_WAYS))
@@ -26236,22 +25889,21 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
     r_s2_dc_tag_addr     <= 'h0;
   end else begin
     r_s2_dc_tag_way_oh <= w_s1_dc_tag_way_oh;
-    r_s2_tag           <= w_s1_tag;
-    r_s2_evicted_valid <= (w_s1_evicted_sel_tag != r_s1_dc_tag_addr[riscv_pkg::PADDR_W-1:DCACHE_TAG_LOW]) &
-                          r_s1_dc_tag_wr_valid &
-                          w_s1_evicted_sel_tag_valid;
-    r_s2_evicted_sel_tag <= w_s1_evicted_sel_tag;
+    r_s2_tag <= w_s1_tag;
+    r_s2_evicted_valid         <= (w_s1_evicted_sel_tag != r_s1_dc_tag_addr[riscv_pkg::PADDR_W-1:myooo_lsu_pkg::DCACHE_TAG_LOW]) &
+                                  r_s1_dc_tag_wr_valid &
+                                  w_s1_evicted_sel_tag_valid;
+    r_s2_evicted_sel_tag       <= w_s1_evicted_sel_tag;
 
     r_s2_dc_tag_addr     <= r_s1_dc_tag_addr;
   end
 end
 
 assign o_dc_wr_resp.s2_evicted_valid = r_s2_evicted_valid;
-assign o_dc_wr_resp.s2_evicted_paddr = {r_s2_evicted_sel_tag[TAG_SIZE-1: 0],
-                                        r_s2_dc_tag_addr[$clog2(myooo_conf_pkg::DCACHE_BANKS) +: ($clog2(DCACHE_WORDS_PER_BANK) - COLOR_BITS)],
+assign o_dc_wr_resp.s2_evicted_paddr = {r_s2_evicted_sel_tag,
+                                        r_s2_dc_tag_addr[$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)],
                                         i_bank,
-                                        {$clog2(DCACHE_DATA_B_W){1'b0}}};
-assign o_dc_wr_resp.s2_evicted_color = 'h0;
+                                        {$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W){1'b0}}};
 assign o_dc_wr_resp.s2_evicted_data  = w_s2_evicted_sel_data;
 assign o_dc_wr_resp.s2_evicted_mesi  = w_s2_evicted_sel_mesi;
 
@@ -26281,11 +25933,11 @@ generate for(genvar way = 0; way < myooo_conf_pkg::DCACHE_WAYS; way++) begin : d
 
   logic [$clog2(DCACHE_WORDS_PER_BANK)-1: 0] w_s0_tag_addr;
   logic [$clog2(DCACHE_WORDS_PER_BANK)-1: 0] r_s1_tag_addr;
-  assign w_s0_tag_addr = w_s0_dc_tag_index[$clog2(myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)];
+  assign w_s0_tag_addr = w_s0_dc_tag_addr[$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)];
 
   tag_array
     #(
-      .TAG_W($bits(mesi_t) + TAG_SIZE),
+      .TAG_W($bits(myooo_lsu_pkg::mesi_t) + TAG_SIZE),
       .WORDS(DCACHE_WORDS_PER_BANK)
       )
   tag (
@@ -26296,18 +25948,18 @@ generate for(genvar way = 0; way < myooo_conf_pkg::DCACHE_WAYS; way++) begin : d
        .i_wr         (w_s0_dc_tag_wr_valid & (w_s0_dc_tag_way == way)),
        .i_addr       (w_s0_tag_addr),
        .i_tag_valid  (1'b1),
-       .i_tag        ({i_dc_wr_req.s0_mesi, i_dc_wr_req.s0_paddr[riscv_pkg::PADDR_W-1:DCACHE_TAG_LOW]}),
+       .i_tag        ({i_dc_wr_req.s0_mesi, i_dc_wr_req.s0_paddr[riscv_pkg::PADDR_W-1:myooo_lsu_pkg::DCACHE_TAG_LOW]}),
        .o_tag        ({w_s1_mesi[way],      w_s1_tag[way]}),
        .o_tag_valid  (w_s1_tag_valid[way])
        );
 
   logic [$clog2(DCACHE_WORDS_PER_BANK)-1: 0] w_data_addr;
   assign w_data_addr = w_s1_wr_data_valid ?
-                       r_s1_dc_tag_addr[$clog2(myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)] :  // For Data Write
-                       w_s0_dc_tag_index[$clog2(myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)];   // For Data Read
+                       r_s1_dc_tag_addr[$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)] :  // For Data Write
+                       w_s0_dc_tag_addr[$clog2(myooo_lsu_pkg::DCACHE_DATA_B_W * myooo_conf_pkg::DCACHE_BANKS) +: $clog2(DCACHE_WORDS_PER_BANK)];   // For Data Read
 
-  logic [$bits(mesi_t)-1: 0] w_mesi_be;
-  assign w_mesi_be = {$bits(mesi_t){1'b1}};
+  logic [$bits(myooo_lsu_pkg::mesi_t)-1: 0] w_mesi_be;
+  assign w_mesi_be = {$bits(myooo_lsu_pkg::mesi_t){1'b1}};
 
   localparam dcache_w = myooo_conf_pkg::DCACHE_DATA_W;
 
@@ -26337,7 +25989,7 @@ generate for(genvar way = 0; way < myooo_conf_pkg::DCACHE_WAYS; way++) begin : d
 end
 endgenerate
 
-endmodule // myooo_lsu_vipt_dcache_array
+endmodule // myooo_dcache_array
 // ------------------------------------------------------------------------
 // NAME : MYOOO LR/SC Buffer
 // TYPE : module
@@ -26465,7 +26117,7 @@ logic [myooo_lsu_pkg::DCACHE_DATA_B_W-1: 0] r_stq_be;
 state_t                                      r_mshr_state;
 logic [myooo_conf_pkg::DCACHE_DATA_W-1: 0]  r_mshr_data;
 logic [myooo_lsu_pkg::DCACHE_DATA_B_W-1: 0] r_mshr_be;
-logic [myooo_conf_pkg::MSHR_ENTRY_SIZE-1: 0] r_mshr_haz_entry_index;
+logic [myooo_conf_pkg::MISSU_ENTRY_SIZE-1: 0] r_mshr_haz_entry_index;
 logic                                          w_mshr_haz_solved;
 
 assign w_mshr_haz_solved = ((r_mshr_haz_entry_index & mshr_snoop_if.entry_valid) == 'h0) |
@@ -26516,7 +26168,6 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
           l1d_snoop_if.req_s0_valid <= 1'b1;
           l1d_snoop_if.req_s0_cmd   <= SNOOP_READ;
           l1d_snoop_if.req_s0_paddr <= {snoop_if.req_payload.paddr[riscv_pkg::PADDR_W-1:$clog2(DCACHE_DATA_B_W)], {$clog2(DCACHE_DATA_B_W){1'b0}}};
-          l1d_snoop_if.req_s0_color <= snoop_if.req_payload.color;
           r_l1d_paddr               <= {snoop_if.req_payload.paddr[riscv_pkg::PADDR_W-1:$clog2(DCACHE_DATA_B_W)], {$clog2(DCACHE_DATA_B_W){1'b0}}};
         end else if ((r_mshr_state == WAIT_HAZ_RESOLVE) & w_mshr_haz_solved) begin
           r_l1d_state               <= WAIT_RESP;
@@ -29461,10 +29112,15 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
     end else if (clint_if.time_irq_valid) begin
       r_mip[ 7] <= 1'b1;
     end
-    if (plic_if.int_valid) begin
-      r_mip[11] <= 1'b1;
-    end else if (plic_if.int_complete) begin
+    // if (plic_if.int_valid & commit_if.commit_valid & |(commit_if.payload.grp_id & ~commit_if.payload.dead_id)) begin
+    //   r_mip[11] <= 1'b1;
+    // end else if (plic_if.int_complete) begin
+    //   r_mip[11] <= 1'b0;
+    // end
+    if (plic_if.int_complete) begin
       r_mip[11] <= 1'b0;
+    end else begin
+      r_mip[11] <= plic_if.int_valid;
     end
   end // else: !if(!i_reset_n)
 end
@@ -31617,72 +31273,8 @@ end // always_ff @ (posedge i_clk, negedge i_reset_n)
 // endgenerate
 
 endmodule // myooo_fpnew_wrapper
-module pma_map
-  import myooo_lsu_pkg::*;
-(
-  input logic [riscv_pkg::PADDR_W-1: 0] i_pa,
-  output logic o_map_hit,
-  output map_attr_t o_map_attr
-);
 
 
-localparam MAP_TABLE_SIZE = 6;
-/* verilator lint_off UNOPTFLAT */
-logic [MAP_TABLE_SIZE-1: 0] w_hit_addr;
-map_attr_t w_map_attr[MAP_TABLE_SIZE];
-/* verilator lint_off UNSIGNED */
-assign w_hit_addr[ 0] = (i_pa >= 56'h00000000000000) & (i_pa < 56'h00000000010000);  // Address Region : 0 - ffff
-assign w_map_attr[ 0].r = 1'b1;
-assign w_map_attr[ 0].w = 1'b0;
-assign w_map_attr[ 0].x = 1'b1;
-assign w_map_attr[ 0].a = 1'b0;
-assign w_map_attr[ 0].c = 1'b1;
-assign w_hit_addr[ 1] = (i_pa >= 56'h00000002000000) & (i_pa < 56'h00000002010000);  // Address Region : 2000000 - 200ffff
-assign w_map_attr[ 1].r = 1'b1;
-assign w_map_attr[ 1].w = 1'b1;
-assign w_map_attr[ 1].x = 1'b0;
-assign w_map_attr[ 1].a = 1'b1;
-assign w_map_attr[ 1].c = 1'b0;
-assign w_hit_addr[ 2] = (i_pa >= 56'h0000000c000000) & (i_pa < 56'h00000010000000);  // Address Region : c000000 - fffffff
-assign w_map_attr[ 2].r = 1'b1;
-assign w_map_attr[ 2].w = 1'b1;
-assign w_map_attr[ 2].x = 1'b0;
-assign w_map_attr[ 2].a = 1'b1;
-assign w_map_attr[ 2].c = 1'b0;
-assign w_hit_addr[ 3] = (i_pa >= 56'h00000010000000) & (i_pa < 56'h00000010010000);  // Address Region : 10000000 - 1000ffff
-assign w_map_attr[ 3].r = 1'b1;
-assign w_map_attr[ 3].w = 1'b1;
-assign w_map_attr[ 3].x = 1'b0;
-assign w_map_attr[ 3].a = 1'b1;
-assign w_map_attr[ 3].c = 1'b1;
-assign w_hit_addr[ 4] = (i_pa >= 56'h00000012000000) & (i_pa < 56'h00000013000000);  // Address Region : 12000000 - 12ffffff
-assign w_map_attr[ 4].r = 1'b1;
-assign w_map_attr[ 4].w = 1'b1;
-assign w_map_attr[ 4].x = 1'b0;
-assign w_map_attr[ 4].a = 1'b1;
-assign w_map_attr[ 4].c = 1'b0;
-assign w_hit_addr[ 5] = (i_pa >= 56'h00000040000000) & (i_pa < 56'h00000050000000);  // Address Region : 40000000 - 4fffffff
-assign w_map_attr[ 5].r = 1'b1;
-assign w_map_attr[ 5].w = 1'b1;
-assign w_map_attr[ 5].x = 1'b0;
-assign w_map_attr[ 5].a = 1'b1;
-assign w_map_attr[ 5].c = 1'b1;
-
-
-assign o_map_hit = |w_hit_addr;
-always_comb begin
-case (w_hit_addr)
-  6'b000001 : o_map_attr = w_map_attr[0];
-  6'b000010 : o_map_attr = w_map_attr[1];
-  6'b000100 : o_map_attr = w_map_attr[2];
-  6'b001000 : o_map_attr = w_map_attr[3];
-  6'b010000 : o_map_attr = w_map_attr[4];
-  6'b100000 : o_map_attr = w_map_attr[5];
-  default   : o_map_attr = 'h0;
-endcase
-end
-
-endmodule
 // ------------------------------------------------------------------------
 // NAME : myooo_bim
 // TYPE : module
@@ -32687,10 +32279,10 @@ assign core_ptw_req.ready  = w_req_if[2].ready;
 myooo_pkg::paddr_t w_base_addr_list[2];
 myooo_pkg::paddr_t w_mask_list[2];
 always_comb begin
-  w_base_addr_list[0] = 'h0200_0000; // CLINT
-  w_mask_list     [0] = 'h003f_ffff; // CLINT
-  w_base_addr_list[1] = 'h0c00_0000; // PLIC
-  w_mask_list     [1] = 'h00ff_ffff; // PLIC
+  w_base_addr_list[0] = 'hf001_0000; // CLINT
+  w_mask_list     [0] = 'h0000_ffff; // CLINT
+  w_base_addr_list[1] = 'hf0c0_0000; // PLIC
+  w_mask_list     [1] = 'h003f_ffff; // PLIC
 end
 
 
@@ -32906,7 +32498,7 @@ myooo_clint
   .DATA_W   (myooo_conf_pkg::DCACHE_DATA_W),
   .TAG_W    (myooo_lsu_pkg::L2_CMD_TAG_W + 2),
   .ADDR_W   (riscv_pkg::PADDR_W),
-  .BASE_ADDR('h200_0000),
+  .BASE_ADDR('hf001_0000),
   .SIZE     ('h1_0000)
 ) u_clint (
   .i_clk    (i_clk),
@@ -32935,7 +32527,7 @@ myooo_plic
   .DATA_W   (myooo_conf_pkg::DCACHE_DATA_W),
   .TAG_W    (myooo_lsu_pkg::L2_CMD_TAG_W + 2),
   .ADDR_W   (riscv_pkg::PADDR_W),
-  .BASE_ADDR('hc00_0000),
+  .BASE_ADDR('hf0c0_0000),
   .SIZE     ('h1_0000),
   .NUM_PRIORITIES (2),
   .NUM_HARTS      (1),
@@ -32949,7 +32541,7 @@ myooo_plic
   // PLIC
   .i_req_valid   (w_req_plic_if.valid           ),
   .i_req_cmd     (w_req_plic_if.payload.cmd     ),
-  .i_req_addr    (w_req_plic_if.payload.addr - 'hc00_0000),
+  .i_req_addr    (w_req_plic_if.payload.addr - 'hf0c0_0000),
   .i_req_tag     (w_req_plic_if.tag             ),
   .i_req_data    (w_req_plic_if.payload.data    ),
   .i_req_byte_en (w_req_plic_if.payload.byte_en ),
@@ -32985,7 +32577,6 @@ module myooo_subsystem_wrapper
     output logic                                                          o_l2_req_valid,
     output myooo_lsu_pkg::mem_cmd_t                                      o_l2_req_cmd,
     output logic                   [              riscv_pkg::PADDR_W-1:0] o_l2_req_addr,
-    output logic                   [  myooo_lsu_pkg::DCACHE_COLOR_W-1:0] o_l2_req_color,
     output logic                   [  myooo_lsu_pkg::L2_CMD_TAG_W+2-1:0] o_l2_req_tag,
     output logic                   [  myooo_conf_pkg::DCACHE_DATA_W-1:0] o_l2_req_data,
     output logic                   [myooo_conf_pkg::DCACHE_DATA_W/8-1:0] o_l2_req_byte_en,
@@ -32999,9 +32590,8 @@ module myooo_subsystem_wrapper
     input logic [ 7: 0] i_interrupts,
 
     // Snoop Interface
-    input logic                      i_snoop_req_valid,
-    input myooo_pkg::paddr_t        i_snoop_req_paddr,
-    input myooo_lsu_pkg::dc_color_t i_snoop_req_color,
+    input logic               i_snoop_req_valid,
+    input myooo_pkg::paddr_t i_snoop_req_paddr,
 
     output logic                                       o_snoop_resp_valid,
     output logic [ myooo_conf_pkg::DCACHE_DATA_W-1:0] o_snoop_resp_data,
@@ -33020,7 +32610,6 @@ snoop_if w_snoop_if ();
 assign o_l2_req_valid          = w_l2_req.valid;
 assign o_l2_req_cmd            = w_l2_req.payload.cmd;
 assign o_l2_req_addr           = w_l2_req.payload.addr;
-assign o_l2_req_color          = w_l2_req.payload.color;
 assign o_l2_req_tag            = w_l2_req.tag        ;
 assign o_l2_req_data           = w_l2_req.payload.data;
 assign o_l2_req_byte_en        = w_l2_req.payload.byte_en;
@@ -33037,7 +32626,6 @@ assign o_l2_resp_ready        = w_l2_resp.ready;
 // ----------------
 assign w_snoop_if.req_valid         = i_snoop_req_valid;
 assign w_snoop_if.req_payload.paddr = i_snoop_req_paddr;
-assign w_snoop_if.req_payload.color = i_snoop_req_color;
 
 assign o_snoop_resp_valid = w_snoop_if.resp_valid;
 assign o_snoop_resp_data  = w_snoop_if.resp_payload.data;
@@ -33215,6 +32803,36 @@ always_ff @ (posedge i_clk, negedge i_reset_n) begin
 end // always_ff @ (posedge i_clk, i_reset_n)
 
 
+typedef enum logic {
+  R_IDLE = 0,
+  R_WAIT = 1
+} r_state_t;
+
+r_state_t r_r_state;
+logic [myooo_lsu_pkg::L2_CMD_TAG_W+2-1:0] r_r_id;
+
+always_ff @ (posedge i_clk, negedge i_reset_n) begin
+  if (!i_reset_n) begin
+    r_r_state <= R_IDLE;
+  end else begin
+    case (r_r_state)
+      R_IDLE : begin
+        if (axi_if_r_valid & ~axi_if_r_ready) begin
+          r_r_state <= R_WAIT;
+          r_r_id    <= axi_if_r_id;
+        end
+      end
+      R_WAIT : begin
+        if (axi_if_r_valid & axi_if_r_ready) begin
+          r_r_state <= R_IDLE;
+        end
+      end
+    endcase // case (r_r_state)
+  end
+end // always_ff @ (posedge i_clk, negedge i_reset_n)
+
+
+
 // -------------------
 // L2 Interconnection
 // -------------------
@@ -33254,7 +32872,7 @@ assign axi_if_ar_id     = w_l2_req.tag;
 
 assign axi_if_r_ready         = w_l2_resp.ready;
 assign w_l2_resp.valid        = axi_if_r_valid;
-assign w_l2_resp.tag          = axi_if_r_id;
+assign w_l2_resp.tag          = r_r_state == R_WAIT ? r_r_id : axi_if_r_id;
 assign w_l2_resp.payload.data = axi_if_r_data;
 
 assign w_l2_req.ready = (r_state == IDLE) & (w_rd_valid ? axi_if_ar_ready : 1'b1);
@@ -33450,7 +33068,7 @@ generate for (genvar h_idx = 0; h_idx < NUM_HARTS; h_idx++) begin : harts_loop
       )
   u_fanin
     (
-     .i_interrupts((w_reg_enables[h_idx] >> 1) & w_reg_pending[h_idx]),
+     .i_interrupts(w_reg_enables[h_idx] & w_reg_pending),
      .i_priority  (w_reg_priorities),
 
      .o_int_valid    (w_int_raw_valid),
@@ -33909,7 +33527,7 @@ always_comb begin
     end else if (|w_threshold_region) begin
       w_resp_data_pre = o_reg_threshold[w_threshold_addr[7 +: $clog2(NUM_HARTS+1)]] << {i_req_addr[$clog2(DATA_W/8)-1: 0], 3'b000};
     end else if (|w_claim_complete_region) begin
-      w_resp_data_pre = o_reg_pending << {i_req_addr[$clog2(DATA_W/8)-1: 0], 3'b000}; // Very temporary
+      w_resp_data_pre = i_int_index[0] << {i_req_addr[$clog2(DATA_W/8)-1: 0], 3'b000}; // Very temporary
       o_plic_claim_valid = 1 << i_int_index[0];
     end else begin
       w_resp_data_pre = 'h0;
@@ -33918,7 +33536,7 @@ always_comb begin
 end // always_comb
 
 logic [$clog2(NUM_SOURCES)-1: 0] w_plic_complete_valid_decode;
-assign w_plic_complete_valid_decode = i_req_data >> {i_req_addr[$clog2(DATA_W/8)-1: 0], 3'b000};
+assign w_plic_complete_valid_decode = i_req_data;
 
 always_comb begin
   o_plic_complete_valid = 'h0;
